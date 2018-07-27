@@ -316,7 +316,6 @@ class Encuestum < ApplicationRecord
     validates :pregunta54, :presence => true
     validates :pregunta55, :presence => true
     validates :pregunta56, :presence => true
-    validates :cedula_encuestador, :presence => true
     validates :nombre_coordinador, :presence => true
     validates :nombre_supervisor, :presence => true
     validates :telefono, :presence => true    
