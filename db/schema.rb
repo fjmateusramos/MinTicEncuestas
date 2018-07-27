@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_25_182944) do
+ActiveRecord::Schema.define(version: 2018_07_27_194030) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -434,6 +434,47 @@ ActiveRecord::Schema.define(version: 2018_07_25_182944) do
     t.string "vivienda"
     t.string "hora"
     t.string "id_persona_activa"
+    t.string "pregunta12_a_hora"
+    t.string "pregunta12_b1_hora"
+    t.string "pregunta12_b2_hora"
+    t.string "pregunta12_b3_hora"
+    t.string "pregunta12_b4_hora"
+    t.string "pregunta12_b5_hora"
+    t.string "pregunta12_b6_hora"
+    t.string "pregunta12_c_hora"
+    t.string "pregunta12_d_hora"
+    t.string "pregunta12_e_hora"
+    t.string "pregunta12_f_hora"
+    t.string "pregunta12_g_hora"
+    t.string "pregunta12_h_hora"
+    t.string "pregunta12_i_hora"
+    t.string "pregunta12_j_hora"
+    t.string "pregunta12_k_hora"
+    t.string "pregunta12_l_hora"
+    t.string "pregunta12_m_hora"
+    t.string "pregunta12_n_hora"
+    t.string "pregunta20C_1_hora"
+    t.string "pregunta20C_2_hora"
+    t.string "pregunta20C_3_hora"
+    t.string "pregunta20C_4_hora"
+    t.string "pregunta20C_5_hora"
+    t.string "pregunta20C_6_hora"
+    t.string "pregunta20C_7_hora"
+    t.string "pregunta20C_8_hora"
+    t.string "pregunta20C_9_hora"
+    t.string "pregunta20C_10_hora"
+    t.string "pregunta20C_11_hora"
+    t.string "pregunta20C_12_hora"
+    t.string "pregunta20C_13_hora"
+    t.string "pregunta20C_14_hora"
+    t.string "pregunta20C_15_hora"
+    t.string "pregunta20C_16_hora"
+    t.string "pregunta20C_17_hora"
+    t.string "pregunta20C_18_hora"
+    t.string "pregunta20C_19_hora"
+    t.string "pregunta20C_20_hora"
+    t.string "pregunta20C_21_hora"
+    t.string "telefono_celular"
   end
 
 end
