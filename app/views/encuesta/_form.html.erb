@@ -31,10 +31,6 @@
     <%= f.select :municipio, ["Acacías","Aipe","Aracataca","Aranzazu","Aratoca","Arauca","Armenia","Barbosa","Barranquilla","Bogotá, D.C.","Bosconia","Bucaramanga","Caldas","Cali","Calima","Candelaria","Cartagena",
       "Cepitá","Chinchiná","Chiquinquirá","Clemencia","Coello","Corozal","Cúcuta","El Paujil","Entrerrios","Espinal","Filandia","Florencia","Giraldo","Girón","Guamal","Guateque","Hatonuevo","Honda","Ibagué","Inírida","Ipiales","Istmina","Jenesano","Jericó","La Ceja","La Florida","La Unión","Leticia","Madrid","Maicao","Maní","Manizales","Medellín","Mitú","Mocoa","Momil","Montelíbano","Montería","Neiva","Nobsa","Ocaña","Pacho","Palmira","Pamplonita","Pasto","Patía","Pereira","Popayán","Puerto Carreño","Puerto Colombia","Puerto López","Puerto Tejada","Quibdó","Ricaurte","Riohacha","Rionegro","Sabanagrande","Salgar","San Andrés","San Gil","San Jacinto","San José del Guaviare","San Pedro","Santa Marta","Santuario","Sincelejo","Soacha","Sotaquirá","Sutatausa","Tibaná","Tuluá","Tunja","Túquerres","Ubaque","Uribia","Valledupar","Villa de Leyva","Villa de San Diego de Ubate","Villavicencio","Villeta","Yopal"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
   <div class="field">
-    <%= f.label :segmento, 'L3a. Segmento' %>
-    <%= f.text_field :segmento, class: 'form-control', placeholder:'Segmento', id:'fechainicial' %>
-  </div>
-  <div class="field">
     <%= f.label :manzana, 'L3b. Manzana' %>
     <%= f.text_field :manzana, class: 'form-control', placeholder:'Manzana', id:'fechainicial' %>
   </div>
@@ -47,8 +43,8 @@
     <%= f.text_field :hora, class: 'form-control', placeholder:'Hora', id:'fechainicial' %>
   </div>
   <div class="field">
-    <%= f.label :id_persona_activa, 'L3f. Persona Activa' %>
-    <%= f.text_field :id_persona_activa, class: 'form-control', placeholder:'Persona Activa', id:'fechainicial' %>
+    <%= f.label :id_persona_activa, 'L3f. Persona Efectiva' %>
+    <%= f.text_field :id_persona_activa, class: 'form-control', placeholder:'Persona Efectiva', id:'fechainicial' %>
   </div>
 
   </div>
@@ -58,7 +54,7 @@
   </div>
   <div class="field">
     <%= f.label :fecha, 'L5. Fecha' %>
-    <%= f.text_field :fecha, class: 'form-control', placeholder:'Nombres', id:'fechainicial' %>
+    <%= f.text_field :fecha, class: 'form-control', placeholder:'fecha', id:'fechainicial' %>
   </div>
   <div class="field">
     <%= f.label :hora_inicial, 'L6. Hora Inicial' %>
@@ -507,7 +503,7 @@
 
     <div class="input-group">
       <div class="col-md-6">
-      <label>A. Cantidad de  hospitales y puestos de salud</label>
+      <label>A. Consulta de medicina general</label>
       </div>
       <div class="col-md-12 input-group">
         <div class="col-md-4">
@@ -546,7 +542,7 @@
           <div class="col-md-8 input-group" style="padding-top: 10px;">
           <%= f.radio_button :pregunta13_a, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
           <%= f.radio_button :pregunta13_a, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
-          <%= f.radio_button :pregunta13_a, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni larog ni corto</div>
+          <%= f.radio_button :pregunta13_a, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
           <%= f.radio_button :pregunta13_a, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
           <%= f.radio_button :pregunta13_a, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
           </div>
@@ -595,7 +591,7 @@
           <div class="col-md-8 input-group" style="padding-top: 10px;">
           <%= f.radio_button :pregunta13_b1, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
           <%= f.radio_button :pregunta13_b1, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
-          <%= f.radio_button :pregunta13_b1, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni larog ni corto</div>
+          <%= f.radio_button :pregunta13_b1, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
           <%= f.radio_button :pregunta13_b1, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
           <%= f.radio_button :pregunta13_b1, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
           </div>
@@ -644,7 +640,7 @@
           <div class="col-md-8 input-group" style="padding-top: 10px;">
           <%= f.radio_button :pregunta13_b2, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
           <%= f.radio_button :pregunta13_b2, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
-          <%= f.radio_button :pregunta13_b2, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni larog ni corto</div>
+          <%= f.radio_button :pregunta13_b2, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
           <%= f.radio_button :pregunta13_b2, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
           <%= f.radio_button :pregunta13_b2, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
           </div>
@@ -692,7 +688,7 @@
             <div class="col-md-8 input-group" style="padding-top: 10px;">
             <%= f.radio_button :pregunta13_b3, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
             <%= f.radio_button :pregunta13_b3, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
-            <%= f.radio_button :pregunta13_b3, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni larog ni corto</div>
+            <%= f.radio_button :pregunta13_b3, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
             <%= f.radio_button :pregunta13_b3, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
             <%= f.radio_button :pregunta13_b3, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
             </div>
@@ -741,7 +737,7 @@
           <div class="col-md-8 input-group" style="padding-top: 10px;">
           <%= f.radio_button :pregunta13_b4, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
           <%= f.radio_button :pregunta13_b4, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
-          <%= f.radio_button :pregunta13_b4, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni larog ni corto</div>
+          <%= f.radio_button :pregunta13_b4, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
           <%= f.radio_button :pregunta13_b4, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
           <%= f.radio_button :pregunta13_b4, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
           </div>
@@ -790,7 +786,7 @@
           <div class="col-md-8 input-group" style="padding-top: 10px;">
           <%= f.radio_button :pregunta13_b5, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
           <%= f.radio_button :pregunta13_b5, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
-          <%= f.radio_button :pregunta13_b5, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni larog ni corto</div>
+          <%= f.radio_button :pregunta13_b5, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
           <%= f.radio_button :pregunta13_b5, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
           <%= f.radio_button :pregunta13_b5, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
           </div>
@@ -839,7 +835,7 @@
           <div class="col-md-8 input-group" style="padding-top: 10px;">
           <%= f.radio_button :pregunta13_b6, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
           <%= f.radio_button :pregunta13_b6, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
-          <%= f.radio_button :pregunta13_b6, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni larog ni corto</div>
+          <%= f.radio_button :pregunta13_b6, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
           <%= f.radio_button :pregunta13_b6, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
           <%= f.radio_button :pregunta13_b6, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
           </div>
@@ -888,7 +884,7 @@
           <div class="col-md-8 input-group" style="padding-top: 10px;">
           <%= f.radio_button :pregunta13_c, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
           <%= f.radio_button :pregunta13_c, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
-          <%= f.radio_button :pregunta13_c, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni larog ni corto</div>
+          <%= f.radio_button :pregunta13_c, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
           <%= f.radio_button :pregunta13_c, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
           <%= f.radio_button :pregunta13_c, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
           </div>
@@ -938,7 +934,7 @@
           <div class="col-md-8 input-group" style="padding-top: 10px;">
           <%= f.radio_button :pregunta13_d, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
           <%= f.radio_button :pregunta13_d, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
-          <%= f.radio_button :pregunta13_d, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni larog ni corto</div>
+          <%= f.radio_button :pregunta13_d, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
           <%= f.radio_button :pregunta13_d, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
           <%= f.radio_button :pregunta13_d, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
           </div>
@@ -987,7 +983,7 @@
           <div class="col-md-8 input-group" style="padding-top: 10px;">
           <%= f.radio_button :pregunta13_e, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
           <%= f.radio_button :pregunta13_e, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
-          <%= f.radio_button :pregunta13_e, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni larog ni corto</div>
+          <%= f.radio_button :pregunta13_e, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
           <%= f.radio_button :pregunta13_e, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
           <%= f.radio_button :pregunta13_e, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
           </div>
@@ -1036,7 +1032,7 @@
           <div class="col-md-8 input-group" style="padding-top: 10px;">
           <%= f.radio_button :pregunta13_f, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
           <%= f.radio_button :pregunta13_f, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
-          <%= f.radio_button :pregunta13_f, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni larog ni corto</div>
+          <%= f.radio_button :pregunta13_f, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
           <%= f.radio_button :pregunta13_f, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
           <%= f.radio_button :pregunta13_f, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
           </div>
@@ -1085,7 +1081,7 @@
           <div class="col-md-8 input-group" style="padding-top: 10px;">
           <%= f.radio_button :pregunta13_g, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
           <%= f.radio_button :pregunta13_g, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
-          <%= f.radio_button :pregunta13_g, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni larog ni corto</div>
+          <%= f.radio_button :pregunta13_g, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
           <%= f.radio_button :pregunta13_g, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
           <%= f.radio_button :pregunta13_g, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
           </div>
@@ -1134,7 +1130,7 @@
           <div class="col-md-8 input-group" style="padding-top: 10px;">
           <%= f.radio_button :pregunta13_h, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
           <%= f.radio_button :pregunta13_h, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
-          <%= f.radio_button :pregunta13_h, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni larog ni corto</div>
+          <%= f.radio_button :pregunta13_h, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
           <%= f.radio_button :pregunta13_h, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
           <%= f.radio_button :pregunta13_h, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
           </div>
@@ -1183,7 +1179,7 @@
           <div class="col-md-8 input-group" style="padding-top: 10px;">
           <%= f.radio_button :pregunta13_i, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
           <%= f.radio_button :pregunta13_i, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
-          <%= f.radio_button :pregunta13_i, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni larog ni corto</div>
+          <%= f.radio_button :pregunta13_i, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
           <%= f.radio_button :pregunta13_i, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
           <%= f.radio_button :pregunta13_i, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
           </div>
@@ -1232,7 +1228,7 @@
           <div class="col-md-8 input-group" style="padding-top: 10px;">
           <%= f.radio_button :pregunta13_j, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
           <%= f.radio_button :pregunta13_j, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
-          <%= f.radio_button :pregunta13_j, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni larog ni corto</div>
+          <%= f.radio_button :pregunta13_j, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
           <%= f.radio_button :pregunta13_j, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
           <%= f.radio_button :pregunta13_j, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
           </div>
@@ -1281,7 +1277,7 @@
           <div class="col-md-8 input-group" style="padding-top: 10px;">
           <%= f.radio_button :pregunta13_k, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
           <%= f.radio_button :pregunta13_k, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
-          <%= f.radio_button :pregunta13_k, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni larog ni corto</div>
+          <%= f.radio_button :pregunta13_k, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
           <%= f.radio_button :pregunta13_k, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
           <%= f.radio_button :pregunta13_k, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
           </div>
@@ -1330,7 +1326,7 @@
           <div class="col-md-8 input-group" style="padding-top: 10px;">
           <%= f.radio_button :pregunta13_l, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
           <%= f.radio_button :pregunta13_l, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
-          <%= f.radio_button :pregunta13_l, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni larog ni corto</div>
+          <%= f.radio_button :pregunta13_l, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
           <%= f.radio_button :pregunta13_l, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
           <%= f.radio_button :pregunta13_l, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
           </div>
@@ -1379,7 +1375,7 @@
           <div class="col-md-8 input-group" style="padding-top: 10px;">
           <%= f.radio_button :pregunta13_m, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
           <%= f.radio_button :pregunta13_m, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
-          <%= f.radio_button :pregunta13_m, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni larog ni corto</div>
+          <%= f.radio_button :pregunta13_m, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
           <%= f.radio_button :pregunta13_m, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
           <%= f.radio_button :pregunta13_m, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
           </div>
@@ -1428,7 +1424,7 @@
           <div class="col-md-8 input-group" style="padding-top: 10px;">
           <%= f.radio_button :pregunta13_n, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
           <%= f.radio_button :pregunta13_n, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
-          <%= f.radio_button :pregunta13_n, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni larog ni corto</div>
+          <%= f.radio_button :pregunta13_n, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
           <%= f.radio_button :pregunta13_n, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
           <%= f.radio_button :pregunta13_n, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
           </div>
