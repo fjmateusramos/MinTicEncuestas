@@ -24,10 +24,9 @@ class Encuestum < ApplicationRecord
   validates :F2, :presence => true, :if => lambda { |o| o.F1A == "Si"}
   validates :F3_a,:F3_b,:F3_c,:F3_d, :presence => true , :if => lambda { |o| o.F1A == "Si" && o.F1 == "Si" && o.F2 == "No"}
   validates  :pregunta1,:pregunta1A,:pregunta2,:pregunta2B,:pregunta3,:pregunta6,:pregunta7A,:pregunta7C,:pregunta7D,:pregunta7E,:pregunta7F,:pregunta7G,:pregunta7H,:pregunta7I,:pregunta7J,:pregunta7K,:pregunta7L,:pregunta7M,:pregunta7N,:pregunta8A,:pregunta8B,:pregunta8C,:pregunta8D,:pregunta8E,:pregunta8F,:pregunta8G,:pregunta9A,:pregunta9B,:pregunta9C,:pregunta9D,:pregunta9E,:pregunta9F,:pregunta9G,:pregunta10_a,:pregunta10_b1,
-:pregunta10_b2,:pregunta10_b3,:pregunta10_b4,:pregunta10_b5,:pregunta10_b6,:pregunta10_c,:pregunta10_d,:pregunta10_e,:pregunta10_f,:pregunta10_g,:pregunta10_h,:pregunta10_i,:pregunta10_j,:pregunta10_k,:pregunta10_l,:pregunta10_m,:pregunta10_n,:pregunta16,:pregunta17,:pregunta18,:pregunta20A_1,:pregunta20A_2,:pregunta20A_3,:pregunta20A_4,:pregunta20A_5,:pregunta20A_6,:pregunta20A_7,:pregunta20A_8,:pregunta20A_9,:pregunta20A_10,:pregunta20A_11,:pregunta20A_12,:pregunta20A_13,:pregunta20A_14,:pregunta20A_15,:pregunta20A_16,:pregunta20A_17,:pregunta20A_18,:pregunta20A_19,:pregunta20A_20,:pregunta20A_21,:pregunta21,:pregunta22,:pregunta23,:pregunta24_AA,:pregunta24_BB,:pregunta27_a,:pregunta27_b,:pregunta27_c,:pregunta27_d,:pregunta27_e,:pregunta27_f,:pregunta27_g,:pregunta27_h,:pregunta27_j,:pregunta27_k,:pregunta28_a,:pregunta28_b,:pregunta28_c,:pregunta28_d,:pregunta28_e,:pregunta28_f,:pregunta28_g,:pregunta28_h,:pregunta28_j,:pregunta28_k,:pregunta29_a,:pregunta29_b,:pregunta30,:pregunta31_a,:pregunta31_b,:pregunta32_a,:pregunta32_b,:pregunta33,:pregunta36,:pregunta37,:pregunta38,:pregunta39,:pregunta40,:pregunta48,:pregunta49,:pregunta51,:pregunta52,
+:pregunta10_b2,:pregunta10_b3,:pregunta10_b4,:pregunta10_b5,:pregunta10_b6,:pregunta10_c,:pregunta10_d,:pregunta10_e,:pregunta10_f,:pregunta10_g,:pregunta10_h,:pregunta10_i,:pregunta10_j,:pregunta10_k,:pregunta10_l,:pregunta10_m,:pregunta10_n,:pregunta16,:pregunta17,:pregunta18,:pregunta20A_1,:pregunta20A_2,:pregunta20A_3,:pregunta20A_4,:pregunta20A_5,:pregunta20A_6,:pregunta20A_7,:pregunta20A_8,:pregunta20A_9,:pregunta20A_10,:pregunta20A_11,:pregunta20A_12,:pregunta20A_13,:pregunta20A_14,:pregunta20A_15,:pregunta20A_16,:pregunta20A_17,:pregunta20A_18,:pregunta20A_19,:pregunta20A_20,:pregunta20A_21,:pregunta21,:pregunta23,:pregunta24_AA,:pregunta24_BB,:pregunta27_a,:pregunta27_b,:pregunta27_c,:pregunta27_d,:pregunta27_e,:pregunta27_f,:pregunta27_g,:pregunta27_h,:pregunta27_j,:pregunta27_k,:pregunta28_a,:pregunta28_b,:pregunta28_c,:pregunta28_d,:pregunta28_e,:pregunta28_f,:pregunta28_g,:pregunta28_h,:pregunta28_j,:pregunta28_k,:pregunta29_a,:pregunta29_b,:pregunta30,:pregunta31_a,:pregunta31_b,:pregunta32_a,:pregunta32_b,:pregunta33,:pregunta37,:pregunta38,:pregunta39,:pregunta40,:pregunta48,:pregunta49,:pregunta51,:pregunta52,
 :pregunta53,:pregunta54,:pregunta55,:pregunta56, :presence => true, :if => lambda { |o| o.F3_a =! "Si" || o.F3_b =! "Si" || o.F3_c =! "Si" || o.F3_d =! "Si"}
   validates :pregunta4, :presence => true, :if =>lambda { |o| o.pregunta3 =! "Beneficiario en el régimen contributivo" || o.pregunta3 =! "Afiliado al régimen subsidiado (SISBEN)"}
-  validates :pregunta5, :presence => true, :if =>lambda { |o| o.pregunta3 =! "Beneficiario en el régimen contributivo" || o.pregunta3 =! "Afiliado al régimen subsidiado (SISBEN)" || o.pregunta4 =! "Si" || o.pregunta4 =! "No recuerda"}
   validates :pregunta7b,:presence => true, :if =>lambda { |o| o.pregunta3 == o.pregunta3 =! "Beneficiario en el régimen contributivo" || o.pregunta3 =! "Afiliado al régimen subsidiado (SISBEN)" }
   validates :pregunta11_a, :pregunta12_a, :pregunta12_a_hora, :pregunta13_a, :presence => true, :if =>lambda { |o| o.pregunta10_a == "Si" }
 	validates :pregunta11_b1, :pregunta12_b1, :pregunta12_b1_hora, :pregunta13_b1, :presence => true, :if =>lambda { |o| o.pregunta10_b1 == "Si" }
@@ -49,9 +48,8 @@ class Encuestum < ApplicationRecord
   validates :pregunta11_m, :pregunta12_m, :pregunta12_m_hora, :pregunta13_m, :presence => true, :if =>lambda { |o| o.pregunta10_m == "Si" }
   validates :pregunta11_n, :pregunta12_n, :pregunta12_n_hora, :pregunta13_n, :presence => true, :if =>lambda { |o| o.pregunta10_n == "Si" }
   validates :pregunta14, :presence => true, :if =>lambda { |o| o.pregunta10_d == "Si" } 
-  validates :pregunta15_a, :pregunta15_b, :pregunta15_c, :pregunta15_d, :pregunta15_e, :pregunta15_f, :pregunta15_A , :presence => true, :if =>lambda { |o| o.pregunta10_g == "Si" } 
+  validates :pregunta15_a, :pregunta15_b, :pregunta15_c, :pregunta15_d, :pregunta15_e, :pregunta15_f , :presence => true, :if =>lambda { |o| o.pregunta10_g == "Si" } 
   validates :pregunta17A, :presence => true, :if =>lambda { |o| o.pregunta17 == "Si"  }
-  validates :pregunta19, :presence => true, :if =>lambda { |o| o.pregunta18 == "Si"  }
   validates :pregunta20B_1, :pregunta20C_1, :pregunta20C_1_hora, :pregunta20D_1, :pregunta20E_1, :pregunta20F_1, :presence => true, :if =>lambda { |o| o.pregunta20A_1 == "Si" }
   validates :pregunta20B_2, :pregunta20C_2, :pregunta20C_2_hora, :pregunta20D_2, :pregunta20E_2, :pregunta20F_2, :presence => true, :if =>lambda { |o| o.pregunta20A_2 == "Si" }
   validates :pregunta20B_3, :pregunta20C_3, :pregunta20C_3_hora, :pregunta20D_3, :pregunta20E_3, :pregunta20F_3, :presence => true, :if =>lambda { |o| o.pregunta20A_3 == "Si" }
@@ -81,11 +79,9 @@ class Encuestum < ApplicationRecord
   validates :pregunta38, :presence => true, :if => lambda { |o| o.pregunta37 == "Otra, Cuál" || o.pregunta37 == "Ninguna"}
   validates :pregunta39, :presence => true, :if => lambda { |o| o.pregunta38 == "No,   pero la EPS le prestó el servicio" || o.pregunta38 == "No y la EPS no le prestó el servicio" || o.pregunta38 =="No ha salido el fallo"}
   validates :pregunta41, :presence => true, :if => lambda { |o| o.pregunta40 == "Si"}
-  validates :pregunta42, :presence => true, :if => lambda { |o| o.pregunta41 == "No"}
   validates :pregunta43, :presence => true, :if => lambda { |o| o.pregunta41 == "Si"}
   validates :pregunta44, :presence => true, :if => lambda { |o| o.pregunta40 == "Si"}
   validates :pregunta46, :presence => true, :if => lambda { |o| o.pregunta45 == "Si"}
-  validates :pregunta47, :presence => true, :if => lambda { |o| o.pregunta45 == "No. Estoy conforme con mi EPS"}
   validates :pregunta48, :presence => true, :if => lambda { |o| o.pregunta45 == "No, por otras razones"}
   validates :pregunta50, :presence => true, :if => lambda { |o| o.pregunta49 == "No"}
   validates :pregunta57, :pregunta58,:pregunta59,:pregunta60,:presence => true, :if => lambda { |o| o.pregunta56 == "Si"}
