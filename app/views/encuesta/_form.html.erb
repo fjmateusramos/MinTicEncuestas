@@ -54,7 +54,7 @@
   </div>
   <div class="field">
     <%= f.label :fecha, 'L5. Fecha' %>
-    <%= f.text_field :fecha, class: 'form-control', placeholder:'fecha', id:'fechainicial' %>
+    <%= f.text_field :fecha, class: 'form-control', placeholder:'Fecha', id:'fechainicial' %>
   </div>
   <div class="field">
     <%= f.label :hora_inicial, 'L6. Hora Inicial' %>
@@ -73,7 +73,7 @@
     ENC:  Si menor 18, o mayor de 80 años, o incapacitado para informar, solicite acompañante a ultimo servicio (IDÓNEO)
     </div>
     <%= f.label :años, 'L9. Años' %>
-    <%= f.text_field :años, class: 'form-control', placeholder:'Nombre', id:'años' %>
+    <%= f.text_field :años, class: 'form-control', placeholder:'Años', id:'años' %>
   </div>
 <br>
   <h2> II. FILTROS DE SELECCIÓN </h2>
@@ -188,7 +188,7 @@
         <div class="alert alert-primary" role="alert">
         (Entregue tarjeta P6 y lea)   En una escala de 1 a 5, donde 1 es Muy mala y 5 es muy buena, califique:
         </div>
-        <%= f.label :pregunta6, 'En general, ¿Cómo califica su estado de salud?' , id:"corres_usuario" %>
+        <%= f.label :pregunta6, '6. En general, ¿Cómo califica su estado de salud?' , id:"corres_usuario" %>
         <%= f.select :pregunta6, ["Muy malo","Malo","Regular","Bueno","Muy bueno"],{:include_blank => true}, {class: "form-control", id:"corres_usuario"}%>
     </div>
     <div class="field">
@@ -393,94 +393,94 @@
     <div class="alert alert-primary" role="alert">
     ENC: Lea cada Factor de servicio, fuerte y claro,  deje tiempo suficiente para que USUARIO entienda el tema y la forma de ordenar y calificar).</div>
     <div class="input-group">
-      <div class="col-md-5">
+      <div class="col-md-4">
       <%= f.label :pregunta8A, 'A. El trato amable del personal administrativo: Oficinas de autorización, oficinas de atención al cliente, etc.' , {style:"margin-right:30px;margin-left:13px;", id:"importan_satis_fact_serv"} %>
       </div>
-      <div class="col-md-7 input-group">
+      <div class="col-md-8 input-group">
         <%= f.text_field :pregunta8A, {class: "form-control", placeholder: "Pos" , id:"importan_satis_fact_serv"}%>
-        <%= f.radio_button :pregunta9A, "Nada s." ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"}%><div>Nada s.</div>
-        <%= f.radio_button :pregunta9A, "Poco s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Poco s.</div>
-        <%= f.radio_button :pregunta9A, "Ni s. Ni ins.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Ni s. Ni ins. </div>
+        <%= f.radio_button :pregunta9A, "Nada s." ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"}%><div>Nada sat.</div>
+        <%= f.radio_button :pregunta9A, "Poco s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Poco sat.</div>
+        <%= f.radio_button :pregunta9A, "Ni s. Ni ins.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Ni sat. Ni ins. </div>
         <%= f.radio_button :pregunta9A, "Satisfecho", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Satisfecho</div>
-        <%= f.radio_button :pregunta9A, "Totalmente s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Totalmente s.</div>
+        <%= f.radio_button :pregunta9A, "Totalmente s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Totalmente sat.</div>
       </div>
     </div>
     <div class="input-group">
-      <div class="col-md-5">
+      <div class="col-md-4">
       <%= f.label :pregunta8B, 'B. El trato amable del personal asistencial: médicos, enfermeras, terapeutas, etc.' , {style:"margin-right:30px;margin-left:13px;" , id:"importan_satis_fact_serv"} %>
       </div>
-      <div class="col-md-7 input-group">
+      <div class="col-md-8 input-group">
         <%= f.text_field :pregunta8B, {class: "form-control", placeholder: "Pos"}%>
-        <%= f.radio_button :pregunta9B, "Nada s." ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"}%><div>Nada s.</div>
-        <%= f.radio_button :pregunta9B, "Poco s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Poco s.</div>
-        <%= f.radio_button :pregunta9B, "Ni s. Ni ins.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Ni s. Ni ins. </div>
+        <%= f.radio_button :pregunta9B, "Nada s." ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"}%><div>Nada sat.</div>
+        <%= f.radio_button :pregunta9B, "Poco s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Poco sat.</div>
+        <%= f.radio_button :pregunta9B, "Ni s. Ni ins.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Ni sat. Ni ins. </div>
         <%= f.radio_button :pregunta9B, "Satisfecho", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Satisfecho</div>
-        <%= f.radio_button :pregunta9B, "Totalmente s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Totalmente s.</div>
+        <%= f.radio_button :pregunta9B, "Totalmente s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Totalmente sat.</div>
       </div>
     </div>
     <div class="input-group">
-      <div class="col-md-5">
+      <div class="col-md-4">
       <%= f.label :pregunta8C, 'C. Instalaciones físicas de la EPS: comodidad, completo, agradable' , {style:"margin-right:30px;margin-left:13px;", id:"importan_satis_fact_serv"} %>
       </div>
-      <div class="col-md-7 input-group">
+      <div class="col-md-8 input-group">
         <%= f.text_field :pregunta8C, {class: "form-control", placeholder: "Pos", id:"importan_satis_fact_serv"}%>
-        <%= f.radio_button :pregunta9C, "Nada s." ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"}%><div>Nada s.</div>
-        <%= f.radio_button :pregunta9C, "Poco s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Poco s.</div>
-        <%= f.radio_button :pregunta9C, "Ni s. Ni ins.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Ni s. Ni ins. </div>
+        <%= f.radio_button :pregunta9C, "Nada s." ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"}%><div>Nada sat.</div>
+        <%= f.radio_button :pregunta9C, "Poco s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Poco sat.</div>
+        <%= f.radio_button :pregunta9C, "Ni s. Ni ins.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Ni sat. Ni ins. </div>
         <%= f.radio_button :pregunta9C, "Satisfecho", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Satisfecho</div>
-        <%= f.radio_button :pregunta9C, "Totalmente s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Totalmente s.</div>
+        <%= f.radio_button :pregunta9C, "Totalmente s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Totalmente sat.</div>
       </div>
     </div>
     <div class="input-group">
-      <div class="col-md-5">
+      <div class="col-md-4">
       <%= f.label :pregunta8D, 'D. Su cercanía a hospitales y puestos de salud' , {style:"margin-right:30px;margin-left:13px;", id:"importan_satis_fact_serv"} %>
       </div>
-      <div class="col-md-7 input-group">
+      <div class="col-md-8 input-group">
         <%= f.text_field :pregunta8D, {class: "form-control", placeholder: "Pos", id:"importan_satis_fact_serv"}%>
-        <%= f.radio_button :pregunta9D, "Nada s." ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"}%><div>Nada s.</div>
-        <%= f.radio_button :pregunta9D, "Poco s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Poco s.</div>
-        <%= f.radio_button :pregunta9D, "Ni s. Ni ins.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Ni s. Ni ins. </div>
+        <%= f.radio_button :pregunta9D, "Nada s." ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"}%><div>Nada sat.</div>
+        <%= f.radio_button :pregunta9D, "Poco s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Poco sat.</div>
+        <%= f.radio_button :pregunta9D, "Ni s. Ni ins.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Ni sat. Ni ins. </div>
         <%= f.radio_button :pregunta9D, "Satisfecho", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Satisfecho</div>
-        <%= f.radio_button :pregunta9D, "Totalmente s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Totalmente s.</div>
+        <%= f.radio_button :pregunta9D, "Totalmente s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Totalmente sat.</div>
       </div>
     </div>
     <div class="input-group">
-      <div class="col-md-5">
+      <div class="col-md-4">
       <%= f.label :pregunta8E, 'E. Tiempos de espera para la atención' , {style:"margin-right:30px;margin-left:13px;", id:"importan_satis_fact_serv"} %>
       </div>
-      <div class="col-md-7 input-group">
+      <div class="col-md-8 input-group">
         <%= f.text_field :pregunta8E, {class: "form-control", placeholder: "Pos", id:"importan_satis_fact_serv"}%>
-        <%= f.radio_button :pregunta9E, "Nada s." ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"}%><div>Nada s.</div>
-        <%= f.radio_button :pregunta9E, "Poco s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Poco s.</div>
-        <%= f.radio_button :pregunta9E, "Ni s. Ni ins.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Ni s. Ni ins. </div>
+        <%= f.radio_button :pregunta9E, "Nada s." ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"}%><div>Nada sat.</div>
+        <%= f.radio_button :pregunta9E, "Poco s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Poco sat.</div>
+        <%= f.radio_button :pregunta9E, "Ni s. Ni ins.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Ni sat. Ni ins. </div>
         <%= f.radio_button :pregunta9E, "Satisfecho", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Satisfecho</div>
-        <%= f.radio_button :pregunta9E, "Totalmente s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Totalmente s.</div>
+        <%= f.radio_button :pregunta9E, "Totalmente s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Totalmente sat.</div>
       </div>
     </div>
     <div class="input-group">
-      <div class="col-md-5">
+      <div class="col-md-4">
       <%= f.label :pregunta8F, 'F. Simplicidad y agilidad en los trámites' , {style:"margin-right:30px;margin-left:13px;", id:"importan_satis_fact_serv"} %>
       </div>
-      <div class="col-md-7 input-group">
+      <div class="col-md-8 input-group">
         <%= f.text_field :pregunta8F, {class: "form-control", placeholder: "Pos", id:"importan_satis_fact_serv"}%>
-        <%= f.radio_button :pregunta9F, "Nada s." ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"}%><div>Nada s.</div>
-        <%= f.radio_button :pregunta9F, "Poco s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Poco s.</div>
-        <%= f.radio_button :pregunta9F, "Ni s. Ni ins.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Ni s. Ni ins. </div>
+        <%= f.radio_button :pregunta9F, "Nada s." ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"}%><div>Nada sat.</div>
+        <%= f.radio_button :pregunta9F, "Poco s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Poco sat.</div>
+        <%= f.radio_button :pregunta9F, "Ni s. Ni ins.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Ni sat. Ni ins. </div>
         <%= f.radio_button :pregunta9F, "Satisfecho", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Satisfecho</div>
-        <%= f.radio_button :pregunta9F, "Totalmente s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Totalmente s.</div>
+        <%= f.radio_button :pregunta9F, "Totalmente s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Totalmente sat.</div>
       </div>
     </div>
     <div class="input-group">
-      <div class="col-md-5">
+      <div class="col-md-4">
       <%= f.label :pregunta8G, 'G. Cantidad de  hospitales y puestos de salud' , {style:"margin-right:30px;margin-left:13px;", id:"importan_satis_fact_serv"} %>
       </div>
-      <div class="col-md-7 input-group">
+      <div class="col-md-8 input-group">
         <%= f.text_field :pregunta8G, {class: "form-control", placeholder: "Pos", id:"importan_satis_fact_serv"}%>
-        <%= f.radio_button :pregunta9G, "Nada s." ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"}%><div>Nada s.</div>
-        <%= f.radio_button :pregunta9G, "Poco s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Poco s.</div>
-        <%= f.radio_button :pregunta9G, "Ni s. Ni ins.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Ni s. Ni ins. </div>
+        <%= f.radio_button :pregunta9G, "Nada s." ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"}%><div>Nada sat.</div>
+        <%= f.radio_button :pregunta9G, "Poco s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Poco sat.</div>
+        <%= f.radio_button :pregunta9G, "Ni s. Ni ins.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Ni sat. Ni ins. </div>
         <%= f.radio_button :pregunta9G, "Satisfecho", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Satisfecho</div>
-        <%= f.radio_button :pregunta9G, "Totalmente s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Totalmente s.</div>
+        <%= f.radio_button :pregunta9G, "Totalmente s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Totalmente sat.</div>
       </div>
     </div>
   </div>
@@ -515,15 +515,15 @@
       </div>
       <div id="pregunta10_a">
         <div class="col-md-12 input-group">
-          <div class="col-md-4">
+          <div class="col-md-3">
           <label id="servicios">11A. Cómo califica el ÚLTIMO servicio recibido?</label>      
           </div>
-          <div class="col-md-8 input-group" style="padding-top: 10px;">
-          <%= f.radio_button :pregunta11_a, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;" , id:"servicios" }%><div>Muy mal serv</div>
-          <%= f.radio_button :pregunta11_a, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal serv</div>
+          <div class="col-md-9 input-group" style="padding-top: 10px;">
+          <%= f.radio_button :pregunta11_a, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;" , id:"servicios" }%><div>Muy mal servicio</div>
+          <%= f.radio_button :pregunta11_a, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
           <%= f.radio_button :pregunta11_a, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
-          <%= f.radio_button :pregunta11_a, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen serv</div>
-          <%= f.radio_button :pregunta11_a, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen serv</div>
+          <%= f.radio_button :pregunta11_a, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen servicio</div>
+          <%= f.radio_button :pregunta11_a, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
           </div>
         </div>  
         <div class="col-md-12 input-group">
@@ -564,15 +564,15 @@
       </div>
       <div id="pregunta10_b1">
         <div class="col-md-12 input-group">
-          <div class="col-md-4">
+          <div class="col-md-3">
           <label id="servicios">11B1. Cómo califica el ÚLTIMO servicio recibido?</label>      
           </div>
-          <div class="col-md-8 input-group" style="padding-top: 10px;">
-            <%= f.radio_button :pregunta11_b1, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal serv</div>
-            <%= f.radio_button :pregunta11_b1, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal serv</div>
+          <div class="col-md-9 input-group" style="padding-top: 10px;">
+            <%= f.radio_button :pregunta11_b1, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal servicio</div>
+            <%= f.radio_button :pregunta11_b1, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
             <%= f.radio_button :pregunta11_b1, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
-            <%= f.radio_button :pregunta11_b1, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"sexo"} %><div>Buen serv</div>
-            <%= f.radio_button :pregunta11_b1, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen serv</div>
+            <%= f.radio_button :pregunta11_b1, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"sexo"} %><div>Buen servicio</div>
+            <%= f.radio_button :pregunta11_b1, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
           </div>
         </div>
         <div class="col-md-12 input-group">
@@ -613,15 +613,15 @@
       </div>
       <div id="pregunta10_b2">
         <div class="col-md-12 input-group">
-          <div class="col-md-4">
+          <div class="col-md-3">
           <label id="servicios">11B2. Cómo califica el ÚLTIMO servicio recibido?</label>      
           </div>
-          <div class="col-md-8 input-group" style="padding-top: 10px;">
-          <%= f.radio_button :pregunta11_b2, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal serv</div>
-          <%= f.radio_button :pregunta11_b2, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal serv</div>
+          <div class="col-md-9 input-group" style="padding-top: 10px;">
+          <%= f.radio_button :pregunta11_b2, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal servicio</div>
+          <%= f.radio_button :pregunta11_b2, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
           <%= f.radio_button :pregunta11_b2, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
-          <%= f.radio_button :pregunta11_b2, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen serv</div>
-          <%= f.radio_button :pregunta11_b2, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen serv</div>
+          <%= f.radio_button :pregunta11_b2, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen servicio</div>
+          <%= f.radio_button :pregunta11_b2, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
           </div>
         </div>
         <div class="col-md-12 input-group">
@@ -661,15 +661,15 @@
       </div>
       <div id="pregunta10_b3">
         <div class="col-md-12 input-group">
-            <div class="col-md-4">
+            <div class="col-md-3">
             <label id="servicios">11B3. Cómo califica el ÚLTIMO servicio recibido?</label>      
             </div>
-          <div class="col-md-8 input-group" style="padding-top: 10px;">
-            <%= f.radio_button :pregunta11_b3, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal serv</div>
-            <%= f.radio_button :pregunta11_b3, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal serv</div>
+          <div class="col-md-9 input-group" style="padding-top: 10px;">
+            <%= f.radio_button :pregunta11_b3, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal servicio</div>
+            <%= f.radio_button :pregunta11_b3, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
             <%= f.radio_button :pregunta11_b3, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
-            <%= f.radio_button :pregunta11_b3, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen serv</div>
-            <%= f.radio_button :pregunta11_b3, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen serv</div>
+            <%= f.radio_button :pregunta11_b3, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen servicio</div>
+            <%= f.radio_button :pregunta11_b3, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
             </div>
           </div>
           <div class="col-md-12 input-group">
@@ -710,15 +710,15 @@
       </div>
       <div id="pregunta10_b4">
         <div class="col-md-12 input-group">
-          <div class="col-md-4">
+          <div class="col-md-3">
           <label id="servicios">11B4. Cómo califica el ÚLTIMO servicio recibido?</label>      
           </div>
-          <div class="col-md-8 input-group" style="padding-top: 10px;">
-          <%= f.radio_button :pregunta11_b4, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal serv</div>
-          <%= f.radio_button :pregunta11_b4, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal serv</div>
+          <div class="col-md-9 input-group" style="padding-top: 10px;">
+          <%= f.radio_button :pregunta11_b4, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal servicio</div>
+          <%= f.radio_button :pregunta11_b4, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
           <%= f.radio_button :pregunta11_b4, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
-          <%= f.radio_button :pregunta11_b4, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen serv</div>
-          <%= f.radio_button :pregunta11_b4, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen serv</div>
+          <%= f.radio_button :pregunta11_b4, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen servicio</div>
+          <%= f.radio_button :pregunta11_b4, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
           </div>
         </div>
         <div class="col-md-12 input-group">
@@ -759,15 +759,15 @@
       </div>
       <div id="pregunta10_b5">
         <div class="col-md-12 input-group">
-          <div class="col-md-4">
+          <div class="col-md-3">
           <label id="servicios">11B5. Cómo califica el ÚLTIMO servicio recibido?</label>      
           </div>
-          <div class="col-md-8 input-group" style="padding-top: 10px;">
-          <%= f.radio_button :pregunta11_b5, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal serv</div>
-          <%= f.radio_button :pregunta11_b5, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal serv</div>
+          <div class="col-md-9 input-group" style="padding-top: 10px;">
+          <%= f.radio_button :pregunta11_b5, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal servicio</div>
+          <%= f.radio_button :pregunta11_b5, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
           <%= f.radio_button :pregunta11_b5, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
-          <%= f.radio_button :pregunta11_b5, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen serv</div>
-          <%= f.radio_button :pregunta11_b5, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen serv</div>
+          <%= f.radio_button :pregunta11_b5, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen servicio</div>
+          <%= f.radio_button :pregunta11_b5, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
           </div>
         </div>
         <div class="col-md-12 input-group">
@@ -808,15 +808,15 @@
       </div>
       <div id="pregunta10_b6">
         <div class="col-md-12 input-group">
-          <div class="col-md-4">
+          <div class="col-md-3">
           <label id="servicios">11B6. Cómo califica el ÚLTIMO servicio recibido?</label>      
           </div>
-          <div class="col-md-8 input-group" style="padding-top: 10px;">
-          <%= f.radio_button :pregunta11_b6, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal serv</div>
-          <%= f.radio_button :pregunta11_b6, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal serv</div>
+          <div class="col-md-9 input-group" style="padding-top: 10px;">
+          <%= f.radio_button :pregunta11_b6, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal servicio</div>
+          <%= f.radio_button :pregunta11_b6, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
           <%= f.radio_button :pregunta11_b6, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
-          <%= f.radio_button :pregunta11_b6, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen serv</div>
-          <%= f.radio_button :pregunta11_b6, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen serv</div>
+          <%= f.radio_button :pregunta11_b6, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen servicio</div>
+          <%= f.radio_button :pregunta11_b6, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
           </div>
         </div>
         <div class="col-md-12 input-group">
@@ -857,15 +857,15 @@
       </div>
       <div id="pregunta10_c">
         <div class="col-md-12 input-group">
-          <div class="col-md-4">
+          <div class="col-md-3">
           <label id="servicios">11C. Cómo califica el ÚLTIMO servicio recibido?</label>      
           </div>
-          <div class="col-md-8 input-group" style="padding-top: 10px;">
-          <%= f.radio_button :pregunta11_c, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal serv</div>
-          <%= f.radio_button :pregunta11_c, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal serv</div>
+          <div class="col-md-9 input-group" style="padding-top: 10px;">
+          <%= f.radio_button :pregunta11_c, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal servicio</div>
+          <%= f.radio_button :pregunta11_c, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
           <%= f.radio_button :pregunta11_c, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
-          <%= f.radio_button :pregunta11_c, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen serv</div>
-          <%= f.radio_button :pregunta11_c, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen serv</div>
+          <%= f.radio_button :pregunta11_c, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen servicio</div>
+          <%= f.radio_button :pregunta11_c, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
           </div>
         </div>
         <div class="col-md-12 input-group">
@@ -907,15 +907,15 @@
       </div>
       <div id="pregunta10_d">
         <div class="col-md-12 input-group">
-          <div class="col-md-4">
+          <div class="col-md-3">
           <label id="servicios">11D. Cómo califica el ÚLTIMO servicio recibido?</label>      
           </div>
-          <div class="col-md-8 input-group" style="padding-top: 10px;">
-          <%= f.radio_button :pregunta11_d, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal serv</div>
-          <%= f.radio_button :pregunta11_d, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal serv</div>
+          <div class="col-md-9 input-group" style="padding-top: 10px;">
+          <%= f.radio_button :pregunta11_d, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal servicio</div>
+          <%= f.radio_button :pregunta11_d, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
           <%= f.radio_button :pregunta11_d, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
-          <%= f.radio_button :pregunta11_d, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen serv</div>
-          <%= f.radio_button :pregunta11_d, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen serv</div>
+          <%= f.radio_button :pregunta11_d, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen servicio</div>
+          <%= f.radio_button :pregunta11_d, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
           </div>
         </div>
         <div class="col-md-12 input-group">
@@ -956,15 +956,15 @@
       </div>
       <div id="pregunta10_e">
         <div class="col-md-12 input-group">
-          <div class="col-md-4">
+          <div class="col-md-3">
           <label id="servicios">11E. Cómo califica el ÚLTIMO servicio recibido?</label>      
           </div>
-          <div class="col-md-8 input-group" style="padding-top: 10px;">
-          <%= f.radio_button :pregunta11_e, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal serv</div>
-          <%= f.radio_button :pregunta11_e, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal serv</div>
+          <div class="col-md-9 input-group" style="padding-top: 10px;">
+          <%= f.radio_button :pregunta11_e, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal servicio</div>
+          <%= f.radio_button :pregunta11_e, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
           <%= f.radio_button :pregunta11_e, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
-          <%= f.radio_button :pregunta11_e, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen serv</div>
-          <%= f.radio_button :pregunta11_e, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen serv</div>
+          <%= f.radio_button :pregunta11_e, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen servicio</div>
+          <%= f.radio_button :pregunta11_e, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
           </div>
         </div>
         <div class="col-md-12 input-group">
@@ -1005,15 +1005,15 @@
       </div>
       <div id="pregunta10_f">
         <div class="col-md-12 input-group">
-          <div class="col-md-4">
+          <div class="col-md-3">
           <label id="servicios">11F. Cómo califica el ÚLTIMO servicio recibido?</label>      
           </div>
-          <div class="col-md-8 input-group" style="padding-top: 10px;">
-          <%= f.radio_button :pregunta11_f, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal serv</div>
-          <%= f.radio_button :pregunta11_f, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal serv</div>
+          <div class="col-md-9 input-group" style="padding-top: 10px;">
+          <%= f.radio_button :pregunta11_f, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal servicio</div>
+          <%= f.radio_button :pregunta11_f, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
           <%= f.radio_button :pregunta11_f, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
-          <%= f.radio_button :pregunta11_f, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen serv</div>
-          <%= f.radio_button :pregunta11_f, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen serv</div>
+          <%= f.radio_button :pregunta11_f, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen servicio</div>
+          <%= f.radio_button :pregunta11_f, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
           </div>
         </div>
         <div class="col-md-12 input-group">
@@ -1054,15 +1054,15 @@
       </div>
       <div id="pregunta10_g">
         <div class="col-md-12 input-group">
-          <div class="col-md-4">
+          <div class="col-md-3">
           <label id="servicios">11G. Cómo califica el ÚLTIMO servicio recibido?</label>      
           </div>
-          <div class="col-md-8 input-group" style="padding-top: 10px;">
-          <%= f.radio_button :pregunta11_g, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal serv</div>
-          <%= f.radio_button :pregunta11_g, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal serv</div>
+          <div class="col-md-9 input-group" style="padding-top: 10px;">
+          <%= f.radio_button :pregunta11_g, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal servicio</div>
+          <%= f.radio_button :pregunta11_g, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
           <%= f.radio_button :pregunta11_g, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
-          <%= f.radio_button :pregunta11_g, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen serv</div>
-          <%= f.radio_button :pregunta11_g, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen serv</div>
+          <%= f.radio_button :pregunta11_g, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen servicio</div>
+          <%= f.radio_button :pregunta11_g, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
           </div>
         </div>
         <div class="col-md-12 input-group">
@@ -1103,15 +1103,15 @@
       </div>
       <div id="pregunta10_h">
         <div class="col-md-12 input-group">
-          <div class="col-md-4">
+          <div class="col-md-3">
           <label id="servicios">11H. Cómo califica el ÚLTIMO servicio recibido?</label>      
           </div>
-          <div class="col-md-8 input-group" style="padding-top: 10px;">
-          <%= f.radio_button :pregunta11_h, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal serv</div>
-          <%= f.radio_button :pregunta11_h, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal serv</div>
+          <div class="col-md-9 input-group" style="padding-top: 10px;">
+          <%= f.radio_button :pregunta11_h, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal servicio</div>
+          <%= f.radio_button :pregunta11_h, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
           <%= f.radio_button :pregunta11_h, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
-          <%= f.radio_button :pregunta11_h, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen serv</div>
-          <%= f.radio_button :pregunta11_h, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen serv</div>
+          <%= f.radio_button :pregunta11_h, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen servicio</div>
+          <%= f.radio_button :pregunta11_h, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
           </div>
         </div>
         <div class="col-md-12 input-group">
@@ -1152,15 +1152,15 @@
       </div>
       <div id="pregunta10_i">
         <div class="col-md-12 input-group">
-          <div class="col-md-4">
+          <div class="col-md-3">
           <label id="servicios">11I. Cómo califica el ÚLTIMO servicio recibido?</label>      
           </div>
-          <div class="col-md-8 input-group" style="padding-top: 10px;">
-          <%= f.radio_button :pregunta11_i, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal serv</div>
-          <%= f.radio_button :pregunta11_i, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal serv</div>
+          <div class="col-md-9 input-group" style="padding-top: 10px;">
+          <%= f.radio_button :pregunta11_i, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal servicio</div>
+          <%= f.radio_button :pregunta11_i, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
           <%= f.radio_button :pregunta11_i, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
-          <%= f.radio_button :pregunta11_i, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen serv</div>
-          <%= f.radio_button :pregunta11_i, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen serv</div>
+          <%= f.radio_button :pregunta11_i, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen servicio</div>
+          <%= f.radio_button :pregunta11_i, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
           </div>
         </div>
         <div class="col-md-12 input-group">
@@ -1201,15 +1201,15 @@
       </div>
       <div id="pregunta10_j">
         <div class="col-md-12 input-group">
-          <div class="col-md-4">
+          <div class="col-md-3">
           <label id="servicios">11J. Cómo califica el ÚLTIMO servicio recibido?</label>      
           </div>
-          <div class="col-md-8 input-group" style="padding-top: 10px;">
-          <%= f.radio_button :pregunta11_j, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal serv</div>
-          <%= f.radio_button :pregunta11_j, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal serv</div>
+          <div class="col-md-9 input-group" style="padding-top: 10px;">
+          <%= f.radio_button :pregunta11_j, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal servicio</div>
+          <%= f.radio_button :pregunta11_j, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
           <%= f.radio_button :pregunta11_j, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
-          <%= f.radio_button :pregunta11_j, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen serv</div>
-          <%= f.radio_button :pregunta11_j, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen serv</div>
+          <%= f.radio_button :pregunta11_j, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen servicio</div>
+          <%= f.radio_button :pregunta11_j, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
           </div>
         </div>
         <div class="col-md-12 input-group">
@@ -1222,10 +1222,10 @@
           </div>
         </div>
         <div class="col-md-12 input-group">
-          <div class="col-md-4">
+          <div class="col-md-3">
           <label>13J. Cómo califica el ÚLTIMO servicio recibido?</label>      
           </div>
-          <div class="col-md-8 input-group" style="padding-top: 10px;">
+          <div class="col-md-9 input-group" style="padding-top: 10px;">
           <%= f.radio_button :pregunta13_j, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
           <%= f.radio_button :pregunta13_j, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
           <%= f.radio_button :pregunta13_j, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
@@ -1250,15 +1250,15 @@
       </div>
       <div id="pregunta10_k">
         <div class="col-md-12 input-group">
-          <div class="col-md-4">
+          <div class="col-md-3">
           <label id="servicios">11K. Cómo califica el ÚLTIMO servicio recibido?</label>      
           </div>
-          <div class="col-md-8 input-group" style="padding-top: 10px;">
-          <%= f.radio_button :pregunta11_k, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal serv</div>
-          <%= f.radio_button :pregunta11_k, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal serv</div>
+          <div class="col-md-9 input-group" style="padding-top: 10px;">
+          <%= f.radio_button :pregunta11_k, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal servicio</div>
+          <%= f.radio_button :pregunta11_k, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
           <%= f.radio_button :pregunta11_k, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
-          <%= f.radio_button :pregunta11_k, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen serv</div>
-          <%= f.radio_button :pregunta11_k, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen serv</div>
+          <%= f.radio_button :pregunta11_k, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen servicio</div>
+          <%= f.radio_button :pregunta11_k, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
           </div>
         </div>
         <div class="col-md-12 input-group">
@@ -1299,15 +1299,15 @@
       </div>
       <div id="pregunta10_l">
         <div class="col-md-12 input-group">
-          <div class="col-md-4">
+          <div class="col-md-3">
           <label>11L. Cómo califica el ÚLTIMO servicio recibido?</label>      
           </div>
-          <div class="col-md-8 input-group" style="padding-top: 10px;">
-          <%= f.radio_button :pregunta11_l, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal serv</div>
-          <%= f.radio_button :pregunta11_l, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal serv</div>
+          <div class="col-md-9 input-group" style="padding-top: 10px;">
+          <%= f.radio_button :pregunta11_l, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal servicio</div>
+          <%= f.radio_button :pregunta11_l, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
           <%= f.radio_button :pregunta11_l, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
-          <%= f.radio_button :pregunta11_l, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen serv</div>
-          <%= f.radio_button :pregunta11_l, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen serv</div>
+          <%= f.radio_button :pregunta11_l, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen servicio</div>
+          <%= f.radio_button :pregunta11_l, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
           </div>
         </div>
         <div class="col-md-12 input-group">
@@ -1348,15 +1348,15 @@
       </div>
       <div id="pregunta10_m">
         <div class="col-md-12 input-group">
-          <div class="col-md-4">
+          <div class="col-md-3">
           <label id="servicios">11M. Cómo califica el ÚLTIMO servicio recibido?</label>      
           </div>
-          <div class="col-md-8 input-group" style="padding-top: 10px;">
-          <%= f.radio_button :pregunta11_m, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal serv</div>
-          <%= f.radio_button :pregunta11_m, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal serv</div>
+          <div class="col-md-9 input-group" style="padding-top: 10px;">
+          <%= f.radio_button :pregunta11_m, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal servicio</div>
+          <%= f.radio_button :pregunta11_m, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
           <%= f.radio_button :pregunta11_m, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
-          <%= f.radio_button :pregunta11_m, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen serv</div>
-          <%= f.radio_button :pregunta11_m, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen serv</div>
+          <%= f.radio_button :pregunta11_m, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen servicio</div>
+          <%= f.radio_button :pregunta11_m, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
           </div>
         </div>
         <div class="col-md-12 input-group">
@@ -1397,15 +1397,15 @@
       </div>
       <div id="pregunta10_n">
         <div class="col-md-12 input-group">
-          <div class="col-md-4">
+          <div class="col-md-3">
           <label id="servicios">11N. Cómo califica el ÚLTIMO servicio recibido?</label>      
           </div>
-          <div class="col-md-8 input-group" style="padding-top: 10px;">
-          <%= f.radio_button :pregunta11_n, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal serv</div>
-          <%= f.radio_button :pregunta11_n, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal serv</div>
+          <div class="col-md-9 input-group" style="padding-top: 10px;">
+          <%= f.radio_button :pregunta11_n, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal servicio</div>
+          <%= f.radio_button :pregunta11_n, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
           <%= f.radio_button :pregunta11_n, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
-          <%= f.radio_button :pregunta11_n, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen serv</div>
-          <%= f.radio_button :pregunta11_n, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen serv</div>
+          <%= f.radio_button :pregunta11_n, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen servicio</div>
+          <%= f.radio_button :pregunta11_n, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
           </div>
         </div>
         <div class="col-md-12 input-group">
@@ -1442,7 +1442,7 @@
     </div>
     <div class="field">
       <%= f.label :pregunta14, '14. Usted me indica que en los últimos seis meses fue usuario del servicio de urgencias,' , id:"urgencias" %>
-      <%= f.select :pregunta14, ["Si","No"],{:include_blank => true}, {class: "form-control", id:"urgencias"}%>
+      <%= f.select :pregunta14, ["Si"],{:include_blank => true}, {class: "form-control", id:"urgencias"}%>
     </div>
     <br>
     <label>14.1. ¿Por cuales de las siguientes razones usó en los últimos seis meses el servicio de urgencias? Por favor, si usted utilizó varias veces el servicio de urgencias en los últimos seis meses, refiérase solo a la última vez que lo utilizó.  (ENC: Lea las opciones y marque cuáles - RM)</label>
@@ -1502,82 +1502,92 @@
 
       <div class="field">
         <%= f.label :pregunta15_a, '15.a. Anteriormente me indicó que en los últimos seis meses solicitó y/o le entregaron medicamentos' , id:"medicamentos_manejo"%>
-        <%= f.select :pregunta15_a, ["Si","No"],{:include_blank => true}, {class: "form-control", id:"medicamentos_manejo"}%>
+        <%= f.select :pregunta15_a, ["Si"],{:include_blank => true}, {class: "form-control", id:"medicamentos_manejo"}%>
       </div>
       <div class="field">
         <%= f.label :pregunta15_b, '15.b. ¿Le entregaron todos los medicamentos la primera vez que los solicitó?' , id:"medicamentos_manejo" %>
-        <%= f.select :pregunta15_b, ["Si","No"],{:include_blank => true}, {class: "form-control", id:"medicamentos_manejo"}%>
+        <%= f.select :pregunta15_b, ["Si","No"],{:include_blank => true}, {class: "form-control", id:"res_pregunta_15b"}%>
       </div>
-      <div class="field">
-        <%= f.label :pregunta15_c, '15.c. ¿Le ofrecieron la posibilidad de entregarle los medicamentos faltantes a domicilio? ' , id:"medicamentos_manejo"%>
-        <%= f.select :pregunta15_c, ["Si","No"],{:include_blank => true}, {class: "form-control", id:"medicamentos_manejo"}%>
+      <div id="pregunta15c">
+        <div class="field">
+          <%= f.label :pregunta15_c, '15.c. ¿Le ofrecieron la posibilidad de entregarle los medicamentos faltantes a domicilio? ' , id:"medicamentos_manejo"%>
+          <%= f.select :pregunta15_c, ["Si","No"],{:include_blank => true}, {class: "form-control", id:"res_pregunta15c"}%>
+        </div>
       </div>
-      <div class="field">
-        <%= f.label :pregunta15_d, '15.d. ¿Aceptó usted esa opción de entrega?' , id:"medicamentos_manejo" %>
-        <%= f.select :pregunta15_d, ["Si","No"],{:include_blank => true}, {class: "form-control", id:"medicamentos_manejo"}%>
+      <div id="pregunta15d">  
+        <div class="field">
+          <%= f.label :pregunta15_d, '15.d. ¿Aceptó usted esa opción de entrega?' , id:"medicamentos_manejo" %>
+          <%= f.select :pregunta15_d, ["Si","No"],{:include_blank => true}, {class: "form-control", id:"res_pregunta15d"}%>
+        </div>
       </div>
-      <div class="field">
-        <%= f.label :pregunta15_e, '15.e. ¿Le llegaron los medicamentos faltantes al domicilio?' , id:"medicamentos_manejo"%>
-        <%= f.select :pregunta15_e, ["Si","No"],{:include_blank => true}, {class: "form-control", id:"medicamentos_manejo"}%>
-      </div>
-      <div class="field">
-        <%= f.label :pregunta15_f, '15.f. ¿Cuántos días se tardó el domicilio con los medicamentos faltantes? (Número de días)' , id:"medicamentos_manejo"%>
-        <%= f.text_field :pregunta15_f, {class: "form-control", id:"medicamentos_manejo"}%>
-      </div>
-
-      <label>15A. Finalmente, ¿Comó obtuvo los medicamentos ?  (Espontanea RM)</label>
-      <div>
-      <%= check_box_tag 'encuestum[pregunta15_A][]', 'Nunca se los entregaron ', checked('Nunca se los entregaron '), id:"medicamentos_manejo" %>
-      <%= label_tag '15A1', 'Nunca se los entregaron ' %>
-      </div>
-      <div>
-      <%= check_box_tag 'encuestum[pregunta15_A][]', 'Nunca los solicito', checked('Nunca los solicito'), id:"medicamentos_manejo" %>
-      <%= label_tag '15A2', 'Nunca los solicito' , id:"medicamentos_manejo" %>
-      </div>
-      <div>
-      <%= check_box_tag 'encuestum[pregunta15_A][]', 'Me quedaron faltando unos medicamentos', checked('Me quedaron faltando unos medicamentos'), id:"medicamentos_manejo" %>
-      <%= label_tag '15A3', 'Me quedaron faltando unos medicamentos' , id:"medicamentos_manejo" %>
-      </div>
-      <div>
-      <%= check_box_tag 'encuestum[pregunta15_A][]', 'Los compró por su cuenta', checked('Los compró por su cuenta'), id:"medicamentos_manejo" %>
-      <%= label_tag '15A4', 'Los compró por su cuenta' , id:"medicamentos_manejo"%>
-      </div>
-      <div>
-      <%= check_box_tag 'encuestum[pregunta15_A][]', 'Se los entregaron todos con la segunda visita', checked('Se los entregaron todos con la segunda visita'), id:"medicamentos_manejo" %>
-      <%= label_tag '15A5', 'Se los entregaron todos con la segunda visita' , id:"medicamentos_manejo"%>
-      </div>
-      <div>
-      <%= check_box_tag 'encuestum[pregunta15_A][]', 'Se los entregaron todos en diferentes días', checked('Se los entregaron todos en diferentes días'), id:"medicamentos_manejo" %>
-      <%= label_tag '15A6', 'Se los entregaron todos en diferentes días' , id:"medicamentos_manejo" %>
-      </div>
+      <div id="pregunta15e">  
+        <div class="field">
+          <%= f.label :pregunta15_e, '15.e. ¿Le llegaron los medicamentos faltantes al domicilio?' , id:"medicamentos_manejo"%>
+          <%= f.select :pregunta15_e, ["Si","No"],{:include_blank => true}, {class: "form-control", id:"res_pregunta15e"}%>
+        </div>
+      </div>  
+      <div id="pregunta15f">  
+        <div class="field">
+          <%= f.label :pregunta15_f, '15.f. ¿Cuántos días se tardó el domicilio con los medicamentos faltantes? (Número de días)' , id:"medicamentos_manejo"%>
+          <%= f.text_field :pregunta15_f, {class: "form-control", id:"res_pregunta15f"}%>
+        </div>
+      </div>  
+      <div id="pregunta15AA">
+        <label>15A. Finalmente, ¿Comó obtuvo los medicamentos ?  (Espontanea RM)</label>
+        <div>
+        <%= check_box_tag 'encuestum[pregunta15_A][]', 'Nunca se los entregaron ', checked('Nunca se los entregaron '), id:"medicamentos_manejo" %>
+        <%= label_tag '15A1', 'Nunca se los entregaron ' %>
+        </div>
+        <div>
+        <%= check_box_tag 'encuestum[pregunta15_A][]', 'Nunca los solicito', checked('Nunca los solicito'), id:"medicamentos_manejo" %>
+        <%= label_tag '15A2', 'Nunca los solicito' , id:"medicamentos_manejo" %>
+        </div>
+        <div>
+        <%= check_box_tag 'encuestum[pregunta15_A][]', 'Me quedaron faltando unos medicamentos', checked('Me quedaron faltando unos medicamentos'), id:"medicamentos_manejo" %>
+        <%= label_tag '15A3', 'Me quedaron faltando unos medicamentos' , id:"medicamentos_manejo" %>
+        </div>
+        <div>
+        <%= check_box_tag 'encuestum[pregunta15_A][]', 'Los compró por su cuenta', checked('Los compró por su cuenta'), id:"medicamentos_manejo" %>
+        <%= label_tag '15A4', 'Los compró por su cuenta' , id:"medicamentos_manejo"%>
+        </div>
+        <div>
+        <%= check_box_tag 'encuestum[pregunta15_A][]', 'Se los entregaron todos con la segunda visita', checked('Se los entregaron todos con la segunda visita'), id:"medicamentos_manejo" %>
+        <%= label_tag '15A5', 'Se los entregaron todos con la segunda visita' , id:"medicamentos_manejo"%>
+        </div>
+        <div>
+        <%= check_box_tag 'encuestum[pregunta15_A][]', 'Se los entregaron todos en diferentes días', checked('Se los entregaron todos en diferentes días'), id:"medicamentos_manejo" %>
+        <%= label_tag '15A6', 'Se los entregaron todos en diferentes días' , id:"medicamentos_manejo" %>
+        </div>
+      </div>  
     </div>  
     <br>
     <div class="field">
       <%= f.label :pregunta16, '16. En los últimos 6 meses, cuando usted solicitó que le prestaran un servicio de salud, ¿Fue informado que no había agenda? ' , id:"medicamentos_manejo"%>
-      <%= f.select :pregunta16, ["Si","No"],{:include_blank => true}, {class: "form-control", id:"medicamentos_manejo"}%>
+      <%= f.select :pregunta16, ["Si","No"],{:include_blank => true}, {class: "form-control", id:"res_pregunta16"}%>
     </div>
-
-    <div class="alert alert-primary" role="alert">
-    ¿En cuál(es) servicio(s)?   (ENC: Mostrar listado de servicios P10 - RM )
-    </div>
-    <div class="input-group">
-      <div class="field" style="padding-left: 5px; padding-right: 5px;">
-        <%= f.label :pregunta16_s1, 'Servicio 1' , id:"medicamentos_manejo"%>
-        <%= f.text_field :pregunta16_s1, {class: "form-control", id:"medicamentos_manejo"}%>
+    <div id="pregunta16a">
+      <div class="alert alert-primary" role="alert">
+      16a. ¿En cuál(es) servicio(s)?   (ENC: Mostrar listado de servicios P10 - RM )
       </div>
-      <div class="field" style="padding-left: 5px; padding-right: 5px;">
-        <%= f.label :pregunta16_s2, 'Servicio 2' , id:"medicamentos_manejo" %>
-        <%= f.text_field :pregunta16_s2, {class: "form-control", id:"medicamentos_manejo"}%>
+      <div class="input-group">
+        <div class="field" style="padding-left: 5px; padding-right: 5px;">
+          <%= f.label :pregunta16_s1, 'Servicio 1' , id:"medicamentos_manejo"%>
+          <%= f.text_field :pregunta16_s1, {class: "form-control", id:"medicamentos_manejo"}%>
+        </div>
+        <div class="field" style="padding-left: 5px; padding-right: 5px;">
+          <%= f.label :pregunta16_s2, 'Servicio 2' , id:"medicamentos_manejo" %>
+          <%= f.text_field :pregunta16_s2, {class: "form-control", id:"medicamentos_manejo"}%>
+        </div>
+        <div class="field" style="padding-left: 5px; padding-right: 5px;">
+          <%= f.label :pregunta16_s3, 'Servicio 3' , id:"medicamentos_manejo" %>
+          <%= f.text_field :pregunta16_s3, {class: "form-control", id:"medicamentos_manejo"}%>
+        </div>
+        <div class="field" style="padding-left: 5px; padding-right: 5px;">
+          <%= f.label :pregunta16_s4, 'Servicio 4' , id:"medicamentos_manejo"%>
+          <%= f.text_field :pregunta16_s4, {class: "form-control", id:"medicamentos_manejo"}%>
+        </div>
       </div>
-      <div class="field" style="padding-left: 5px; padding-right: 5px;">
-        <%= f.label :pregunta16_s3, 'Servicio 3' , id:"medicamentos_manejo" %>
-        <%= f.text_field :pregunta16_s3, {class: "form-control", id:"medicamentos_manejo"}%>
-      </div>
-      <div class="field" style="padding-left: 5px; padding-right: 5px;">
-        <%= f.label :pregunta16_s4, 'Servicio 4' , id:"medicamentos_manejo"%>
-        <%= f.text_field :pregunta16_s4, {class: "form-control", id:"medicamentos_manejo"}%>
-      </div>
-    </div>
+    </div>  
 
     <div class="field">
       <%= f.label :pregunta17, '17. En los últimos 6 meses, ¿su EPS le ha negado algún servicio? ' , id:"medicamentos_manejo"%>
@@ -3066,11 +3076,14 @@
       <%= f.label :pregunta22_otra, "Otra, ¿Cuál?" ,id:"otros_servicios"%>     
       <%= f.text_field :pregunta22_otra, {class: "form-control",placeholder:"Otra,¿Cuál?" ,id:"otros_servicios"}%>
     </div>
+    <br>
+    <h2>XI. INFORMACIÓN Y COMUNICACIÓN </h2>
+    <br>
     <div class="field">
       <div class="alert alert-primary" role="alert">
      (ENC: Entregue tarjeta P23, LEA: ) En una escala de 1 a 5; donde 1 es muy mala y 5 es muy buena;
       </div>
-        <%= f.label :pregunta23, 'En general  ¿Cómo califica la comunicación que brinda su EPS,  sobre los servicios que presta? (ENC LEA OPCIONES:). ',id:"otros_servicios" %>
+        <%= f.label :pregunta23, '23. En general  ¿Cómo califica la comunicación que brinda su EPS,  sobre los servicios que presta? (ENC LEA OPCIONES:). ',id:"otros_servicios" %>
         <%= f.select :pregunta23, ["Muy mala","Mala","Regular","Buena","Muy buena"],{:include_blank => true}, {class: "form-control",id:"otros_servicios"}%>
     </div>
     <br>
@@ -3114,6 +3127,9 @@
         <%= f.select :pregunta26_BB, ["Nada útil","Poco útil","Medianamente útil","Útil","Muy útil"],{:include_blank => true}, {class: "form-control",id:"otros_servicios"}%>
       </div>
     </div>  
+    <br>
+    <br>
+    <h2>XII. PREVENCIÓN DE LA SALUD </h2>
     <br>
     <div class="alert alert-primary" role="alert">
     27. ¿Su EPS en los últimos 6 meses le ha dado a conocer alguno de los siguientes programas y/o servicios? (ENC: Lea - ROTE, RM)
@@ -3541,12 +3557,12 @@
           <%= f.select :pregunta58, ["Masculino","Femenino"],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario"}%>
       </div>
       <div>
-          <%= f.label :pregunta59, '59. años' , id:"identicacion_caracterizacion_usuario"%>
+          <%= f.label :pregunta59, '59. ¿Cuantos años cumplidos tiene el acompañante?' , id:"identicacion_caracterizacion_usuario"%>
           <%= f.text_field :pregunta59, {class: "form-control", id:"identicacion_caracterizacion_usuario"}%>
       </div>
       <div>
           <%= f.label :pregunta60, '60. Parentesco del informante idóneo' , id:"identicacion_caracterizacion_usuario"%>
-          <%= f.text_field :pregunta60, {class: "form-control", id:"identicacion_caracterizacion_usuario"}%>
+          <%= f.select :pregunta60, ["Abuelo(a)","Cuñado(a)","Esposo(a)","Familiar lejano (3er grado)","Hijo(a)","Nieto(a)","Nuera/Yerno","Papa/Mama","Primo(a)","Sobrino(a)","Suegro(a)","Tio(a)"],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario"}%>
       </div>
      </div> 
     </div>
@@ -4042,6 +4058,60 @@ $(document).ready(function(){
           $("#pregunta10_n").removeClass('hidden');
         }
       }); 
+     $('#res_pregunta_15b').change(function(){
+        if($('#res_pregunta_15b').val() == "Si"){
+          $("#pregunta15c").addClass('hidden');
+          $("#pregunta15d").addClass('hidden');
+          $("#pregunta15e").addClass('hidden');
+          $("#pregunta15f").addClass('hidden');  
+          $("#pregunta15AA").addClass('hidden');    
+        }
+        else{
+          $("#pregunta15c").removeClass('hidden');
+          $("#pregunta15d").removeClass('hidden');
+          $("#pregunta15e").removeClass('hidden');
+          $("#pregunta15f").removeClass('hidden');
+          $("#pregunta15AA").removeClass('hidden'); 
+        }
+      }); 
+    $('#res_pregunta15c').change(function(){
+        if($('#res_pregunta15c').val() == "No"){
+          $("#pregunta15d").addClass('hidden');
+          $("#pregunta15e").addClass('hidden');
+          $("#pregunta15f").addClass('hidden');                              
+        }
+        else{
+          $("#pregunta15d").removeClass('hidden');
+          $("#pregunta15e").removeClass('hidden');
+          $("#pregunta15f").removeClass('hidden'); 
+        }
+      }); 
+    $('#res_pregunta15d').change(function(){
+        if($('#res_pregunta15d').val() == "No"){
+          $("#pregunta15e").addClass('hidden');
+          $("#pregunta15f").addClass('hidden');                              
+        }
+        else{
+          $("#pregunta15e").removeClass('hidden');
+          $("#pregunta15f").removeClass('hidden'); 
+        }
+      });
+    $('#res_pregunta15e').change(function(){
+        if($('#res_pregunta15e').val() == "No"){
+          $("#pregunta15f").addClass('hidden');                              
+        }
+        else{
+          $("#pregunta15f").removeClass('hidden'); 
+        }
+      }); 
+    $('#res_pregunta16').change(function(){
+        if($('#res_pregunta16').val() == "No"){
+          $("#pregunta16a").addClass('hidden');                              
+        }
+        else{
+          $("#pregunta16a").removeClass('hidden'); 
+        }
+      });           
     $('#res_pregunta17').change(function(){
         if($('#res_pregunta17').val() == "No"){
           $("#pregunta17a").addClass('hidden');
@@ -4294,10 +4364,14 @@ $(document).ready(function(){
       }); 
     $('#res_pregunta41').change(function(){
         if($('#res_pregunta41').val() == "Si"){
-          $("#pregunta42").addClass('hidden');                          
+          $("#pregunta42").addClass('hidden'); 
+          $("#pregunta43").removeClass('hidden');
+          $("#pregunta44").removeClass('hidden');                                   
         }
         else{
-          $("#pregunta42").removeClass('hidden');       
+          $("#pregunta42").removeClass('hidden');
+          $("#pregunta43").addClass('hidden');
+          $("#pregunta44").addClass('hidden');                           
         }
       });
     $('#res_pregunta45').change(function(){

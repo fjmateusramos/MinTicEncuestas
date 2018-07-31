@@ -1,6 +1,24 @@
 class Encuestum < ApplicationRecord
 
-
+  validates :nombre_coordinador, :presence => true
+  validates :nombre_supervisor, :presence => true
+  validates :telefono, :presence => true    
+  validates :hora_final, :presence => true
+  validates :direccion, :presence => true
+  validates :telefono_celular, :presence => true  
+  validates :departamento, :presence => true
+  validates :municipio, :presence => true
+  validates :manzana, :presence => true
+  validates :vivienda, :presence => true
+  validates :hora, :presence => true
+  validates :id_persona_activa, :presence => true
+  validates :zona, :presence => true
+  validates :fecha, :presence => true
+  validates :hora_inicial, :presence => true
+  validates :nombre_encuestado, :presence => true
+  validates :sexo, :presence => true
+  validates :años, :presence => true
+  validates :F1, :presence => true
 
 
   before_save do
