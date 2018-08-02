@@ -134,14 +134,22 @@
     </div>
     <div class="field">
       <%= f.label :pregunta2, '2. Cuando recibió el último servicio de salud, ¿Estaba usted afiliado a esta misma EPS? ' , {id:"ident_caract_usuario"}%>
-      <%= f.select :pregunta2, ["Si","No"],{:include_blank => true}, {class: "form-control", id:"ident_caract_usuario"}%>
+      <%= f.select :pregunta2, ["Si","No"],{:include_blank => true}, {class: "form-control", id:"res_pregunta2"}%>
     </div>
-    <div class="field">
-        <%= f.label :pregunta2B, '2B. Régimen' %>
-        <%= f.select :pregunta2B, ["Contributivo","Subsidiado"],{:include_blank => true}, {class: "form-control", id:"ident_caract_usuario"}%>
+    <div id="pregunta2A">
+      <div class="field">
+          <%= f.label :pregunta2A, '2A. En que EPS estaba afiliado' %>
+          <%= f.select :pregunta2A, ["ALIANSALUD ENTIDAD PROMOTORA DE SALUD S.A.","ANASWAYUU","ASOCIACIÓN INDÍGENA DEL CAUCA","ASOCIACIÓN INDÍGENA DEL CESAR Y LA GUAJIRA  DUSAKAWI","ASOCIACIÓN MUTUAL BARRIOS UNIDOS DE QUIBDÓ E.S.S.","ASOCIACIÓN MUTUAL EMPRESA SOLIDARIA DE SALUD DE NARIÑO E.S.S. EMSSANAR E.S.S.","ASOCIACIÓN MUTUAL LA ESPERANZA ASMET  SALUD","ASOCIACIÓN MUTUAL SER EMPRESA SOLIDARIA DE SALUD ESS","CAJA DE COMPENSACIÓN FAMILIAR  DE CARTAGENA COMFAMILIAR CARTAGENA","CAJA DE COMPENSACIÓN FAMILIAR C.C.F. DEL ORIENTE COLOMBIANO COMFAORIENTE","CAJA DE COMPENSACION FAMILIAR DE CORDOBA  COMFACOR","CAJA DE COMPENSACIÓN FAMILIAR DE CUNDINAMARCA COMFACUNDI","CAJA DE COMPENSACIÓN FAMILIAR DE LA GUAJIRA","CAJA DE COMPENSACIÓN FAMILIAR DE NARIÑO COMFAMILIAR NARIÑO","CAJA DE COMPENSACIÓN FAMILIAR DE SUCRE","CAJA DE COMPENSACIÓN FAMILIAR DEL CHOCÓ COMFACHOCO","CAJA DE COMPENSACIÓN FAMILIAR DEL HUILA COMFAMILIAR","CAJA DE DE COMPENSACION FAMILIAR  CAJACOPI ATLANTICO","CAPITAL SALUD","CAPRESOCA  EPS","COMFENALCO  VALLE  E.P.S.","COMPENSAR   E.P.S.","COOMEVA   E.P.S.  S.A.","COOPERATIVA DE SALUD COMUNITARIA-COMPARTA","COOPERATIVA DE SALUD Y DESARROLLO INTEGRAL ZONA SUR ORIENTAL DE CARTAGENA LTDA. COOSALUD E.S.S.","CRUZ BLANCA  EPS S.A.","E.P.S.  FAMISANAR  LTDA.","E.P.S.  SANITAS  S.A.","EMPRESA MUTUAL PARA EL DESARROLLO INTEGRAL  DE LA SALUD E.S.S. EMDISALUD ESS","ENTIDAD COOPERATIVA SOL.DE SALUD DEL NORTE DE SOACHA ECOOPSOS","EPS  CONVIDA","EPS SERVICIO OCCIDENTAL DE SALUD  S.A. - EPS S.O.S. S.A.","EPS Y MEDICINA PREPAGADA SURAMERICANA S.A","MALLAMAS","MEDIMAS","NUEVA EPS S.A.","PIJAOS SALUD EPSI","SALUD  TOTAL  S.A.  E.P.S.","SALUDVIDA S.A .E.P.S","SAVIA SALUD EPS"],{:include_blank => true}, {class: "form-control", id:"ident_caract_usuario"}%>
+      </div>
     </div>
+    <div id="pregunta2B">  
+      <div class="field">
+          <%= f.label :pregunta2B, '2B. Régimen' %>
+          <%= f.select :pregunta2B, ["Contributivo","Subsidiado"],{:include_blank => true}, {class: "form-control", id:"ident_caract_usuario"}%>
+      </div>
+    </div>  
     <div class="field">
-        <%= f.label :pregunta3, '¿3. Qué tipo de afiliado es usted en la EPS?' %>
+        <%= f.label :pregunta3, '3. Qué tipo de afiliado es usted en la EPS?' %>
         <%= f.select :pregunta3, ["Cotizante en el régimen contributivo","Beneficiario en el régimen contributivo","Afiliado al régimen subsidiado (SISBEN)"],{:include_blank => true}, {class: "form-control", id:"res_pregunta3"}%>
     </div>
     <div class="field" id="pregunta4">
@@ -3857,6 +3865,16 @@ $(document).ready(function(){
         $("#identificaciondiv").removeClass('hidden');
         }
     });
+    $('#res_pregunta2').change(function(){
+        if($('#res_pregunta2').val() == "No"){
+          $("#pregunta2A").removeClass('hidden');
+          $("#pregunta2B").removeClass('hidden');          
+        }
+        else{
+          $("#pregunta2A").addClass('hidden');
+          $("#pregunta2B").addClass('hidden'); 
+        }
+      });
     $('#res_pregunta3').change(function(){
         if($('#res_pregunta3').val() == "Beneficiario en el régimen contributivo" || $('#res_pregunta3').val()== "Afiliado al régimen subsidiado (SISBEN)"){
           $("#pregunta5").addClass('hidden');
@@ -3869,7 +3887,6 @@ $(document).ready(function(){
           $("#pregunta7B").removeClass('hidden');
         }
       });  
-  
     $('#res_pregunta4').change(function(){
         if($('#res_pregunta4').val() == "Si" || $('#res_pregunta4').val()== "No recuerda"){
           $("#pregunta5").addClass('hidden');
