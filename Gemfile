@@ -22,6 +22,7 @@ gem 'bootstrap', '~> 4.1.2'
 gem 'rails_admin', '~> 1.3'
 gem 'jquery-rails'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'rack-offline'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

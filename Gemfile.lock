@@ -180,6 +180,7 @@ GEM
     public_suffix (3.0.2)
     puma (3.12.0)
     rack (2.0.5)
+    rack-offline (0.6.4)
     rack-pjax (1.0.0)
       nokogiri (~> 1.5)
       rack (>= 1.1)
@@ -306,6 +307,7 @@ DEPENDENCIES
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
+  rack-offline
   rails (~> 5.2.0)
   rails_admin (~> 1.3)
   sass-rails (~> 5.0)

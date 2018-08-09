@@ -3615,8 +3615,8 @@
   <br>
   <div class="col-md-12">
     <div class="row">
-      <div class="col-md-4">
-        <%= f.submit "Guardar con internet" , {class:"btn btn-primary btn-xl", style:"background-color: #15690f !important;height: 50px;background-image:  none !important;color: white;"}%>
+      <div class="col-md-12 text-center">
+        <a href="http://localhost:3000/"><input type="button" value="Guardar Sin internet" class="btn btn-primary btn-xl" id="Guardar_Sin_Internet" style="background-color: #15690f !important;height: 50px;background-image:  none !important;color: white;" /></a>
       </div>
     </div>
   </div>  
@@ -4423,6 +4423,10 @@ $(document).ready(function(){
         }
       });                                                                      
    });
+    $('#Guardar_Sin_Internet').click(function(){
+      alert("Encuesta Guardada con Exito");
+    });
+    
 
 
 </script>

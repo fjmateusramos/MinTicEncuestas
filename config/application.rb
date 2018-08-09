@@ -6,6 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+ENV["RAILS_ASSET_ID"] = "" # disable timestamps at end of asset files for offline browsing
 module MinTicEncuestas
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
