@@ -66,14 +66,14 @@
   </div>
   <div class="field">
     <%= f.label :sexo, 'L8. Sexo' %>
-    <%= f.select :sexo, ["Masculino","Femenino"],{:include_blank => true}, {class: "form-control", id:"sexo"}%>
+    <%= f.select :sexo, ["Masculino","Femenino"],{:include_blank => true}, {class: "form-control", id:"sexo_l8"}%>
   </div>
   <div class="field">
     <div class="alert alert-primary" role="alert">
     ENC:  Si menor 18, o mayor de 80 años, o incapacitado para informar, solicite acompañante a ultimo servicio (IDÓNEO)
     </div>
     <%= f.label :años, 'L9. Años' %>
-    <%= f.text_field :años, class: 'form-control', placeholder:'Años', id:'años' %>
+    <%= f.text_field :años, class: 'form-control', placeholder:'Años', id:'años_l9' %>
   </div>
 <br>
   <h2> II. FILTROS DE SELECCIÓN </h2>
@@ -557,104 +557,106 @@
         </div>
       </div>
     </div>  
-
-    <div class="input-group">
-      <div class="col-md-6">
-      <label id="servicios">B1. Consulta de Obstetricia - control embarazo</label>
-      </div>
-      <div class="col-md-12 input-group">
-        <div class="col-md-4">
-        <%= f.label :pregunta10_b1, "10B1. Lo Utilizó" , id:"servicios"%>
-        </div>
-        <div class="col-md-8">
-        <%= f.select :pregunta10_b1, ["Si","No"],{:include_blank => true}, {class: "form-control", id:"res_pregunta10_b1"}%>
-        </div>
-      </div>
-      <div id="pregunta10_b1">
-        <div class="col-md-12 input-group">
-          <div class="col-md-3">
-          <label id="servicios">11B1. Cómo califica el ÚLTIMO servicio recibido?</label>      
-          </div>
-          <div class="col-md-9 input-group" style="padding-top: 10px;">
-            <%= f.radio_button :pregunta11_b1, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal servicio</div>
-            <%= f.radio_button :pregunta11_b1, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
-            <%= f.radio_button :pregunta11_b1, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
-            <%= f.radio_button :pregunta11_b1, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"sexo"} %><div>Buen servicio</div>
-            <%= f.radio_button :pregunta11_b1, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
-          </div>
+    <div id="PreguntaB1" class="hidden">
+      <div class="input-group">
+        <div class="col-md-6">
+        <label id="servicios">B1. Consulta de Obstetricia - control embarazo</label>
         </div>
         <div class="col-md-12 input-group">
           <div class="col-md-4">
-          <%= f.label :pregunta12_b1, "12B1. Tiempo espera", id:"servicios"%>
+          <%= f.label :pregunta10_b1, "10B1. Lo Utilizó" , id:"servicios"%>
           </div>
-          <div class="col-md-8 input-group">
-          <%= f.text_field :pregunta12_b1_hora , id:"servicios"%>
-          <%= f.select :pregunta12_b1, ["Días","Horas","Minutos"],{:include_blank => true}, {class: "form-control",style:"margin-left:20px;", id:"servicios"}%>
+          <div class="col-md-8">
+          <%= f.select :pregunta10_b1, ["Si","No"],{:include_blank => true}, {class: "form-control", id:"res_pregunta10_b1"}%>
           </div>
+        </div>
+        <div id="pregunta10_b1">
+          <div class="col-md-12 input-group">
+            <div class="col-md-3">
+            <label id="servicios">11B1. Cómo califica el ÚLTIMO servicio recibido?</label>      
+            </div>
+            <div class="col-md-9 input-group" style="padding-top: 10px;">
+              <%= f.radio_button :pregunta11_b1, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal servicio</div>
+              <%= f.radio_button :pregunta11_b1, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
+              <%= f.radio_button :pregunta11_b1, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
+              <%= f.radio_button :pregunta11_b1, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"sexo"} %><div>Buen servicio</div>
+              <%= f.radio_button :pregunta11_b1, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
+            </div>
+          </div>
+          <div class="col-md-12 input-group">
+            <div class="col-md-4">
+            <%= f.label :pregunta12_b1, "12B1. Tiempo espera", id:"servicios"%>
+            </div>
+            <div class="col-md-8 input-group">
+            <%= f.text_field :pregunta12_b1_hora , id:"servicios"%>
+            <%= f.select :pregunta12_b1, ["Días","Horas","Minutos"],{:include_blank => true}, {class: "form-control",style:"margin-left:20px;", id:"servicios"}%>
+            </div>
+          </div>
+          <div class="col-md-12 input-group">
+            <div class="col-md-4">
+            <label id="servicios">13B1. Cómo califica el ÚLTIMO servicio recibido?</label>      
+            </div>
+            <div class="col-md-8 input-group" style="padding-top: 10px;">
+            <%= f.radio_button :pregunta13_b1, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
+            <%= f.radio_button :pregunta13_b1, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
+            <%= f.radio_button :pregunta13_b1, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
+            <%= f.radio_button :pregunta13_b1, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
+            <%= f.radio_button :pregunta13_b1, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>   
+    <div id="PreguntaB2" class="hidden">
+      <div class="input-group">
+        <div class="col-md-6">
+        <label id="servicios">B2. Consulta de ginecología: citologías, y otros relacionados sin incluir embarazo</label>
         </div>
         <div class="col-md-12 input-group">
           <div class="col-md-4">
-          <label id="servicios">13B1. Cómo califica el ÚLTIMO servicio recibido?</label>      
+          <%= f.label :pregunta10_b2, "10B2. Lo Utilizó" , id:"servicios"%>
           </div>
-          <div class="col-md-8 input-group" style="padding-top: 10px;">
-          <%= f.radio_button :pregunta13_b1, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
-          <%= f.radio_button :pregunta13_b1, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
-          <%= f.radio_button :pregunta13_b1, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
-          <%= f.radio_button :pregunta13_b1, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
-          <%= f.radio_button :pregunta13_b1, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
+          <div class="col-md-8">
+          <%= f.select :pregunta10_b2, ["Si","No"],{:include_blank => true}, {class: "form-control", id:"res_pregunta10_b2"}%>
+          </div>
+        </div>
+        <div id="pregunta10_b2">
+          <div class="col-md-12 input-group">
+            <div class="col-md-3">
+            <label id="servicios">11B2. Cómo califica el ÚLTIMO servicio recibido?</label>      
+            </div>
+            <div class="col-md-9 input-group" style="padding-top: 10px;">
+            <%= f.radio_button :pregunta11_b2, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal servicio</div>
+            <%= f.radio_button :pregunta11_b2, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
+            <%= f.radio_button :pregunta11_b2, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
+            <%= f.radio_button :pregunta11_b2, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen servicio</div>
+            <%= f.radio_button :pregunta11_b2, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
+            </div>
+          </div>
+          <div class="col-md-12 input-group">
+            <div class="col-md-4">
+            <%= f.label :pregunta12_b2, "12B2. Tiempo espera" , id:"servicios"%>
+            </div>
+            <div class="col-md-8 input-group">
+            <%= f.text_field :pregunta12_b2_hora %>
+            <%= f.select :pregunta12_b2, ["Días","Horas","Minutos"],{:include_blank => true}, {class: "form-control",style:"margin-left:20px;", id:"servicios"}%>
+            </div>
+          </div>
+          <div class="col-md-12 input-group">
+            <div class="col-md-4">
+            <label id="servicios">13B2. Cómo califica el ÚLTIMO servicio recibido?</label>      
+            </div>
+            <div class="col-md-8 input-group" style="padding-top: 10px;">
+            <%= f.radio_button :pregunta13_b2, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
+            <%= f.radio_button :pregunta13_b2, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
+            <%= f.radio_button :pregunta13_b2, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
+            <%= f.radio_button :pregunta13_b2, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
+            <%= f.radio_button :pregunta13_b2, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
+            </div>
           </div>
         </div>
       </div>
     </div>  
-
-    <div class="input-group">
-      <div class="col-md-6">
-      <label id="servicios">B2. Consulta de ginecología: citologías, y otros relacionados sin incluir embarazo</label>
-      </div>
-      <div class="col-md-12 input-group">
-        <div class="col-md-4">
-        <%= f.label :pregunta10_b2, "10B2. Lo Utilizó" , id:"servicios"%>
-        </div>
-        <div class="col-md-8">
-        <%= f.select :pregunta10_b2, ["Si","No"],{:include_blank => true}, {class: "form-control", id:"res_pregunta10_b2"}%>
-        </div>
-      </div>
-      <div id="pregunta10_b2">
-        <div class="col-md-12 input-group">
-          <div class="col-md-3">
-          <label id="servicios">11B2. Cómo califica el ÚLTIMO servicio recibido?</label>      
-          </div>
-          <div class="col-md-9 input-group" style="padding-top: 10px;">
-          <%= f.radio_button :pregunta11_b2, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal servicio</div>
-          <%= f.radio_button :pregunta11_b2, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
-          <%= f.radio_button :pregunta11_b2, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
-          <%= f.radio_button :pregunta11_b2, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen servicio</div>
-          <%= f.radio_button :pregunta11_b2, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
-          </div>
-        </div>
-        <div class="col-md-12 input-group">
-          <div class="col-md-4">
-          <%= f.label :pregunta12_b2, "12B2. Tiempo espera" , id:"servicios"%>
-          </div>
-          <div class="col-md-8 input-group">
-          <%= f.text_field :pregunta12_b2_hora %>
-          <%= f.select :pregunta12_b2, ["Días","Horas","Minutos"],{:include_blank => true}, {class: "form-control",style:"margin-left:20px;", id:"servicios"}%>
-          </div>
-        </div>
-        <div class="col-md-12 input-group">
-          <div class="col-md-4">
-          <label id="servicios">13B2. Cómo califica el ÚLTIMO servicio recibido?</label>      
-          </div>
-          <div class="col-md-8 input-group" style="padding-top: 10px;">
-          <%= f.radio_button :pregunta13_b2, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
-          <%= f.radio_button :pregunta13_b2, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
-          <%= f.radio_button :pregunta13_b2, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
-          <%= f.radio_button :pregunta13_b2, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
-          <%= f.radio_button :pregunta13_b2, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="input-group">
       <div class="col-md-6">
       <label id="servicios">B3. Consulta de medicina interna: internista</label>
@@ -703,55 +705,56 @@
           </div>
         </div>
       </div>  
-
-    <div class="input-group">
-      <div class="col-md-6">
-      <label id="servicios">B4. Consulta de pediatría</label>
-      </div>
-      <div class="col-md-12 input-group">
-        <div class="col-md-4">
-        <%= f.label :pregunta10_b4, "10B4. Lo Utilizó", id:"servicios"%>
-        </div>
-        <div class="col-md-8">
-        <%= f.select :pregunta10_b4, ["Si","No"],{:include_blank => true}, {class: "form-control", id:"res_pregunta10_b4"}%>
-        </div>
-      </div>
-      <div id="pregunta10_b4">
-        <div class="col-md-12 input-group">
-          <div class="col-md-3">
-          <label id="servicios">11B4. Cómo califica el ÚLTIMO servicio recibido?</label>      
-          </div>
-          <div class="col-md-9 input-group" style="padding-top: 10px;">
-          <%= f.radio_button :pregunta11_b4, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal servicio</div>
-          <%= f.radio_button :pregunta11_b4, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
-          <%= f.radio_button :pregunta11_b4, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
-          <%= f.radio_button :pregunta11_b4, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen servicio</div>
-          <%= f.radio_button :pregunta11_b4, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
-          </div>
+    <div id="PreguntaB4" class="hidden">
+      <div class="input-group">
+        <div class="col-md-6">
+        <label id="servicios">B4. Consulta de pediatría</label>
         </div>
         <div class="col-md-12 input-group">
           <div class="col-md-4">
-          <%= f.label :pregunta12_b4, "12B4. Tiempo espera" , id:"servicios"%>
+          <%= f.label :pregunta10_b4, "10B4. Lo Utilizó", id:"servicios"%>
           </div>
-          <div class="col-md-8 input-group">
-          <%= f.text_field :pregunta12_b4_hora , id:"servicios" %>
-          <%= f.select :pregunta12_b4, ["Días","Horas","Minutos"],{:include_blank => true}, {class: "form-control",style:"margin-left:20px;", id:"servicios"}%>
+          <div class="col-md-8">
+          <%= f.select :pregunta10_b4, ["Si","No"],{:include_blank => true}, {class: "form-control", id:"res_pregunta10_b4"}%>
           </div>
         </div>
-        <div class="col-md-12 input-group">
-          <div class="col-md-4">
-          <label id="servicios">13B4. Cómo califica el ÚLTIMO servicio recibido?</label>      
+        <div id="pregunta10_b4">
+          <div class="col-md-12 input-group">
+            <div class="col-md-3">
+            <label id="servicios">11B4. Cómo califica el ÚLTIMO servicio recibido?</label>      
+            </div>
+            <div class="col-md-9 input-group" style="padding-top: 10px;">
+            <%= f.radio_button :pregunta11_b4, "Muy mal servicio" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy mal servicio</div>
+            <%= f.radio_button :pregunta11_b4, "Mal servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Mal servicio</div>
+            <%= f.radio_button :pregunta11_b4, "Ni bueno ni malo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni bueno ni malo </div>
+            <%= f.radio_button :pregunta11_b4, "Buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Buen servicio</div>
+            <%= f.radio_button :pregunta11_b4, "Muy buen servicio", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy buen servicio</div>
+            </div>
           </div>
-          <div class="col-md-8 input-group" style="padding-top: 10px;">
-          <%= f.radio_button :pregunta13_b4, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
-          <%= f.radio_button :pregunta13_b4, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
-          <%= f.radio_button :pregunta13_b4, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
-          <%= f.radio_button :pregunta13_b4, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
-          <%= f.radio_button :pregunta13_b4, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
+          <div class="col-md-12 input-group">
+            <div class="col-md-4">
+            <%= f.label :pregunta12_b4, "12B4. Tiempo espera" , id:"servicios"%>
+            </div>
+            <div class="col-md-8 input-group">
+            <%= f.text_field :pregunta12_b4_hora , id:"servicios" %>
+            <%= f.select :pregunta12_b4, ["Días","Horas","Minutos"],{:include_blank => true}, {class: "form-control",style:"margin-left:20px;", id:"servicios"}%>
+            </div>
+          </div>
+          <div class="col-md-12 input-group">
+            <div class="col-md-4">
+            <label id="servicios">13B4. Cómo califica el ÚLTIMO servicio recibido?</label>      
+            </div>
+            <div class="col-md-8 input-group" style="padding-top: 10px;">
+            <%= f.radio_button :pregunta13_b4, "Muy largo" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"}%><div>Muy largo</div>
+            <%= f.radio_button :pregunta13_b4, "Largo", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Largo</div>
+            <%= f.radio_button :pregunta13_b4, "Ni largo ni corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Ni largo ni corto</div>
+            <%= f.radio_button :pregunta13_b4, "Corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Corto</div>
+            <%= f.radio_button :pregunta13_b4, "Muy corto", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"servicios"} %><div>Muy corto</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </div>  
 
     <div class="input-group">
       <div class="col-md-6">
@@ -2519,72 +2522,73 @@
         </div>
       </div>  
     </div>
-
-    <div class="input-group">
-      <div class="col-md-6">
-      <label id="otros_servicios">14. Radicar una Licencia de maternidad (Solo aplica para mujeres entre los 12 a los 58 años. Si es hombre, verifique si ha solicidado la licencia en los últimos 6 meses)</label>
+    <div id="Pregunta2014" class="hidden">
+      <div class="input-group">
+        <div class="col-md-6">
+        <label id="otros_servicios">14. Radicar una Licencia de maternidad (Solo aplica para mujeres entre los 12 a los 58 años. Si es hombre, verifique si ha solicidado la licencia en los últimos 6 meses)</label>
+        </div>
+        <div class="col-md-12 input-group">
+          <div class="col-md-4">
+          <%= f.label :pregunta20A_14, "20A. En los últimos 6 meses usted necesito .. …?",id:"otros_servicios"%>
+          </div>
+          <div class="col-md-8">
+          <%= f.select :pregunta20A_14, ["Si","No"],{:include_blank => true}, {class: "form-control",id:"res_pregunta20a_14"}%>
+          </div>
+        </div>
+        <div id="pregunta20_14">
+          <div class="col-md-12 input-group">
+            <div class="col-md-4">
+            <%= f.label :pregunta20B_14, "20B.  La última vez que hizo este trámite de ….. :, ¿A través de qué medio o persona lo realizó?", id:"otros_servicios"%>     
+            </div>
+            <div class="col-md-8">
+            <%= f.select :pregunta20B_14, ["Presencial, tuve que asistir personalmente","Presencial, me representó un familiar, amigo o conocido","Enviar Email - tramitar por Web","Radicar por escrito
+              (carta-formato)","Telefónicamente"],{:include_blank => true}, {class: "form-control", id:"otros_servicios"}%>
+            </div>
+          </div>
+          <div class="col-md-12 input-group">
+            <div class="col-md-4">
+            <%= f.label :pregunta20B_14_otra, "Otra, ¿Cuál?" ,id:"otros_servicios"%>     
+            </div>
+            <div class="col-md-8">
+            <%= f.text_field :pregunta20B_14_otra, {class: "form-control",placeholder:"Otra,¿Cuál?" ,id:"otros_servicios"}%>
+            </div>
+          </div>
+          <div class="col-md-12 input-group">
+            <div class="col-md-4">
+            <%= f.label :pregunta20C_14, "20C. Cuanto tiempo le tomó  hacer éste trámite" ,id:"otros_servicios"%>
+            </div>
+            <div class="col-md-8 input-group" style="padding: 15px;">
+            <%= f.text_field :pregunta20C_14_hora ,id:"otros_servicios" %>
+            <%= f.select :pregunta20C_14, ["Días","Horas","Minutos"],{:include_blank => true}, {class: "form-control",style:"margin-left:20px;",id:"otros_servicios"}%>
+            </div>
+          </div>
+          <div class="col-md-12 input-group">
+            <div class="col-md-4">
+            <%= f.label :pregunta20D_14, "20D. A cuántas ventanillas o numero de funcionarios se contacto para hacer este  tramite totalmente?",id:"otros_servicios"%>     
+            </div>
+            <div class="col-md-8">
+            <%= f.text_field :pregunta20D_14, {class: "form-control",id:"otros_servicios"}%>
+            </div>
+          </div>
+          <div class="col-md-12 input-group">
+            <div class="col-md-4">
+            <%= f.label :pregunta20E_14, "20E. ¿Debió trasladarse a otro municipio para realizar este tramite?",id:"otros_servicios"%>
+            </div>
+            <div class="col-md-8 input-group">
+            <%= f.select :pregunta20E_14, ["Si","No"],{:include_blank => true}, {class: "form-control",style:"margin-left:20px;",id:"otros_servicios"}%>
+            </div>
+          </div>
+          <div class="col-md-12 input-group">
+            <div class="col-md-4">
+            <%= f.label :pregunta20F_14, "20F. ¿Logró finalizar este trámite?",id:"otros_servicios"%>
+            </div>
+            <div class="col-md-8 input-group">
+            <%= f.select :pregunta20F_14, ["SI, ya finalizó","No, está en proceso.","No, desertó de hacerlo"],{:include_blank => true}, {class: "form-control",style:"margin-left:20px;",id:"otros_servicios"}%>
+            </div>
+          </div>
+        </div>  
       </div>
-      <div class="col-md-12 input-group">
-        <div class="col-md-4">
-        <%= f.label :pregunta20A_14, "20A. En los últimos 6 meses usted necesito .. …?",id:"otros_servicios"%>
-        </div>
-        <div class="col-md-8">
-        <%= f.select :pregunta20A_14, ["Si","No"],{:include_blank => true}, {class: "form-control",id:"res_pregunta20a_14"}%>
-        </div>
-      </div>
-      <div id="pregunta20_14">
-        <div class="col-md-12 input-group">
-          <div class="col-md-4">
-          <%= f.label :pregunta20B_14, "20B.  La última vez que hizo este trámite de ….. :, ¿A través de qué medio o persona lo realizó?", id:"otros_servicios"%>     
-          </div>
-          <div class="col-md-8">
-          <%= f.select :pregunta20B_14, ["Presencial, tuve que asistir personalmente","Presencial, me representó un familiar, amigo o conocido","Enviar Email - tramitar por Web","Radicar por escrito
-            (carta-formato)","Telefónicamente"],{:include_blank => true}, {class: "form-control", id:"otros_servicios"}%>
-          </div>
-        </div>
-        <div class="col-md-12 input-group">
-          <div class="col-md-4">
-          <%= f.label :pregunta20B_14_otra, "Otra, ¿Cuál?" ,id:"otros_servicios"%>     
-          </div>
-          <div class="col-md-8">
-          <%= f.text_field :pregunta20B_14_otra, {class: "form-control",placeholder:"Otra,¿Cuál?" ,id:"otros_servicios"}%>
-          </div>
-        </div>
-        <div class="col-md-12 input-group">
-          <div class="col-md-4">
-          <%= f.label :pregunta20C_14, "20C. Cuanto tiempo le tomó  hacer éste trámite" ,id:"otros_servicios"%>
-          </div>
-          <div class="col-md-8 input-group" style="padding: 15px;">
-          <%= f.text_field :pregunta20C_14_hora ,id:"otros_servicios" %>
-          <%= f.select :pregunta20C_14, ["Días","Horas","Minutos"],{:include_blank => true}, {class: "form-control",style:"margin-left:20px;",id:"otros_servicios"}%>
-          </div>
-        </div>
-        <div class="col-md-12 input-group">
-          <div class="col-md-4">
-          <%= f.label :pregunta20D_14, "20D. A cuántas ventanillas o numero de funcionarios se contacto para hacer este  tramite totalmente?",id:"otros_servicios"%>     
-          </div>
-          <div class="col-md-8">
-          <%= f.text_field :pregunta20D_14, {class: "form-control",id:"otros_servicios"}%>
-          </div>
-        </div>
-        <div class="col-md-12 input-group">
-          <div class="col-md-4">
-          <%= f.label :pregunta20E_14, "20E. ¿Debió trasladarse a otro municipio para realizar este tramite?",id:"otros_servicios"%>
-          </div>
-          <div class="col-md-8 input-group">
-          <%= f.select :pregunta20E_14, ["Si","No"],{:include_blank => true}, {class: "form-control",style:"margin-left:20px;",id:"otros_servicios"}%>
-          </div>
-        </div>
-        <div class="col-md-12 input-group">
-          <div class="col-md-4">
-          <%= f.label :pregunta20F_14, "20F. ¿Logró finalizar este trámite?",id:"otros_servicios"%>
-          </div>
-          <div class="col-md-8 input-group">
-          <%= f.select :pregunta20F_14, ["SI, ya finalizó","No, está en proceso.","No, desertó de hacerlo"],{:include_blank => true}, {class: "form-control",style:"margin-left:20px;",id:"otros_servicios"}%>
-          </div>
-        </div>
-      </div>  
-    </div>
+    </div>  
 
     <div class="input-group">
       <div class="col-md-6">
@@ -3616,7 +3620,7 @@
   <div class="col-md-12">
     <div class="row">
       <div class="col-md-12 text-center">
-        <a href="http://minsalud.bigasigma.com/"><input type="button" value="Guardar Sin internet" class="btn btn-primary btn-xl" id="Guardar_Sin_Internet" style="background-color: #15690f !important;height: 50px;background-image:  none !important;color: white;" /></a>
+        <a href="http://minsalud.sigmadosbioestadistica.com/"><input type="button" value="Guardar Sin internet" class="btn btn-primary btn-xl" id="Guardar_Sin_Internet" style="background-color: #15690f !important;height: 50px;background-image:  none !important;color: white;" /></a>
       </div>
     </div>
   </div>  
@@ -4421,12 +4425,51 @@ $(document).ready(function(){
         else{
           $("#pregunta57585960").removeClass('hidden');       
         }
-      });                                                                      
-   });
+      });
+
     $('#Guardar_Sin_Internet').click(function(){
       alert("Encuesta Guardada con Exito");
     });
-    
+
+    $('#sexo_l8').change(function(){
+      if($('#sexo_l8').val() == "Masculino"){
+        $("#PreguntaB1").addClass('hidden');
+        $("#PreguntaB2").addClass('hidden');
+      }
+    });
+
+    $('#años_l9').change(function(){
+      if ($('#sexo_l8').val() == "Femenino" && $('#años_l9').val() >= 11){
+            $("#PreguntaB1").removeClass('hidden');
+            $("#PreguntaB2").removeClass('hidden');
+        }else if($('#sexo_l8').val() == "Femenino" && $('#años_l9').val() <= 18){
+            $("#PreguntaB4").removeClass('hidden');
+        }else if($('#sexo_l8').val() == "Femenino" && $('#años_l9').val() >= 59){
+            $("#PreguntaB2").addClass('hidden');
+        }else if($('#sexo_l8').val() == "Masculino" && $('#años_l9').val() <= 18){
+            $("#PreguntaB4").removeClass('hidden');
+        }
+    });
+    $('#años_l9').change(function(){
+        if($('#sexo_l8').val() == "Femenino" && $('#años_l9').val() <= 18){
+            $("#PreguntaB4").removeClass('hidden');
+        }else if($('#sexo_l8').val() == "Femenino" && $('#años_l9').val() >= 59){
+            $("#PreguntaB2").addClass('hidden');
+        }else if($('#sexo_l8').val() == "Masculino" && $('#años_l9').val() <= 18){
+            $("#PreguntaB4").removeClass('hidden');
+        }
+    });
+    $('#años_l9').change(function(){
+        if($('#sexo_l8').val() == "Femenino" && $('#años_l9').val() >= 18 && $('#años_l9').val() <= 60){
+            $("#Pregunta2014").removeClass('hidden');
+        }else if($('#sexo_l8').val() == "Masculino" && $('#años_l9').val() >= 12){
+            $("#Pregunta2014").removeClass('hidden');
+        }
+    });
+});
+   
+
+   
 
 
 </script>

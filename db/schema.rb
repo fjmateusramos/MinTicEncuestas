@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_27_194030) do
+ActiveRecord::Schema.define(version: 2018_08_10_010127) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -396,7 +396,6 @@ ActiveRecord::Schema.define(version: 2018_07_27_194030) do
     t.string "hora_inicial"
     t.string "nombre_encuestado"
     t.string "sexo"
-    t.string "años"
     t.string "F1"
     t.string "F1A"
     t.string "F2"
@@ -475,6 +474,7 @@ ActiveRecord::Schema.define(version: 2018_07_27_194030) do
     t.string "pregunta20C_20_hora"
     t.string "pregunta20C_21_hora"
     t.string "telefono_celular"
+    t.integer "años", limit: 2
   end
 
 end
