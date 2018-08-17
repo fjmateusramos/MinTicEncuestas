@@ -19,6 +19,8 @@
 //= require popper
 //= require bootstrap
 //= require bootstrap-sprockets
+//= require Chart.bundle
+//= require chartkick
 //= require_tree .
 $(function() {
   $(window.applicationCache).bind("error", function() {

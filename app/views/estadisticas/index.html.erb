@@ -1,0 +1,36 @@
+<header>  
+  <div class="row">
+    <div class="col-md-4">
+      <img src="<%= asset_path 'bioestadistica.png' %>">
+    </div>
+    <div class="col-md-4">
+      <img src="<%= asset_path 'minsalud2.png' %>">
+    </div>
+    <div class="col-md-4">
+      <img src="<%= asset_path 'gss2.png' %>">
+    </div>
+  </div>
+</header>
+<div class="container">
+  <h2 class="text-center">Estadisticas del estudio de evaluación de los servicios de las EPS por parte de los usuarios, en el régimen contributivo y subsidiado.</h2>
+    <div class="alert alert-danger" role="alert">
+    Los datos que se muestran, corresponden a la última actualización de la base de datos, puede que existan datos pendientes de actualizar.
+    </div>
+  <br>
+  <div id="Departamentos">
+  	<label> <strong> L1. Departamentos </strong> </label>
+  	<%= column_chart Encuestum.group(:departamento).count(:id) %>
+  </div>
+  <div id="Municipio">
+  	<label> <strong> L2. Municipio </strong> </label>
+  	<%= column_chart Encuestum.group(:municipio).count(:id) %>
+  </div>
+  <div id="Sexo">
+  	<label> <strong> L8. Sexo </strong> </label>
+  	<%= pie_chart Encuestum.group(:sexo).count(:id) %>
+  </div>
+  <div id="Sexo">
+  	<label> <strong> 1. ¿A qué EPS se encuentra afiliado actualmente?  </strong> </label>
+  	<%= bar_chart Encuestum.group(:pregunta1).count(:id) %>
+  </div>
+</div>
