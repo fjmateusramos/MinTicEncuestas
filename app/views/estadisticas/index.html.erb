@@ -209,6 +209,280 @@
   	<label> <strong> 9. G. Cantidad de  hospitales y puestos de salud </strong> </label>
   	<%= column_chart Encuestum.group(:pregunta9G).count(:id) %>
   </div>
-  
+<h3>10. En los últimos 6 meses ¿Cuáles de los siguientes servicios de salud ha utilizado usted a través de su EPS?</h3>
+ <div id="Pregunta10A">
+    <label> <strong> 10. A. Consulta de medicina general </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta10_a).count(:id) %>
+  </div>
+  <div id="Pregunta10B1">
+    <label> <strong> 10. B1. Consulta de Obstetricia - control embarazo </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta10_b1).count(:id) %>
+  </div>
+  <div id="Pregunta10B2">
+    <label> <strong> 10. B2. Consulta de ginecología: citologías, y otros relacionados sin incluir embarazo </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta10_b2).count(:id) %>
+  </div>
+  <div id="Pregunta10B3">
+    <label> <strong> 10. B3. Consulta de medicina interna: internista </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta10_b3).count(:id) %>
+  </div>  
+  <div id="Pregunta10B4">
+    <label> <strong> 10. B4. Consulta de pediatría </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta10_b4).count(:id) %>
+  </div>
+  <div id="Pregunta10B5">
+    <label> <strong> 10. B5. Cirugía general </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta10_b5).count(:id) %>
+  </div>
+  <div id="Pregunta10B6">
+    <label> <strong> 10. B6. Otras consultas de medicina especializada: cardiología, neurología y ortopedia </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta10_b6).count(:id) %>
+  </div> 
+  <div id="Pregunta10C">
+    <label> <strong> 10. C. Citas prioritarias cita no programada </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta10_c).count(:id) %>
+  </div> 
+  <div id="Pregunta10D">
+    <label> <strong> 10. D. Urgencias </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta10_d).count(:id) %>
+  </div> 
+  <div id="Pregunta10E">
+    <label> <strong> 10. E. Hospitalización </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta10_e).count(:id) %>
+  </div> 
+  <div id="Pregunta10F">
+    <label> <strong> 10. F. Domiciliario: médicos, cuidados </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta10_f).count(:id) %>
+  </div> 
+  <div id="Pregunta10G">
+    <label> <strong> 10. G. Entrega de medicamentos </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta10_g).count(:id) %>
+  </div> 
+  <div id="Pregunta10H">
+    <label> <strong> 10. H. Tratamientos asistidos: quimioterapia-radioterapias-diálisis </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta10_h).count(:id) %>
+  </div> 
+  <div id="Pregunta10I">
+    <label> <strong> 10. I. Programas de promoción de la salud y prevención de la enfermedad (PyP) </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta10_i).count(:id) %>
+  </div> 
+  <div id="Pregunta10J">
+    <label> <strong> 10. J. Odontología </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta10_j).count(:id) %>
+  </div> 
+  <div id="Pregunta10K">
+    <label> <strong> 10. K. Exámenes de laboratorio </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta10_k).count(:id) %>
+  </div> 
+  <div id="Pregunta10L">
+    <label> <strong> 10. L. Radiografías, imágenes o pruebas de diagnóstico </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta10_l).count(:id) %>
+  </div> 
+  <div id="Pregunta10M">
+    <label> <strong> 10. M. Terapias en la EPS: físicas, respiratorias, ocupacional, de lenguaje </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta10_m).count(:id) %>
+  </div>     
+  <div id="Pregunta10N">
+    <label> <strong> 10. N. Suministro de oxígeno  </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta10_n).count(:id) %>
+  </div>   
+<h3>11. Utilizando una escala de 1 a 5, 1 corresponde a un muy mal servicio y donde 5 indica un muy buen servicio. ¿Cómo califica el servicio de____ recibido en los últimos 6 meses? </h3>
+ <div id="Pregunta11A">
+    <label> <strong> 11. A. Consulta de medicina general </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta11_a).count(:id) %>
+  </div>
+  <div id="Pregunta11B1">
+    <label> <strong> 11. B1. Consulta de Obstetricia - control embarazo </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta11_b1).count(:id) %>
+  </div>
+  <div id="Pregunta11B2">
+    <label> <strong> 11. B2. Consulta de ginecología: citologías, y otros relacionados sin incluir embarazo </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta11_b2).count(:id) %>
+  </div>
+  <div id="Pregunta11B3">
+    <label> <strong> 11. B3. Consulta de medicina interna: internista </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta11_b3).count(:id) %>
+  </div>  
+  <div id="Pregunta11B4">
+    <label> <strong> 11. B4. Consulta de pediatría </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta11_b4).count(:id) %>
+  </div>
+  <div id="Pregunta11B5">
+    <label> <strong> 11. B5. Cirugía general </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta11_b5).count(:id) %>
+  </div>
+  <div id="Pregunta11B6">
+    <label> <strong> 11. B6. Otras consultas de medicina especializada: cardiología, neurología y ortopedia </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta11_b6).count(:id) %>
+  </div> 
+  <div id="Pregunta11C">
+    <label> <strong> 11. C. Citas prioritarias cita no programada </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta11_c).count(:id) %>
+  </div> 
+  <div id="Pregunta11D">
+    <label> <strong> 11. D. Urgencias </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta11_d).count(:id) %>
+  </div> 
+  <div id="Pregunta11E">
+    <label> <strong> 11. E. Hospitalización </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta11_e).count(:id) %>
+  </div> 
+  <div id="Pregunta11F">
+    <label> <strong> 11. F. Domiciliario: médicos, cuidados </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta11_f).count(:id) %>
+  </div> 
+  <div id="Pregunta11G">
+    <label> <strong> 11. G. Entrega de medicamentos </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta11_g).count(:id) %>
+  </div> 
+  <div id="Pregunta11H">
+    <label> <strong> 11. H. Tratamientos asistidos: quimioterapia-radioterapias-diálisis </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta11_h).count(:id) %>
+  </div> 
+  <div id="Pregunta11I">
+    <label> <strong> 11. I. Programas de promoción de la salud y prevención de la enfermedad (PyP) </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta11_i).count(:id) %>
+  </div> 
+  <div id="Pregunta11J">
+    <label> <strong> 11. J. Odontología </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta11_j).count(:id) %>
+  </div> 
+  <div id="Pregunta11K">
+    <label> <strong> 11. K. Exámenes de laboratorio </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta11_k).count(:id) %>
+  </div> 
+  <div id="Pregunta11L">
+    <label> <strong> 11. L. Radiografías, imágenes o pruebas de diagnóstico </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta11_l).count(:id) %>
+  </div> 
+  <div id="Pregunta11M">
+    <label> <strong> 11. M. Terapias en la EPS: físicas, respiratorias, ocupacional, de lenguaje </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta11_m).count(:id) %>
+  </div>     
+  <div id="Pregunta11N">
+    <label> <strong> 11. N. Suministro de oxígeno  </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta11_n).count(:id) %>
+  </div> 
+<h3>13. ¿De acuerdo a las opciones de esta tarjeta, como le pareció el tiempo de espera para ser atendido en el servicio de ______? </h3>
+ <div id="Pregunta13A">
+    <label> <strong> 13. A. Consulta de medicina general </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta13_a).count(:id) %>
+  </div>
+  <div id="Pregunta13B1">
+    <label> <strong> 13. B1. Consulta de Obstetricia - control embarazo </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta13_b1).count(:id) %>
+  </div>
+  <div id="Pregunta13B2">
+    <label> <strong> 13. B2. Consulta de ginecología: citologías, y otros relacionados sin incluir embarazo </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta13_b2).count(:id) %>
+  </div>
+  <div id="Pregunta13B3">
+    <label> <strong> 13. B3. Consulta de medicina interna: internista </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta13_b3).count(:id) %>
+  </div>  
+  <div id="Pregunta13B4">
+    <label> <strong> 13. B4. Consulta de pediatría </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta13_b4).count(:id) %>
+  </div>
+  <div id="Pregunta13B5">
+    <label> <strong> 13. B5. Cirugía general </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta13_b5).count(:id) %>
+  </div>
+  <div id="Pregunta13B6">
+    <label> <strong> 13. B6. Otras consultas de medicina especializada: cardiología, neurología y ortopedia </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta13_b6).count(:id) %>
+  </div> 
+  <div id="Pregunta13C">
+    <label> <strong> 13. C. Citas prioritarias cita no programada </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta13_c).count(:id) %>
+  </div> 
+  <div id="Pregunta13D">
+    <label> <strong> 13. D. Urgencias </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta13_d).count(:id) %>
+  </div> 
+  <div id="Pregunta13E">
+    <label> <strong> 13. E. Hospitalización </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta13_e).count(:id) %>
+  </div> 
+  <div id="Pregunta13F">
+    <label> <strong> 13. F. Domiciliario: médicos, cuidados </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta13_f).count(:id) %>
+  </div> 
+  <div id="Pregunta13G">
+    <label> <strong> 13. G. Entrega de medicamentos </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta13_g).count(:id) %>
+  </div> 
+  <div id="Pregunta13H">
+    <label> <strong> 13. H. Tratamientos asistidos: quimioterapia-radioterapias-diálisis </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta13_h).count(:id) %>
+  </div> 
+  <div id="Pregunta13I">
+    <label> <strong> 13. I. Programas de promoción de la salud y prevención de la enfermedad (PyP) </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta13_i).count(:id) %>
+  </div> 
+  <div id="Pregunta13J">
+    <label> <strong> 13. J. Odontología </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta13_j).count(:id) %>
+  </div> 
+  <div id="Pregunta13K">
+    <label> <strong> 13. K. Exámenes de laboratorio </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta13_k).count(:id) %>
+  </div> 
+  <div id="Pregunta13L">
+    <label> <strong> 13. L. Radiografías, imágenes o pruebas de diagnóstico </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta13_l).count(:id) %>
+  </div> 
+  <div id="Pregunta13M">
+    <label> <strong> 13. M. Terapias en la EPS: físicas, respiratorias, ocupacional, de lenguaje </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta13_m).count(:id) %>
+  </div>     
+  <div id="Pregunta13N">
+    <label> <strong> 13. N. Suministro de oxígeno  </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta13_n).count(:id) %>
+  </div>   
+  <div id="Pregunta14">
+    <label> <strong> 14. Usted me indica que en los últimos seis meses fue usuario del servicio de urgencias  </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta14).count(:id) %>
+  </div>  
+  <div id="Pregunta14a">
+    <label> <strong> 14.1. ¿Por cuales de las siguientes razones usó en los últimos seis meses el servicio de urgencias? Por favor, si usted utilizó varias veces el servicio de urgencias en los últimos seis meses, refiérase solo a la última vez que lo utilizó.  </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta14_1).count(:id) %>
+  </div>  
+  <div id="Pregunta15A">
+    <label> <strong> 15. a. Anteriormente me indicó que en los últimos seis meses solicitó y/o le entregaron medicamentos  </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta15_a).count(:id) %>
+  </div>     
+  <div id="Pregunta15B">
+    <label> <strong> 15. B. ¿Le entregaron todos los medicamentos la primera vez que los solicitó ?  </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta15_b).count(:id) %>
+  </div>  
+  <div id="Pregunta15C">
+    <label> <strong> 15. C. ¿Le ofrecieron la posibilidad de entregarle los medicamentos faltantes a domicilio?   </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta15_c).count(:id) %>
+  </div>  
+  <div id="Pregunta15D">
+    <label> <strong> 15. D. ¿Aceptó usted esa opción de entrega?  </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta15_d).count(:id) %>
+  </div>  
+  <div id="Pregunta15E">
+    <label> <strong> 15. E. ¿Le llegaron los medicamentos faltantes al domicilio?  </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta15_e).count(:id) %>
+  </div>  
+  <div id="Pregunta15AA">
+    <label> <strong> 15. A. Finalmente, ¿Comó obtuvo los medicamentos ?  </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta15_A).count(:id) %>
+  </div>  
+  <div id="Pregunta16">
+    <label> <strong> 16. En los últimos 6 meses, cuando usted solicitó que le prestaran un servicio de salud, ¿Fue informado que no había agenda?   </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta16).count(:id) %>
+  </div>   
+  <div id="Pregunta17">
+    <label> <strong> 17. En los últimos 6 meses, ¿su EPS le ha negado algún servicio? </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta17).count(:id) %>
+  </div>  
+  <div id="Pregunta17A">
+    <label> <strong> 17. A. ¿Por qué motivo? </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta17A).count(:id) %>
+  </div>      
 
 </div>
