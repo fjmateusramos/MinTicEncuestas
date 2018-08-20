@@ -54,7 +54,12 @@
   </div>
   <div class="field">
     <%= f.label :fecha, 'L5. Fecha' %>
-    <%= f.text_field :fecha, class: 'form-control', placeholder:'Fecha', id:'fechainicial' %>
+    <div class='input-group date' id='datetimepicker1'>
+      <span class="input-group-addon">    
+        <span class="glyphicon glyphicon-calendar"></span>
+      </span>
+      <%= f.text_field :fecha, "data-provide" => 'datetimepicker', class: 'form-control' , id:'FechaServicioLead' %>
+    </div>
   </div>
   <div class="field">
     <%= f.label :hora_inicial, 'L6. Hora Inicial' %>
@@ -73,7 +78,7 @@
     ENC:  Si menor 18, o mayor de 80 años, o incapacitado para informar, solicite acompañante a ultimo servicio (IDÓNEO)
     </div>
     <%= f.label :años, 'L9. Años' %>
-    <%= f.text_field :años, class: 'form-control', placeholder:'Años', id:'años_l9' %>
+    <%= f.select :años, ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99"],{:include_blank => true}, {class: "form-control", id:"años_l9"} %>
   </div>
 <br>
   <h2> II. FILTROS DE SELECCIÓN </h2>
@@ -1468,10 +1473,6 @@
     <div>
     <%= check_box_tag 'encuestum[pregunta14_1][]', 'Por falta de disponibilidad de citas de consulta externa de manera rápida', checked('Por falta de disponibilidad de citas de consulta externa de manera rápida'), id:"urgencias" %>
     <%= label_tag '14c', 'Por falta de disponibilidad de citas de consulta externa de manera rápida' , id:"urgencias"%>
-    </div>
-    <div>
-    <%= check_box_tag 'encuestum[pregunta14_1][]', 'Por unificación familiar', checked('Por unificación familiar'), id:"urgencias" %>
-    <%= label_tag '14d', 'Por unificación familiar' , id:"urgencias" %>
     </div>
     <div>
     <%= check_box_tag 'encuestum[pregunta14_1][]', 'Por pérdida de la cita en consulta externa', checked('Por pérdida de la cita en consulta externa'), id:"urgencias" %>
@@ -3576,6 +3577,10 @@
           <%= f.label :pregunta60, '60. Parentesco del informante idóneo' , id:"identicacion_caracterizacion_usuario"%>
           <%= f.select :pregunta60, ["Abuelo(a)","Cuñado(a)","Esposo(a)","Familiar lejano (3er grado)","Hermano(a)","Hijo(a)","Nieto(a)","Nuera/Yerno","Papa/Mama","Primo(a)","Sobrino(a)","Suegro(a)","Tio(a)"],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario"}%>
       </div>
+       <div>
+          <%= f.label :pregunta61, '61. Hace cuanto tiempo vive en este municipio?' , id:"identicacion_caracterizacion_usuario"%>
+          <%= f.select :pregunta61, ["Menos de un año","Más de un año"],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario"}%>
+      </div>
      </div> 
     </div>
   </div>
@@ -4467,9 +4472,6 @@ $(document).ready(function(){
         }
     });
 });
-   
-
-   
 
 
 </script>
