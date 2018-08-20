@@ -19,7 +19,7 @@
   <br>
   <div id="Departamentos">
   	<label> <strong> L1. Departamentos </strong> </label>
-  	<%= column_chart Encuestum.group(:departamento).count(:id) %>
+  	<%= column_chart Encuestum.group(:departamento).count(:id), download: true%>
   </div>
   <div id="Municipio">
   	<label> <strong> L2. Municipio </strong> </label>
