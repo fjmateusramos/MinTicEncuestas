@@ -484,5 +484,622 @@
     <label> <strong> 17. A. ¿Por qué motivo? </strong> </label>
     <%= pie_chart Encuestum.group(:pregunta17A).count(:id) %>
   </div>      
-
+  <div id="Pregunta18">
+    <label> <strong> 18. En los últimos 6 meses, ¿para cubrir los costos de consulta médica, exámenes o medicamentos, utilizó recursos propios y/o familiares? </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta18).count(:id) %>
+  </div>      
+  <div id="Pregunta19">
+    <label> <strong> 19. ¿Por qué razón(es) utilizó recursos propios y/o familiares para cubrir la atención en salud? </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta19).count(:id) %>
+  </div>  
+<h3>20. A. Hablemos de trámites administrativos ante la EPS : En los últimos seis (6) meses usted necesito .. …?</h3>  
+  <div id="Pregunta20A1">
+    <label> <strong> 20. A. 1. Tramitar una Afiliación de ingreso a una EPS? </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20A_1).count(:id) %>
+  </div>   
+  <div id="Pregunta20A2">
+    <label> <strong> 20. A. 2. Tramitar una Desafiliación de una EPS </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20A_2).count(:id) %>
+  </div>   
+  <div id="Pregunta20A3">
+    <label> <strong> 20. A. 3. Tramitar una Vinculación o desvinculación de un miembro de su núcleo familiar </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20A_3).count(:id) %>
+  </div>   
+  <div id="Pregunta20A4">
+    <label> <strong> 20. A. 4. Tramitar una Autorización para pedir una cita de medicina general </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20A_4).count(:id) %>
+  </div>   
+  <div id="Pregunta20A5">
+    <label> <strong> 20. A. 5. Tramitar una Autorización para pedir una cita de medicina especializada </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20A_5).count(:id) %>
+  </div>    
+  <div id="Pregunta20A6">
+    <label> <strong> 20. A. 6. Tramitar una Autorización para acceder a cirugías </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20A_6).count(:id) %>
+  </div>           
+  <div id="Pregunta20A7">
+    <label> <strong> 20. A. 7. Tramitar una Autorización para acceder a Otros Procedimientos Médicos diferentes a cirugías </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20A_7).count(:id) %>
+  </div>   
+  <div id="Pregunta20A8">
+    <label> <strong> 20. A. 8. Tramitar una Autorización para acceder a Tratamientos asistidos: quimioterapia-radioterapias-diálisis </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20A_8).count(:id) %>
+  </div>   
+  <div id="Pregunta20A9">
+    <label> <strong> 20. A. 9. Tramitar una Autorización para  Radiografías, imágenes o pruebas de diagnóstico </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20A_9).count(:id) %>
+  </div>   
+  <div id="Pregunta20A10">
+    <label> <strong> 20. A. 10. Tramitar una Autorización para la entrega de MEDICAMENTOS NO CUBIERTOS por su servicio de salud </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20A_10).count(:id) %>
+  </div>   
+  <div id="Pregunta20A11">
+    <label> <strong> 20. A. 11. Tramitar una Autorización para la entrega de Medicamentos cubiertos por su servicio de salud  </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20A_11).count(:id) %>
+  </div>   
+  <div id="Pregunta20A12">
+    <label> <strong> 20. A. 12.  Tramite de Autorización para la atención de los servicios de salud en otra ciudad diferente a la afiliación (Por Necesidad temporal) </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20A_12).count(:id) %>
+  </div>   
+  <div id="Pregunta20A13">
+    <label> <strong> 20. A. 13. Tramitar una incapacidad (transcripción o radicación) </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20A_13).count(:id) %>
+  </div>   
+  <div id="Pregunta20A14">
+    <label> <strong> 20. A. 14. Radicar una Licencia de maternidad </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20A_14).count(:id) %>
+  </div>   
+  <div id="Pregunta20A15">
+    <label> <strong> 20. A. 15. Radicar una queja </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20A_15).count(:id) %>
+  </div>   
+  <div id="Pregunta20A16">
+    <label> <strong> 20. A. 16. Tramitar un Cambio de Régimen </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20A_16).count(:id) %>
+  </div>   
+  <div id="Pregunta20A17">
+    <label> <strong> 20. A. 17. Tramitar un Cambio de EPS </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20A_17).count(:id) %>
+  </div>   
+  <div id="Pregunta20A18">
+    <label> <strong> 20. A. 18. Tramitar un Cambio de contrato, desvinculación o aportes adicionales al sistema </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20A_18).count(:id) %>
+  </div>   
+  <div id="Pregunta20A19">
+    <label> <strong> 20. A. 19. Tramitar Pagos de afiliado por periodos de inactividad, cartera morosa, Acuerdos de pago. </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20A_19).count(:id) %>
+  </div>   
+  <div id="Pregunta20A20">
+    <label> <strong> 20. A. 20. Tramitar Reembolsos </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20A_20).count(:id) %>
+  </div>   
+  <div id="Pregunta20A21">
+    <label> <strong> 20. A. 21. Reclamar por Cobros indebidos  </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20A_21).count(:id) %>
+  </div>                                   
+<h3>20 B. La última vez que hizo este trámite de ….. :, ¿A través de qué medio o persona lo realizó?</h3>  
+  <div id="Pregunta20B1">
+    <label> <strong> 20. B. 1. Tramitar una Afiliación de ingreso a una EPS? </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20B_1).count(:id) %>
+  </div>   
+  <div id="Pregunta20B2">
+    <label> <strong> 20. B. 2. Tramitar una Desafiliación de una EPS </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20B_2).count(:id) %>
+  </div>   
+  <div id="Pregunta20B3">
+    <label> <strong> 20. B. 3. Tramitar una Vinculación o desvinculación de un miembro de su núcleo familiar </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20B_3).count(:id) %>
+  </div>   
+  <div id="Pregunta20B4">
+    <label> <strong> 20. B. 4. Tramitar una Autorización para pedir una cita de medicina general </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20B_4).count(:id) %>
+  </div>   
+  <div id="Pregunta20B5">
+    <label> <strong> 20. B. 5. Tramitar una Autorización para pedir una cita de medicina especializada </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20B_5).count(:id) %>
+  </div>    
+  <div id="Pregunta20B6">
+    <label> <strong> 20. B. 6. Tramitar una Autorización para acceder a cirugías </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20B_6).count(:id) %>
+  </div>           
+  <div id="Pregunta20B7">
+    <label> <strong> 20. B. 7. Tramitar una Autorización para acceder a Otros Procedimientos Médicos diferentes a cirugías </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20B_7).count(:id) %>
+  </div>   
+  <div id="Pregunta20B8">
+    <label> <strong> 20. B. 8. Tramitar una Autorización para acceder a Tratamientos asistidos: quimioterapia-radioterapias-diálisis </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20B_8).count(:id) %>
+  </div>   
+  <div id="Pregunta20B9">
+    <label> <strong> 20. B. 9. Tramitar una Autorización para  Radiografías, imágenes o pruebas de diagnóstico </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20B_9).count(:id) %>
+  </div>   
+  <div id="Pregunta20B10">
+    <label> <strong> 20. B. 10. Tramitar una Autorización para la entrega de MEDICAMENTOS NO CUBIERTOS por su servicio de salud </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20B_10).count(:id) %>
+  </div>   
+  <div id="Pregunta20B11">
+    <label> <strong> 20. B. 11. Tramitar una Autorización para la entrega de Medicamentos cubiertos por su servicio de salud  </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20B_11).count(:id) %>
+  </div>   
+  <div id="Pregunta20B12">
+    <label> <strong> 20. B. 12.  Tramite de Autorización para la atención de los servicios de salud en otra ciudad diferente a la afiliación (Por Necesidad temporal) </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20B_12).count(:id) %>
+  </div>   
+  <div id="Pregunta20B13">
+    <label> <strong> 20. B. 13. Tramitar una incapacidad (transcripción o radicación) </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20B_13).count(:id) %>
+  </div>   
+  <div id="Pregunta20B14">
+    <label> <strong> 20. B. 14. Radicar una Licencia de maternidad </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20B_14).count(:id) %>
+  </div>   
+  <div id="Pregunta20B15">
+    <label> <strong> 20. B. 15. Radicar una queja </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20B_15).count(:id) %>
+  </div>   
+  <div id="Pregunta20B16">
+    <label> <strong> 20. B. 16. Tramitar un Cambio de Régimen </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20B_16).count(:id) %>
+  </div>   
+  <div id="Pregunta20B17">
+    <label> <strong> 20. B. 17. Tramitar un Cambio de EPS </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20B_17).count(:id) %>
+  </div>   
+  <div id="Pregunta20B18">
+    <label> <strong> 20. B. 18. Tramitar un Cambio de contrato, desvinculación o aportes adicionales al sistema </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20B_18).count(:id) %>
+  </div>   
+  <div id="Pregunta20B19">
+    <label> <strong> 20. B. 19. Tramitar Pagos de afiliado por periodos de inactividad, cartera morosa, Acuerdos de pago. </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20B_19).count(:id) %>
+  </div>   
+  <div id="Pregunta20B20">
+    <label> <strong> 20. B. 20. Tramitar Reembolsos </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20B_20).count(:id) %>
+  </div>   
+  <div id="Pregunta20B21">
+    <label> <strong> 20. B. 21. Reclamar por Cobros indebidos  </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20B_21).count(:id) %>
+  </div> 
+<h3>20 E. ¿Debió trasladarse a otro municipio para realizar este tramite?</h3>  
+  <div id="Pregunta20E1">
+    <label> <strong> 20. E. 1. Tramitar una Afiliación de ingreso a una EPS? </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20E_1).count(:id) %>
+  </div>   
+  <div id="Pregunta20E2">
+    <label> <strong> 20. E. 2. Tramitar una Desafiliación de una EPS </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20E_2).count(:id) %>
+  </div>   
+  <div id="Pregunta20E3">
+    <label> <strong> 20. E. 3. Tramitar una Vinculación o desvinculación de un miembro de su núcleo familiar </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20E_3).count(:id) %>
+  </div>   
+  <div id="Pregunta20E4">
+    <label> <strong> 20. E. 4. Tramitar una Autorización para pedir una cita de medicina general </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20E_4).count(:id) %>
+  </div>   
+  <div id="Pregunta20E5">
+    <label> <strong> 20. E. 5. Tramitar una Autorización para pedir una cita de medicina especializada </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20E_5).count(:id) %>
+  </div>    
+  <div id="Pregunta20E6">
+    <label> <strong> 20. E. 6. Tramitar una Autorización para acceder a cirugías </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20E_6).count(:id) %>
+  </div>           
+  <div id="Pregunta20E7">
+    <label> <strong> 20. E. 7. Tramitar una Autorización para acceder a Otros Procedimientos Médicos diferentes a cirugías </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20E_7).count(:id) %>
+  </div>   
+  <div id="Pregunta20E8">
+    <label> <strong> 20. E. 8. Tramitar una Autorización para acceder a Tratamientos asistidos: quimioterapia-radioterapias-diálisis </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20E_8).count(:id) %>
+  </div>   
+  <div id="Pregunta20E9">
+    <label> <strong> 20. E. 9. Tramitar una Autorización para  Radiografías, imágenes o pruebas de diagnóstico </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20E_9).count(:id) %>
+  </div>   
+  <div id="Pregunta20E10">
+    <label> <strong> 20. E. 10. Tramitar una Autorización para la entrega de MEDICAMENTOS NO CUBIERTOS por su servicio de salud </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20E_10).count(:id) %>
+  </div>   
+  <div id="Pregunta20E11">
+    <label> <strong> 20. E. 11. Tramitar una Autorización para la entrega de Medicamentos cubiertos por su servicio de salud  </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20E_11).count(:id) %>
+  </div>   
+  <div id="Pregunta20E12">
+    <label> <strong> 20. E. 12.  Tramite de Autorización para la atención de los servicios de salud en otra ciudad diferente a la afiliación (Por Necesidad temporal) </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20E_12).count(:id) %>
+  </div>   
+  <div id="Pregunta20E13">
+    <label> <strong> 20. E. 13. Tramitar una incapacidad (transcripción o radicación) </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20E_13).count(:id) %>
+  </div>   
+  <div id="Pregunta20E14">
+    <label> <strong> 20. E. 14. Radicar una Licencia de maternidad </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20E_14).count(:id) %>
+  </div>   
+  <div id="Pregunta20E15">
+    <label> <strong> 20. E. 15. Radicar una queja </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20E_15).count(:id) %>
+  </div>   
+  <div id="Pregunta20E16">
+    <label> <strong> 20. E. 16. Tramitar un Cambio de Régimen </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20E_16).count(:id) %>
+  </div>   
+  <div id="Pregunta20E17">
+    <label> <strong> 20. E. 17. Tramitar un Cambio de EPS </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20E_17).count(:id) %>
+  </div>   
+  <div id="Pregunta20E18">
+    <label> <strong> 20. E. 18. Tramitar un Cambio de contrato, desvinculación o aportes adicionales al sistema </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20E_18).count(:id) %>
+  </div>   
+  <div id="Pregunta20E19">
+    <label> <strong> 20. E. 19. Tramitar Pagos de afiliado por periodos de inactividad, cartera morosa, Acuerdos de pago. </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20E_19).count(:id) %>
+  </div>   
+  <div id="Pregunta20E20">
+    <label> <strong> 20. E. 20. Tramitar Reembolsos </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20E_20).count(:id) %>
+  </div>   
+  <div id="Pregunta20E21">
+    <label> <strong> 20. E. 21. Reclamar por Cobros indebidos  </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta20E_21).count(:id) %>
+  </div>   
+<h3>20 F. ¿Logró finalizar este trámite?</h3>  
+  <div id="Pregunta20F1">
+    <label> <strong> 20. F. 1. Tramitar una Afiliación de ingreso a una EPS? </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20F_1).count(:id) %>
+  </div>   
+  <div id="Pregunta20F2">
+    <label> <strong> 20. F. 2. Tramitar una Desafiliación de una EPS </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20F_2).count(:id) %>
+  </div>   
+  <div id="Pregunta20F3">
+    <label> <strong> 20. F. 3. Tramitar una Vinculación o desvinculación de un miembro de su núcleo familiar </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20F_3).count(:id) %>
+  </div>   
+  <div id="Pregunta20F4">
+    <label> <strong> 20. F. 4. Tramitar una Autorización para pedir una cita de medicina general </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20F_4).count(:id) %>
+  </div>   
+  <div id="Pregunta20F5">
+    <label> <strong> 20. F. 5. Tramitar una Autorización para pedir una cita de medicina especializada </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20F_5).count(:id) %>
+  </div>    
+  <div id="Pregunta20F6">
+    <label> <strong> 20. F. 6. Tramitar una Autorización para acceder a cirugías </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20F_6).count(:id) %>
+  </div>           
+  <div id="Pregunta20F7">
+    <label> <strong> 20. F. 7. Tramitar una Autorización para acceder a Otros Procedimientos Médicos diferentes a cirugías </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20F_7).count(:id) %>
+  </div>   
+  <div id="Pregunta20F8">
+    <label> <strong> 20. F. 8. Tramitar una Autorización para acceder a Tratamientos asistidos: quimioterapia-radioterapias-diálisis </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20F_8).count(:id) %>
+  </div>   
+  <div id="Pregunta20F9">
+    <label> <strong> 20. F. 9. Tramitar una Autorización para  Radiografías, imágenes o pruebas de diagnóstico </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20F_9).count(:id) %>
+  </div>   
+  <div id="Pregunta20F10">
+    <label> <strong> 20. F. 10. Tramitar una Autorización para la entrega de MEDICAMENTOS NO CUBIERTOS por su servicio de salud </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20F_10).count(:id) %>
+  </div>   
+  <div id="Pregunta20F11">
+    <label> <strong> 20. F. 11. Tramitar una Autorización para la entrega de Medicamentos cubiertos por su servicio de salud  </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20F_11).count(:id) %>
+  </div>   
+  <div id="Pregunta20F12">
+    <label> <strong> 20. F. 12.  Tramite de Autorización para la atención de los servicios de salud en otra ciudad diferente a la afiliación (Por Necesidad temporal) </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20F_12).count(:id) %>
+  </div>   
+  <div id="Pregunta20F13">
+    <label> <strong> 20. F. 13. Tramitar una incapacidad (transcripción o radicación) </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20F_13).count(:id) %>
+  </div>   
+  <div id="Pregunta20F14">
+    <label> <strong> 20. F. 14. Radicar una Licencia de maternidad </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20F_14).count(:id) %>
+  </div>   
+  <div id="Pregunta20F15">
+    <label> <strong> 20. F. 15. Radicar una queja </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20F_15).count(:id) %>
+  </div>   
+  <div id="Pregunta20F16">
+    <label> <strong> 20. F. 16. Tramitar un Cambio de Régimen </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20F_16).count(:id) %>
+  </div>   
+  <div id="Pregunta20F17">
+    <label> <strong> 20. F. 17. Tramitar un Cambio de EPS </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20F_17).count(:id) %>
+  </div>   
+  <div id="Pregunta20F18">
+    <label> <strong> 20. F. 18. Tramitar un Cambio de contrato, desvinculación o aportes adicionales al sistema </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20F_18).count(:id) %>
+  </div>   
+  <div id="Pregunta20F19">
+    <label> <strong> 20. F. 19. Tramitar Pagos de afiliado por periodos de inactividad, cartera morosa, Acuerdos de pago. </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20F_19).count(:id) %>
+  </div>   
+  <div id="Pregunta20F20">
+    <label> <strong> 20. F. 20. Tramitar Reembolsos </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20F_20).count(:id) %>
+  </div>   
+  <div id="Pregunta20F21">
+    <label> <strong> 20. F. 21. Reclamar por Cobros indebidos  </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta20F_21).count(:id) %>
+  </div>
+  <div id="Pregunta21">
+    <label> <strong> 21. ¿ De qué forma solicita regularmente sus citas medicas? </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta21).count(:id) %>
+  </div>
+  <div id="Pregunta22">
+    <label> <strong> 22. ¿Por qué utiliza regularmente esta opción para solicitar la cita medica? </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta22).count(:id) %>
+  </div>
+  <div id="Pregunta23">
+    <label> <strong> 23. En general  ¿Cómo califica la comunicación que brinda su EPS,  sobre los servicios que presta? </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta23).count(:id) %>
+  </div>
+  <div id="Pregunta24A">
+    <label> <strong> 24 A. ¿Su EPS le ha dado a conocer información sobre….?  </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta24_AA).count(:id) %>
+  </div>
+  <div id="Pregunta25A">
+    <label> <strong> 25 A. ¿Ha utilizado dicha información?   </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta25_AA).count(:id) %>
+  </div>
+  <div id="Pregunta26A">
+    <label> <strong> 26 A. Utilidad de esa información  </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta26_AA).count(:id) %>
+  </div>    
+ <div id="Pregunta24B">
+    <label> <strong> 24 A. ¿Su EPS le ha dado a conocer información sobre….?  </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta24_BB).count(:id) %>
+  </div>
+  <div id="Pregunta20B">
+    <label> <strong> 25 A. ¿Ha utilizado dicha información?   </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta25_BB).count(:id) %>
+  </div>
+  <div id="Pregunta26B">
+    <label> <strong> 26 A. Utilidad de esa información  </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta26_BB).count(:id) %>
+  </div>          
+<h3>27. ¿Su EPS en los últimos 6 meses le ha dado a conocer alguno de los siguientes programas y/o servicios?</h3>
+  <div id="Pregunta27A">
+    <label> <strong> 27 A. Programa de control prenatal </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta27_a).count(:id) %>
+  </div> 
+  <div id="Pregunta27B">
+    <label> <strong> 27 B. Vacunación </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta27_b).count(:id) %>
+  </div>
+  <div id="Pregunta27C">
+    <label> <strong> 27 C. Programa de crecimiento y desarrollo </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta27_c).count(:id) %>
+  </div>
+  <div id="Pregunta27D">
+    <label> <strong> 27 D. Programa de planificación familiar </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta27_d).count(:id) %>
+  </div>
+  <div id="Pregunta27E">
+    <label> <strong> 27 E. Programa de salud visual </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta27_e).count(:id) %>
+  </div>
+  <div id="Pregunta27F">
+    <label> <strong> 27 F. Mamografía </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta27_f).count(:id) %>
+  </div>
+  <div id="Pregunta27G">
+    <label> <strong> 27 G. Citologías </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta27_g).count(:id) %>
+  </div>
+  <div id="Pregunta27H">
+    <label> <strong> 27 H. Salud oral </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta27_h).count(:id) %>
+  </div>
+  <div id="Pregunta27I">
+    <label> <strong> 27 I. Programas de acuerdo a su grupo de edad (programa de: adulto joven, adulto, adulto mayor, entre otros) </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta27_i).count(:id) %>
+  </div>
+  <div id="Pregunta27J">
+    <label> <strong> 27 J. Programas de Enfermedades crónicas (Enfermedades que duran más de 30 días como:  diabetes, pulmonares, hipertensión, enfermedad renal crónica, etc.) </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta27_j).count(:id) %>
+  </div>   
+  <div id="Pregunta27K">
+    <label> <strong> 27 K. Programas relacionados con salud mental </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta27_k).count(:id) %>
+  </div>    
+<h3>28. ¿Su EPS en los últimos 6 meses le ha dado a conocer alguno de los siguientes programas y/o servicios?</h3>
+  <div id="Pregunta28A">
+    <label> <strong> 28 A. Programa de control prenatal </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta28_a).count(:id) %>
+  </div> 
+  <div id="Pregunta28B">
+    <label> <strong> 28 B. Vacunación </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta28_b).count(:id) %>
+  </div>
+  <div id="Pregunta28C">
+    <label> <strong> 28 C. Programa de crecimiento y desarrollo </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta28_c).count(:id) %>
+  </div>
+  <div id="Pregunta28D">
+    <label> <strong> 28 D. Programa de planificación familiar </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta28_d).count(:id) %>
+  </div>
+  <div id="Pregunta28E">
+    <label> <strong> 28 E. Programa de salud visual </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta28_e).count(:id) %>
+  </div>
+  <div id="Pregunta28F">
+    <label> <strong> 28 F. Mamografía </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta28_f).count(:id) %>
+  </div>
+  <div id="Pregunta28G">
+    <label> <strong> 28 G. Citologías </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta28_g).count(:id) %>
+  </div>
+  <div id="Pregunta28H">
+    <label> <strong> 28 H. Salud oral </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta28_h).count(:id) %>
+  </div>
+  <div id="Pregunta28I">
+    <label> <strong> 28 I. Programas de acuerdo a su grupo de edad (programa de: adulto joven, adulto, adulto mayor, entre otros) </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta28_i).count(:id) %>
+  </div>
+  <div id="Pregunta28J">
+    <label> <strong> 28 J. Programas de Enfermedades crónicas (Enfermedades que duran más de 30 días como:  diabetes, pulmonares, hipertensión, enfermedad renal crónica, etc.) </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta28_j).count(:id) %>
+  </div>   
+  <div id="Pregunta28K">
+    <label> <strong> 28 K. Programas relacionados con salud mental </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta28_k).count(:id) %>
+  </div>   
+  <div id="Pregunta29A">
+    <label> <strong> 29. A. Pensando en los últimos 6 meses, ¿Cómo calificaría su experiencia global respecto a los servicios de salud que ha recibido a través de su EPS? </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta29_a).count(:id) %>
+  </div>   
+  <div id="Pregunta29B">
+    <label> <strong> 29. B. ¿Cómo califica la solución que le dio la EPS a la necesidad de Salud por la cual usted consultó la última vez? </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta29_b).count(:id) %>
+  </div> 
+  <div id="Pregunta30">
+    <label> <strong> 30. En general, en los últimos 6 meses, usted considera que acceder a servicios de salud (exámenes, hospitalizaciones, urgencias, consultas médicas y terapias) a través de su EPS fue </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta30).count(:id) %>
+  </div> 
+  <div id="Pregunta31A">
+    <label> <strong> 31. A. ¿Considera que si llegara a estar gravemente enfermo(a), podrá acceder de forma oportuna o a tiempo a los servicios de salud necesarios a través de su EPS ? </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta31_a).count(:id) %>
+  </div> 
+  <div id="Pregunta31B">
+    <label> <strong> 31. B. ¿Recomendaría a sus familiares y amigos afiliarse a su EPS? </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta31_b).count(:id) %>
+  </div> 
+  <div id="Pregunta32A">
+    <label> <strong> 32. A. ¿Su EPS le permite escoger el centro de atención básica al que asiste? </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta32_a).count(:id) %>
+  </div> 
+  <div id="Pregunta32B">
+    <label> <strong> 32. B. Cuando usted quiere que lo atienda el mismo médico general. ¿Su EPS se lo permite? </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta32_b).count(:id) %>
+  </div> 
+  <div id="Pregunta32C">
+    <label> <strong> 32. C. Cuando necesita una cita con médico especialista, ¿La EPS le permite escoger el centro de atención dentro de la red contratada? </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta32_c).count(:id) %>
+  </div> 
+  <div id="Pregunta32D">
+    <label> <strong> 32. D. Cuando necesita una cita con médico especialista, ¿Su EPS le permite escoger el médico especialista? </strong> </label>
+    <%= column_chart Encuestum.group(:pregunta32_d).count(:id) %>
+  </div> 
+  <div id="Pregunta33">
+    <label> <strong> 33. En los últimos 6 meses usted, ¿Ha tenido algún(os) problema(s) en la atención con su prestador de servicios? (médico, clínica u hospital, farmacia, ambulancia o prestador de atención domiciliario) </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta33).count(:id) %>
+  </div>                    
+  <div id="Pregunta34">
+    <label> <strong> 34. ¿Buscó ayuda en la EPS para resolver el problema? </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta34).count(:id) %>
+  </div> 
+  <div id="Pregunta35">
+    <label> <strong> 35. ¿Cómo califica esa ayuda?  </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta35).count(:id) %>
+  </div>  
+  <div id="Pregunta36">
+    <label> <strong> 36. Usted que le mejoraría a su EPS.  </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta36).count(:id) %>
+  </div>  
+  <div id="Pregunta37">
+    <label> <strong> 37. En los últimos 6 meses, para acceder a los servicios de su EPS </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta37).count(:id) %>
+  </div>   
+  <div id="Pregunta38">
+    <label> <strong> 38. ¿La acción de tutela fue fallada a su favor? </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta38).count(:id) %>
+  </div>
+  <div id="Pregunta39">
+    <label> <strong> 39. Si la acción de tutela fue fallada a su favor, ¿La EPS cumplió con el fallo del juzgado? </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta39).count(:id) %>
+  </div>
+  <div id="Pregunta40">
+    <label> <strong> 40. En alguna ocasión, ¿Ha considerado interponer una queja o derecho de petición  ante su EPS? </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta40).count(:id) %>
+  </div>  
+  <div id="Pregunta41">
+    <label> <strong> 41. ¿Y usted ya Interpuso alguna queja o derecho de petición a su EPS? </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta41).count(:id) %>
+  </div>  
+  <div id="Pregunta42">
+    <label> <strong> 42. ¿Por qué no ha interpuesto la queja o petición? </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta42).count(:id) %>
+  </div>   
+  <div id="Pregunta43">
+    <label> <strong> 43. ¿Cuál fue el principal motivo de la última queja que presentó?  </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta43).count(:id) %>
+  </div>  
+  <div id="Pregunta44">
+    <label> <strong> 44. ¿Cuál fue el resultado de su queja o derecho de petición? </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta44).count(:id) %>
+  </div> 
+  <div id="Pregunta45">
+    <label> <strong> 45. ¿Ha pensado en cambiarse a otra EPS? </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta45).count(:id) %>
+  </div>   
+  <div id="Pregunta46">
+    <label> <strong> 46. ¿Cuál es el principal motivo para querer cambiarse de EPS? </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta46).count(:id) %>
+  </div>
+  <div id="Pregunta47">
+    <label> <strong> 47. ¿Por qué razones no ha cambiado de EPS?  </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta47).count(:id) %>
+  </div>   
+  <div id="Pregunta48">
+    <label> <strong> 48. ¿Sabe usted que en caso que cambie su situación laboral (ejemplo quedar desempleado o conseguir empleo), usted tiene derecho a cambiarse de régimen dentro de su misma EPS? </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta48).count(:id) %>
+  </div>
+  <div id="Pregunta49">
+    <label> <strong> 49. ¿Sabe usted que cuando temporalmente deba hacer cambio de residencia a cualquier municipio del país diferente a donde habitualmente recibe atención en salud o este afiliado, tiene derecho a recibir los mismos servicios en el nuevo municipio? </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta49).count(:id) %>
+  </div>
+  <div id="Pregunta50">
+    <label> <strong> 50. ¿Ha solicitado la portabilidad a su EPS? </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta50).count(:id) %>
+  </div>
+  <div id="Pregunta51">
+    <label> <strong> 51. De acuerdo con su cultura, pueblo o rasgos físicos, es o se reconoce como </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta51).count(:id) %>
+  </div>
+  <div id="Pregunta52">
+    <label> <strong> 52. Su estado civil actualmente es… </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta52).count(:id) %>
+  </div>
+  <div id="Pregunta53">
+    <label> <strong> 53. ¿Cuál es el nivel educativo más alto que usted ha alcanzado? </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta53).count(:id) %>
+  </div>
+  <div id="Pregunta54">
+    <label> <strong> 54. Estrato de la residencia:  </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta54).count(:id) %>
+  </div>
+  <div id="Pregunta55">
+    <label> <strong> 55. ¿A qué actividad se dedica la mayor parte del tiempo?  </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta55).count(:id) %>
+  </div>
+  <div id="Pregunta56">
+    <label> <strong> 56. La encuesta fue respondida por un persona diferente al usuario? </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta56).count(:id) %>
+  </div>
+  <div id="Pregunta58">
+    <label> <strong> 58. Género del informante idóneo </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta58).count(:id) %>
+  </div>  
+  <div id="Pregunta60">
+    <label> <strong> 60. Parentesco del informante idóneo </strong> </label>
+    <%= bar_chart Encuestum.group(:pregunta60).count(:id) %>
+  </div>  
+  <div id="Pregunta61">
+    <label> <strong> 61. Hace cuanto tiempo vive usted en este municipio? </strong> </label>
+    <%= pie_chart Encuestum.group(:pregunta61).count(:id) %>
+  </div>                                                                
 </div>
