@@ -449,7 +449,7 @@
       <%= f.label :pregunta8D, 'D. Su cercanía a hospitales y puestos de salud' , {style:"margin-right:30px;margin-left:13px;", id:"importan_satis_fact_serv"} %>
       </div>
       <div class="col-md-8 input-group">
-        <%= f.select :pregunta8D, ["1","2","3","4","5","6","7"],{:include_blank => true}, {class: "form-control", id:"importan_satis_fact_serv"}%>
+        <%= f.select :pregunta8D, ["1","2","3","4","5","6","7"],{:include_blank => true}, {class: "form-control", id:"importan_satis_fact_serv", style:"width:50px;"}%>
         <%= f.radio_button :pregunta9D, "Nada s." ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"}%><div>Nada sat.</div>
         <%= f.radio_button :pregunta9D, "Poco s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Poco sat.</div>
         <%= f.radio_button :pregunta9D, "Ni s. Ni ins.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Ni sat. Ni ins. </div>
