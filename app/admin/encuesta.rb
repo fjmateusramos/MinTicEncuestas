@@ -7,7 +7,7 @@ ActiveAdmin.register Encuestum do
 
 	permit_params :departamento,:municipio,:zona,:fecha,:hora_inicial,:nombre_encuestado,:sexo,:años
 
-	index do
+	index :title => "Listado de encuestas - Estudio EPS" do
     selectable_column
     id_column
     column :departamento
