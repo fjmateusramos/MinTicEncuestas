@@ -54,7 +54,7 @@
     <br>
   </div>
   <div id="Municipio" class="col-md-12">
-    <label> <strong> L1. Departamentos </strong> </label>
+    <label> <strong> L2. Municipio </strong> </label>
       <%= column_chart Encuestum.group(:municipio).having("municipio != ?", "--").having("municipio != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
@@ -89,7 +89,7 @@
     <br>
   </div>
   <div id="Sexo">
-    <label> <strong> L1. Departamentos </strong> </label>
+    <label> <strong> L3. Sexo </strong> </label>
       <%= column_chart Encuestum.group(:sexo).having("sexo != ?", "--").having("sexo != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
