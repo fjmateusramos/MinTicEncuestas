@@ -53,41 +53,7 @@
     </table>
     <br>
   </div>
-  <div id="Municipio" class="col-md-12">
-    <label> <strong> L1. Departamentos </strong> </label>
-      <%= column_chart Encuestum.group(:municipio).having("municipio != ?", "--").having("municipio != ?", "").count(:id), download: true%>
-    <br>
-    <table class="table">
-      <thead>
-        <tr>  
-          <th scope="col">Item</th>
-          <th scope="col">Cantidad</th>
-          <th scope="col">%</th>
-        </tr>
-      </thead>
-      <tbody>  
-        <% total_municipio  = 0 %>
-        <% Encuestum.group(:municipio).having("municipio != ?", "--").having("municipio != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
-          <% total_municipio = total_municipio + item %>
-        <%end%>
-        <% Encuestum.group(:municipio).having("municipio != ?", "--").having("municipio != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
-        <tr>
-          <td scope="row"><%= value %></td>
-          <td><%= item %></td>
-          <td><%= 100*item/total_municipio.to_f(1) %></td>
-        </tr>
-        <%end%>
-        <thead>
-        <tr>
-          <th scope="col"> <strong> Total </strong></td>
-          <th scope="col"> <strong> <%= total_municipio %> </strong></td>
-          <th scope="col"> <strong> 100% </strong></td>
-        </tr>
-        </thead>
-      </tbody>  
-    </table>
-    <br>
-  </div>
+
 
   <div id="Pregunta1">
   	<label> <strong> 1. ¿A qué EPS se encuentra afiliado actualmente?  </strong> </label>
