@@ -31,7 +31,7 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:departamento).having("departamento != ?", "--").having("departamento != ?", "").count(:id).sort.each do |value,item|%>
+        <% Encuestum.group(:departamento).having("departamento != ?", "--").having("departamento != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
