@@ -39,7 +39,7 @@
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= 100*item/total.to_f %></td>
+          <td><%= 100*item/total.to_f(1) %></td>
         </tr>
         <%end%>
         <thead>
@@ -54,9 +54,9 @@
     <br>
   </div>
   <div id="Municipio">
-  	<label> <strong> L2. Municipio </strong> </label>
-  	<%= column_chart Encuestum.group(:municipio).count(:id) %>
-        <br>
+    <label> <strong> L1. Departamentos </strong> </label>
+      <%= column_chart Encuestum.group(:municipio).having("municipio != ?", "--").having("municipio != ?", "").count(:id), download: true%>
+    <br>
     <table class="table">
       <thead>
         <tr>  
@@ -66,21 +66,32 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:municipio).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:municipio).having("municipio != ?", "--").having("municipio != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:municipio).having("municipio != ?", "--").having("municipio != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= 100*item/total.to_f(1) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
     <br>
   </div>
   <div id="Sexo">
-  	<label> <strong> L8. Sexo </strong> </label>
-  	<%= pie_chart Encuestum.group(:sexo).count(:id) %>
-        <br>
+    <label> <strong> L1. Departamentos </strong> </label>
+      <%= column_chart Encuestum.group(:sexo).having("sexo != ?", "--").having("sexo != ?", "").count(:id), download: true%>
+    <br>
     <table class="table">
       <thead>
         <tr>  
@@ -90,13 +101,24 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:sexo).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:sexo).having("sexo != ?", "--").having("sexo != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:sexo).having("sexo != ?", "--").having("sexo != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= 100*item/total.to_f(1) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
     <br>
