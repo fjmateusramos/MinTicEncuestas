@@ -39,7 +39,7 @@
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= 100*item/total.to_f %></td>
+          <td><%= 100*item/total.to_f, :precision => 2 %></td>
         </tr>
         <%end%>
         <thead>
