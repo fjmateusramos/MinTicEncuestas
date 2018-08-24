@@ -39,7 +39,7 @@
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= 100*item/total.to_f.round(2) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
         <thead>
