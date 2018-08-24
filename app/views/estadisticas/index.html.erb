@@ -90,7 +90,7 @@
   </div>
   <div id="Sexo">
     <label> <strong> L3. Sexo </strong> </label>
-      <%= column_chart Encuestum.group(:sexo).having("sexo != ?", "--").having("sexo != ?", "").count(:id), download: true%>
+      <%= pie_chart Encuestum.group(:sexo).having("sexo != ?", "--").having("sexo != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
