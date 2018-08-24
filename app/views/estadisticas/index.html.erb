@@ -126,32 +126,8 @@
 
   <div id="Pregunta1">
   	<label> <strong> 1. ¿A qué EPS se encuentra afiliado actualmente?  </strong> </label>
-  	<%= bar_chart Encuestum.group(:pregunta1).count(:id) %>
-        <br>
-    <table class="table">
-      <thead>
-        <tr>  
-          <th scope="col">Item</th>
-          <th scope="col">Cantidad</th>
-          <th scope="col">%</th>
-        </tr>
-      </thead>
-      <tbody>  
-        <% Encuestum.group(:pregunta1).count(:id).each do |value,item|%>
-        <tr>
-          <td scope="row"><%= value %></td>
-          <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
-        </tr>
-        <%end%>
-      </tbody>  
-    </table>
+  	<%= bar_chart Encuestum.group(:pregunta1).having("pregunta1 != ?", "--").having("pregunta1 != ?", "").count(:id), download: true%>
     <br>
-  </div>
-  <div id="Pregunta1A">
-  	<label> <strong> 1A. ¿Cuánto tiempo lleva afiliado a esta EPS:  </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta1A).count(:id) %>
-        <br>
     <table class="table">
       <thead>
         <tr>  
@@ -161,20 +137,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta1A).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta1).having("pregunta1 != ?", "--").having("pregunta1 != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta1).having("pregunta1 != ?", "--").having("pregunta1 != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
     <br>
   </div>
   <div id="Pregunta2">
   	<label> <strong> 2. Cuando recibió el último servicio de salud, ¿Estaba usted afiliado a esta misma EPS?  </strong> </label>
-  	<%= pie_chart Encuestum.group(:pregunta2).count(:id) %>
+  	<%= pie_chart Encuestum.group(:pregunta2).having("pregunta2 != ?", "--").having("pregunta2 != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -185,20 +172,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta2).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta2).having("pregunta2 != ?", "--").having("pregunta2 != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta2).having("pregunta2 != ?", "--").having("pregunta2 != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
     <br>    
   </div>
   <div id="Pregunta2A">
   	<label> <strong> 2A. En que EPS estaba afiliado  </strong> </label>
-  	<%= bar_chart Encuestum.group(:pregunta2A).count(:id) %>
+  	<%= bar_chart Encuestum.group(:pregunta2A).having("pregunta2A != ?", "--").having("pregunta2A != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -209,20 +207,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta2A).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta2A).having("pregunta2A != ?", "--").having("pregunta2A != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta2A).having("pregunta2A != ?", "--").having("pregunta2A != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
-    <br>    
+    <br>  
   </div>
   <div id="Pregunta2B">
   	<label> <strong> 2B. Régimen  </strong> </label>
-  	<%= pie_chart Encuestum.group(:pregunta2B).count(:id) %>
+  	<%= pie_chart Encuestum.group(:pregunta2B).having("pregunta2B != ?", "--").having("pregunta2B != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -233,21 +242,32 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta2B).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta2B).having("pregunta2B != ?", "--").having("pregunta2B != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta2B).having("pregunta2B != ?", "--").having("pregunta2B != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
-    <br>    
+    <br>  
   </div>
   <div id="Pregunta3">
   	<label> <strong> 3. Qué tipo de afiliado es usted en la EPS?  </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta3).count(:id) %>
-        <br>
+  	<%= column_chart Encuestum.group(:pregunta3).having("pregunta3 != ?", "--").having("pregunta3 != ?", "").count(:id), download: true%>
+    <br>
     <table class="table">
       <thead>
         <tr>  
@@ -257,20 +277,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta3).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta3).having("pregunta3 != ?", "--").having("pregunta3 != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta3).having("pregunta3 != ?", "--").having("pregunta3 != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
     <br>
   </div>
   <div id="Pregunta4">
   	<label> <strong> 4. La última vez que se afilió a la seguridad social ¿Usted escogió libremente su EPS?  </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta4).count(:id) %>
+  	 <%= column_chart Encuestum.group(:pregunta4).having("pregunta4 != ?", "--").having("pregunta4 != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -281,20 +312,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta4).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta4).having("pregunta4 != ?", "--").having("pregunta4 != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta4).having("pregunta4 != ?", "--").having("pregunta4 != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
-    <br>    
+    <br>   
   </div>
   <div id="Pregunta5">
   	<label> <strong> 5. ¿Cuál o cuáles fueron los motivos por los cuales se afilió a su EPS actual?  </strong> </label>
-  	<%= bar_chart Encuestum.group(:pregunta5).count(:id) %>
+  	<%= bar_chart Encuestum.group(:pregunta5).having("pregunta5 != ?", "--").having("pregunta5 != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -305,20 +347,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta5).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta5).having("pregunta5 != ?", "--").having("pregunta5 != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta5).having("pregunta5 != ?", "--").having("pregunta5 != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
     <br>    
   </div>  
   <div id="Pregunta6">
   	<label> <strong> 6. En general, ¿Cómo califica su estado de salud?  </strong> </label>
-  	<%= bar_chart Encuestum.group(:pregunta6).count(:id) %>
+  	<%= bar_chart Encuestum.group(:pregunta6).having("pregunta6 != ?", "--").having("pregunta6 != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -329,13 +382,24 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta6).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta6).having("pregunta6 != ?", "--").having("pregunta6 != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta6).having("pregunta6 != ?", "--").having("pregunta6 != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
     <br>    
@@ -343,7 +407,7 @@
 <h3>7. Evalúe con qué frecuencia realiza usted cada acción que le voy a mencionar: </h3>
   <div id="Pregunta7A">
   	<label> <strong> 7. A. Preguntar por el costo de los servicios que recibió  </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta7A).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta7A).having("pregunta7A != ?", "--").having("pregunta7A != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -354,20 +418,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta7A).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta7A).having("pregunta7A != ?", "--").having("pregunta7A != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta7A).having("pregunta7A != ?", "--").having("pregunta7A != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
-    <br>    
+    <br>
   </div>
   <div id="Pregunta7B">
   	<label> <strong> 7. B. Cotizar de conformidad con sus ingresos  </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta7B).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta7B).having("pregunta7B != ?", "--").having("pregunta7B != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -378,20 +453,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta7B).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta7B).having("pregunta7B != ?", "--").having("pregunta7B != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta7B).having("pregunta7B != ?", "--").having("pregunta7B != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
     <br>    
   </div> 
   <div id="Pregunta7C">
   	<label> <strong> 7. C. Cancelar con anticipación las citas solicitadas cuando no puede asistir </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta7C).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta7C).having("pregunta7C != ?", "--").having("pregunta7C != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -402,20 +488,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta7C).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta7C).having("pregunta7C != ?", "--").having("pregunta7C != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta7C).having("pregunta7C != ?", "--").having("pregunta7C != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
-    <br>    
+    <br> 
   </div> 
   <div id="Pregunta7D">
   	<label> <strong> 7. D. Reportar a su EPS alguna novedad, (Como por ejemplo la actualización de datos personales, reportar el fallecimiento de algún miembro del núcleo familiar - entre otras.) </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta7D).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta7D).having("pregunta7D != ?", "--").having("pregunta7D != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -426,20 +523,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta7D).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta7D).having("pregunta7D != ?", "--").having("pregunta7D != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta7D).having("pregunta7D != ?", "--").having("pregunta7D != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
     <br>
   </div>     
   <div id="Pregunta7E">
   	<label> <strong> 7. E. Suministrar información veraz sobre sus síntomas y condición de salud para facilitar el diagnóstico  </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta7E).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta7E).having("pregunta7E != ?", "--").having("pregunta7E != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -450,20 +558,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta7E).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta7E).having("pregunta7E != ?", "--").having("pregunta7E != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta7E).having("pregunta7E != ?", "--").having("pregunta7E != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
-    <br>    
+    <br>  
   </div>  
   <div id="Pregunta7F">
   	<label> <strong> 7. F. Tomar medicamentos sin prescripción médica  </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta7F).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta7F).having("pregunta7F != ?", "--").having("pregunta7F != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -474,20 +593,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta7F).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta7F).having("pregunta7F != ?", "--").having("pregunta7F != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta7F).having("pregunta7F != ?", "--").having("pregunta7F != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
-    <br>    
+    <br>  
   </div>  
   <div id="Pregunta7G">
   	<label> <strong> 7. G. Seguir las recomendaciones dadas por el personal de salud  </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta7G).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta7G).having("pregunta7G != ?", "--").having("pregunta7G != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -498,20 +628,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta7G).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta7G).having("pregunta7G != ?", "--").having("pregunta7G != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta7G).having("pregunta7G != ?", "--").having("pregunta7G != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
-    <br>    
+    <br> 
   </div>  
   <div id="Pregunta7H">
   	<label> <strong> 7. H. Solicitar aclaración al personal de salud cuando tiene dudas sobre tratamientos, indicaciones, cuidados, fórmulas médicas, etc. </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta7H).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta7H).having("pregunta7H != ?", "--").having("pregunta7H != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -522,20 +663,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta7H).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta7H).having("pregunta7H != ?", "--").having("pregunta7H != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta7H).having("pregunta7H != ?", "--").having("pregunta7H != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
     <br>    
   </div>  
   <div id="Pregunta7I">
   	<label> <strong> 7. I. Llegar puntualmente a las citas programadas  </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta7I).count(:id) %>
+  	 <%= column_chart Encuestum.group(:pregunta7I).having("pregunta7I != ?", "--").having("pregunta7I != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -546,20 +698,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta7I).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta7I).having("pregunta7I != ?", "--").having("pregunta7I != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta7I).having("pregunta7I != ?", "--").having("pregunta7I != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
     <br>    
   </div>  
   <div id="Pregunta7J">
   	<label> <strong> 7. J. Cumplir a cabalidad con el tratamiento médico ordenado  </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta7J).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta7J).having("pregunta7J != ?", "--").having("pregunta7J != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -570,20 +733,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta7J).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta7J).having("pregunta7J != ?", "--").having("pregunta7J != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta7J).having("pregunta7J != ?", "--").having("pregunta7J != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
     <br>    
   </div>  
   <div id="Pregunta7K">
   	<label> <strong> 7. K. Hacer ejercicio y/o alimentación balanceada </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta7K).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta7K).having("pregunta7K != ?", "--").having("pregunta7K != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -594,20 +768,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta7K).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta7K).having("pregunta7K != ?", "--").having("pregunta7K != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta7K).having("pregunta7K != ?", "--").having("pregunta7K != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
-    <br>    
+    <br>  
   </div>  
   <div id="Pregunta7L">
   	<label> <strong> 7. L. Asistir a los controles médicos periódicos siguiendo las recomendaciones de su médico  </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta7L).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta7L).having("pregunta7L != ?", "--").having("pregunta7L != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -618,20 +803,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta7L).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta7L).having("pregunta7L != ?", "--").having("pregunta7L != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta7L).having("pregunta7L != ?", "--").having("pregunta7L != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
-    <br>    
+    <br>  
   </div>  
   <div id="Pregunta7M">
   	<label> <strong> 7. M. Asistir a los programas de promoción de la salud y prevención de la enfermedad </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta7M).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta7M).having("pregunta7M != ?", "--").having("pregunta7M != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -642,20 +838,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta7M).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta7M).having("pregunta7M != ?", "--").having("pregunta7M != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta7M).having("pregunta7M != ?", "--").having("pregunta7M != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
-    <br>    
+    <br> 
   </div>  
   <div id="Pregunta7N">
   	<label> <strong> 7. N. Atender a las recomendaciones recibidas en los programas de promoción de la salud y prevención de la enfermedad </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta7N).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta7N).having("pregunta7N != ?", "--").having("pregunta7N != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -666,13 +873,24 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta7N).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta7N).having("pregunta7N != ?", "--").having("pregunta7N != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta7N).having("pregunta7N != ?", "--").having("pregunta7N != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
     <br>
@@ -680,7 +898,7 @@
 <h3>8. Pensando en la EPS ideal, ordene las siguientes características de acuerdo al grado de importancia que tiene para usted cada una; donde 1 es la más importante y 7 la menos importante</h3>  
   <div id="Pregunta8A">
   	<label> <strong> 8. A. El trato amable del personal administrativo: Oficinas de autorización, oficinas de atención al cliente, etc. </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta8A).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta8A).having("pregunta8A != ?", "--").having("pregunta8A != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -691,20 +909,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta8A).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta8A).having("pregunta8A != ?", "--").having("pregunta8A != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta8A).having("pregunta8A != ?", "--").having("pregunta8A != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
-    <br>    
+    <br>   
   </div>  
   <div id="Pregunta8B">
   	<label> <strong> 8. B. El trato amable del personal asistencial: médicos, enfermeras, terapeutas, etc. </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta8B).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta8B).having("pregunta8B != ?", "--").having("pregunta8B != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -715,20 +944,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta8B).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta8B).having("pregunta8B != ?", "--").having("pregunta8B != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta8B).having("pregunta8B != ?", "--").having("pregunta8B != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
-    <br>    
+    <br> 
   </div>  
   <div id="Pregunta8C">
   	<label> <strong> 8. C. Instalaciones físicas de la EPS: comodidad, completo, agradable </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta8C).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta8C).having("pregunta8C != ?", "--").having("pregunta8C != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -739,20 +979,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta8C).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta8C).having("pregunta8C != ?", "--").having("pregunta8C != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta8C).having("pregunta8C != ?", "--").having("pregunta8C != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
     <br>    
   </div>     
   <div id="Pregunta8D">
   	<label> <strong> 8. D. Su cercanía a hospitales y puestos de salud </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta8D).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta8D).having("pregunta8D != ?", "--").having("pregunta8D != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -763,20 +1014,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta8D).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta8D).having("pregunta8D != ?", "--").having("pregunta8D != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta8D).having("pregunta8D != ?", "--").having("pregunta8D != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
     <br>    
   </div> 
   <div id="Pregunta8E">
   	<label> <strong> 8. E. Tiempos de espera para la atención </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta8E).count(:id) %>
+  	 <%= column_chart Encuestum.group(:pregunta8E).having("pregunta8E != ?", "--").having("pregunta8E != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -787,20 +1049,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta8E).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta8E).having("pregunta8E != ?", "--").having("pregunta8E != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta8E).having("pregunta8E != ?", "--").having("pregunta8E != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
-    <br>    
+    <br>   
   </div> 
   <div id="Pregunta8F">
   	<label> <strong> 8. F. Simplicidad y agilidad en los trámites </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta8F).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta8F).having("pregunta8F != ?", "--").having("pregunta8F != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -811,20 +1084,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta8F).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta8F).having("pregunta8F != ?", "--").having("pregunta8F != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta8F).having("pregunta8F != ?", "--").having("pregunta8F != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
-    <br>    
+    <br>  
   </div> 
   <div id="Pregunta8G">
   	<label> <strong> 8. G. Cantidad de  hospitales y puestos de salud </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta8G).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta8G).having("pregunta8G != ?", "--").having("pregunta8G != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -835,13 +1119,24 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta8G).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta8G).having("pregunta8G != ?", "--").having("pregunta8G != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta8G).having("pregunta8G != ?", "--").having("pregunta8G != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
     <br>
@@ -849,7 +1144,7 @@
  <h3>9. Pensando en su EPS, Qué tan satisfecho(a) esta usted frente a los siguientes servicios recibidos de su EPS durante los ÚLTIMOS 6 MESES</h3>
   <div id="Pregunta9A">
   	<label> <strong> 9. A. El trato amable del personal administrativo: Oficinas de autorización, oficinas de atención al cliente, etc. </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta9A).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta9A).having("pregunta9A != ?", "--").having("pregunta9A != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -860,20 +1155,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta9A).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta9A).having("pregunta9A != ?", "--").having("pregunta9A != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta9A).having("pregunta9A != ?", "--").having("pregunta9A != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
-    <br>    
+    <br>  
   </div>  
   <div id="Pregunta9B">
   	<label> <strong> 9. B. El trato amable del personal asistencial: médicos, enfermeras, terapeutas, etc. </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta9B).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta9B).having("pregunta9B != ?", "--").having("pregunta9B != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -884,20 +1190,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta9B).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta9B).having("pregunta9B != ?", "--").having("pregunta9B != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta9B).having("pregunta9B != ?", "--").having("pregunta9B != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
     <br>
   </div>  
   <div id="Pregunta9C">
   	<label> <strong> 9. C. Instalaciones físicas de la EPS: comodidad, completo, agradable </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta9C).count(:id) %>
+  	 <%= column_chart Encuestum.group(:pregunta9C).having("pregunta9C != ?", "--").having("pregunta9C != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -908,20 +1225,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta9C).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta9C).having("pregunta9C != ?", "--").having("pregunta9C != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta9C).having("pregunta9C != ?", "--").having("pregunta9C != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
-    <br>    
+    <br>
   </div>     
   <div id="Pregunta9D">
   	<label> <strong> 9. D. Su cercanía a hospitales y puestos de salud </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta9D).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta9D).having("pregunta9D != ?", "--").having("pregunta9D != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -932,20 +1260,32 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta9D).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta9D).having("pregunta9D != ?", "--").having("pregunta9D != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta9D).having("pregunta9D != ?", "--").having("pregunta9D != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
+    <br>e>
     <br>    
   </div> 
   <div id="Pregunta9E">
   	<label> <strong> 9. E. Tiempos de espera para la atención </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta9E).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta9E).having("pregunta9E != ?", "--").having("pregunta9E != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -956,20 +1296,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta9E).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta9E).having("pregunta9E != ?", "--").having("pregunta9E != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta9E).having("pregunta9E != ?", "--").having("pregunta9E != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
-    <br>    
+    <br> 
   </div> 
   <div id="Pregunta9F">
   	<label> <strong> 9. F. Simplicidad y agilidad en los trámites </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta9F).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta9F).having("pregunta9F != ?", "--").having("pregunta9F != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -980,20 +1331,31 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta9F).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta9F).having("pregunta9F != ?", "--").having("pregunta9F != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta9F).having("pregunta9F != ?", "--").having("pregunta9F != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
-    <br>    
+    <br>  
   </div> 
   <div id="Pregunta9G">
   	<label> <strong> 9. G. Cantidad de  hospitales y puestos de salud </strong> </label>
-  	<%= column_chart Encuestum.group(:pregunta9G).count(:id) %>
+  	<%= column_chart Encuestum.group(:pregunta9G).having("pregunta9G != ?", "--").having("pregunta9G != ?", "").count(:id), download: true%>
     <br>
     <table class="table">
       <thead>
@@ -1004,16 +1366,27 @@
         </tr>
       </thead>
       <tbody>  
-        <% Encuestum.group(:pregunta9G).count(:id).each do |value,item|%>
+        <% total  = 0 %>
+        <% Encuestum.group(:pregunta9G).having("pregunta9G != ?", "--").having("pregunta9G != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+          <% total = total + item %>
+        <%end%>
+        <% Encuestum.group(:pregunta9G).having("pregunta9G != ?", "--").having("pregunta9G != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
         <tr>
           <td scope="row"><%= value %></td>
           <td><%= item %></td>
-          <td><%= number_with_precision(100 * item / total_encuestas, :precision => 1) %></td>
+          <td><%= (100*item/total.to_f).round(2) %></td>
         </tr>
         <%end%>
+        <thead>
+        <tr>
+          <th scope="col"> <strong> Total </strong></td>
+          <th scope="col"> <strong> <%= total %> </strong></td>
+          <th scope="col"> <strong> 100% </strong></td>
+        </tr>
+        </thead>
       </tbody>  
     </table>
-    <br>    
+    <br> 
   </div>
 <h3>10. En los últimos 6 meses ¿Cuáles de los siguientes servicios de salud ha utilizado usted a través de su EPS?</h3>
  <div id="Pregunta10A">
