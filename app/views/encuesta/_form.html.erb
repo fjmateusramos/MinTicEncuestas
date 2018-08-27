@@ -32,25 +32,25 @@
       "Cepitá","Chinchiná","Chiquinquirá","Clemencia","Coello","Corozal","Cúcuta","El Paujil","Entrerrios","Espinal","Filandia","Florencia","Giraldo","Girón","Guamal","Guateque","Hatonuevo","Honda","Ibagué","Inírida","Ipiales","Istmina","Jenesano","Jericó","La Ceja","La Florida","La Unión","Leticia","Madrid","Maicao","Maní","Manizales","Medellín","Mitú","Mocoa","Momil","Montelíbano","Montería","Neiva","Nobsa","Ocaña","Pacho","Palmira","Pamplonita","Pasto","Patía","Pereira","Popayán","Puerto Carreño","Puerto Colombia","Puerto López","Puerto Tejada","Quibdó","Ricaurte","Riohacha","Rionegro","Sabanagrande","Salgar","San Andrés","San Gil","San Jacinto","San José del Guaviare","San Pedro","Santa Marta","Santuario","Sincelejo","Soacha","Sotaquirá","Sutatausa","Tibaná","Tuluá","Tunja","Túquerres","Ubaque","Uribia","Valledupar","Villa de Leyva","Villa de San Diego de Ubate","Villavicencio","Villeta","Yopal"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
   <div class="field">
     <%= f.label :manzana, 'L3b. Manzana' %>
-    <%= f.text_field :manzana, class: 'form-control', placeholder:'Manzana', id:'fechainicial' %>
+    <%= f.text_field :manzana, class: 'form-control', placeholder:'Manzana', id:'ManzanaEncuesta' %>
   </div>
   <div class="field">
     <%= f.label :vivienda, 'L3c. Vivienda' %>
-    <%= f.text_field :vivienda, class: 'form-control', placeholder:'Vivienda', id:'fechainicial' %>
+    <%= f.text_field :vivienda, class: 'form-control', placeholder:'Vivienda', id:'ViviendaEncuesta' %>
   </div>
   <div class="field">
     <%= f.label :hora, 'L3d. Hogar' %>
-    <%= f.text_field :hora, class: 'form-control', placeholder:'Hogar', id:'fechainicial' %>
+    <%= f.text_field :hora, class: 'form-control', placeholder:'Hogar', id:'HoraEncuesta' %>
   </div>
   <div class="field">
     <%= f.label :id_persona_activa, 'L3f. Persona Efectiva' %>
-    <%= f.text_field :id_persona_activa, class: 'form-control', placeholder:'Persona Efectiva', id:'fechainicial' %>
+    <%= f.text_field :id_persona_activa, class: 'form-control', placeholder:'Persona Efectiva', id:'PersonaActivaEncuesta' %>
   </div>
 
   </div>
   <div class="field">
     <%= f.label :zona, 'L4. Zona' %>
-    <%= f.select :zona, ["Rural","Urbano"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    <%= f.select :zona, ["Rural","Urbano"],{:include_blank => true}, {class: "form-control", id:"ZonaEncuesta"}%>
   </div>
   <div class="field">
     <%= f.label :fecha, 'L5. Fecha' %>
@@ -58,16 +58,16 @@
       <span class="input-group-addon">    
         <span class="glyphicon glyphicon-calendar"></span>
       </span>
-      <%= f.text_field :fecha, "data-provide" => 'datetimepicker', class: 'form-control' , id:'FechaServicioLead' %>
+      <%= f.text_field :fecha, "data-provide" => 'datetimepicker', class: 'form-control' , id:'FechaEncuesta' %>
     </div>
   </div>
   <div class="field">
     <%= f.label :hora_inicial, 'L6. Hora Inicial' %>
-    <%= f.text_field :hora_inicial, class: 'form-control', placeholder:'Hora inicial', id:'horainicial' %>
+    <%= f.text_field :hora_inicial, class: 'form-control', placeholder:'Hora inicial', id:'HoraInicialEncuesta' %>
   </div>
   <div class="field">
     <%= f.label :nombre_encuestado, 'L7. Nombre del USUARIO SELECCIONADO' %>
-    <%= f.text_field :nombre_encuestado, class: 'form-control', placeholder:'Nombre', id:'nombreencuestado' %>
+    <%= f.text_field :nombre_encuestado, class: 'form-control', placeholder:'Nombre', id:'nombreencuestadoEncuesta' %>
   </div>
   <div class="field">
     <%= f.label :sexo, 'L8. Sexo' %>
@@ -131,11 +131,11 @@
     <br>
     <div class="field">
       <%= f.label :pregunta1, '¿A qué EPS se encuentra afiliado actualmente? ', {id:"ident_caract_usuario"} %>
-      <%= f.select :pregunta1, ["ALIANSALUD ENTIDAD PROMOTORA DE SALUD S.A.","ANASWAYUU","ASOCIACIÓN INDÍGENA DEL CAUCA","ASOCIACIÓN INDÍGENA DEL CESAR Y LA GUAJIRA  DUSAKAWI","ASOCIACIÓN MUTUAL BARRIOS UNIDOS DE QUIBDÓ E.S.S.","ASOCIACIÓN MUTUAL EMPRESA SOLIDARIA DE SALUD DE NARIÑO E.S.S. EMSSANAR E.S.S.","ASOCIACIÓN MUTUAL LA ESPERANZA ASMET  SALUD","ASOCIACIÓN MUTUAL SER EMPRESA SOLIDARIA DE SALUD ESS","CAJA DE COMPENSACIÓN FAMILIAR  DE CARTAGENA COMFAMILIAR CARTAGENA","CAJA DE COMPENSACIÓN FAMILIAR C.C.F. DEL ORIENTE COLOMBIANO COMFAORIENTE","CAJA DE COMPENSACION FAMILIAR DE CORDOBA  COMFACOR","CAJA DE COMPENSACIÓN FAMILIAR DE CUNDINAMARCA COMFACUNDI","CAJA DE COMPENSACIÓN FAMILIAR DE LA GUAJIRA","CAJA DE COMPENSACIÓN FAMILIAR DE NARIÑO COMFAMILIAR NARIÑO","CAJA DE COMPENSACIÓN FAMILIAR DE SUCRE","CAJA DE COMPENSACIÓN FAMILIAR DEL CHOCÓ COMFACHOCO","CAJA DE COMPENSACIÓN FAMILIAR DEL HUILA COMFAMILIAR","CAJA DE DE COMPENSACION FAMILIAR  CAJACOPI ATLANTICO","CAPITAL SALUD","CAPRESOCA  EPS","COMFENALCO  VALLE  E.P.S.","COMPENSAR   E.P.S.","COOMEVA   E.P.S.  S.A.","COOPERATIVA DE SALUD COMUNITARIA-COMPARTA","COOPERATIVA DE SALUD Y DESARROLLO INTEGRAL ZONA SUR ORIENTAL DE CARTAGENA LTDA. COOSALUD E.S.S.","CRUZ BLANCA  EPS S.A.","E.P.S.  FAMISANAR  LTDA.","E.P.S.  SANITAS  S.A.","EMPRESA MUTUAL PARA EL DESARROLLO INTEGRAL  DE LA SALUD E.S.S. EMDISALUD ESS","ENTIDAD COOPERATIVA SOL.DE SALUD DEL NORTE DE SOACHA ECOOPSOS","EPS  CONVIDA","EPS SERVICIO OCCIDENTAL DE SALUD  S.A. - EPS S.O.S. S.A.","EPS Y MEDICINA PREPAGADA SURAMERICANA S.A","MALLAMAS","MEDIMAS","NUEVA EPS S.A.","PIJAOS SALUD EPSI","SALUD  TOTAL  S.A.  E.P.S.","SALUDVIDA S.A .E.P.S","SAVIA SALUD EPS"],{:include_blank => true}, {class: "form-control", id:"ident_caract_usuario"}%>
+      <%= f.select :pregunta1, ["ALIANSALUD ENTIDAD PROMOTORA DE SALUD S.A.","ANASWAYUU","ASOCIACIÓN INDÍGENA DEL CAUCA","ASOCIACIÓN INDÍGENA DEL CESAR Y LA GUAJIRA  DUSAKAWI","ASOCIACIÓN MUTUAL BARRIOS UNIDOS DE QUIBDÓ E.S.S.","ASOCIACIÓN MUTUAL EMPRESA SOLIDARIA DE SALUD DE NARIÑO E.S.S. EMSSANAR E.S.S.","ASOCIACIÓN MUTUAL LA ESPERANZA ASMET  SALUD","ASOCIACIÓN MUTUAL SER EMPRESA SOLIDARIA DE SALUD ESS","CAJA DE COMPENSACIÓN FAMILIAR  DE CARTAGENA COMFAMILIAR CARTAGENA","CAJA DE COMPENSACIÓN FAMILIAR C.C.F. DEL ORIENTE COLOMBIANO COMFAORIENTE","CAJA DE COMPENSACION FAMILIAR DE CORDOBA  COMFACOR","CAJA DE COMPENSACIÓN FAMILIAR DE CUNDINAMARCA COMFACUNDI","CAJA DE COMPENSACIÓN FAMILIAR DE LA GUAJIRA","CAJA DE COMPENSACIÓN FAMILIAR DE NARIÑO COMFAMILIAR NARIÑO","CAJA DE COMPENSACIÓN FAMILIAR DE SUCRE","CAJA DE COMPENSACIÓN FAMILIAR DEL CHOCÓ COMFACHOCO","CAJA DE COMPENSACIÓN FAMILIAR DEL HUILA COMFAMILIAR","CAJA DE DE COMPENSACION FAMILIAR  CAJACOPI ATLANTICO","CAPITAL SALUD","CAPRESOCA  EPS","COMFENALCO  VALLE  E.P.S.","COMPENSAR   E.P.S.","COOMEVA   E.P.S.  S.A.","COOPERATIVA DE SALUD COMUNITARIA-COMPARTA","COOPERATIVA DE SALUD Y DESARROLLO INTEGRAL ZONA SUR ORIENTAL DE CARTAGENA LTDA. COOSALUD E.S.S.","CRUZ BLANCA  EPS S.A.","E.P.S.  FAMISANAR  LTDA.","E.P.S.  SANITAS  S.A.","EMPRESA MUTUAL PARA EL DESARROLLO INTEGRAL  DE LA SALUD E.S.S. EMDISALUD ESS","ENTIDAD COOPERATIVA SOL.DE SALUD DEL NORTE DE SOACHA ECOOPSOS","EPS  CONVIDA","EPS SERVICIO OCCIDENTAL DE SALUD  S.A. - EPS S.O.S. S.A.","EPS Y MEDICINA PREPAGADA SURAMERICANA S.A","MALLAMAS","MEDIMAS","NUEVA EPS S.A.","PIJAOS SALUD EPSI","SALUD  TOTAL  S.A.  E.P.S.","SALUDVIDA S.A .E.P.S","SAVIA SALUD EPS"],{:include_blank => true}, {class: "form-control", id:"ident_caract_usuario1"}%>
     </div>
     <div class="field">
       <%= f.label :pregunta1A, '1A. ¿Cuánto tiempo lleva afiliado a esta EPS: (ENC: Lea opciones RU)', {id:"ident_caract_usuario"}%>
-      <%= f.select :pregunta1A, ["Menos de 6 meses","Desde 6 meses y hasta 2 años","Mas de 2 años y hasta 5 años","Más de 5 años"],{:include_blank => true}, {class: "form-control", id:"ident_caract_usuario"}%>
+      <%= f.select :pregunta1A, ["Menos de 6 meses","Desde 6 meses y hasta 2 años","Mas de 2 años y hasta 5 años","Más de 5 años"],{:include_blank => true}, {class: "form-control", id:"ident_caract_usuario1a"}%>
     </div>
     <div class="field">
       <%= f.label :pregunta2, '2. Cuando recibió el último servicio de salud, ¿Estaba usted afiliado a esta misma EPS? ' , {id:"ident_caract_usuario"}%>
@@ -144,13 +144,13 @@
     <div id="pregunta2A">
       <div class="field">
           <%= f.label :pregunta2A, '2A. En que EPS estaba afiliado' %>
-          <%= f.select :pregunta2A, ["ALIANSALUD ENTIDAD PROMOTORA DE SALUD S.A.","ANASWAYUU","ASOCIACIÓN INDÍGENA DEL CAUCA","ASOCIACIÓN INDÍGENA DEL CESAR Y LA GUAJIRA  DUSAKAWI","ASOCIACIÓN MUTUAL BARRIOS UNIDOS DE QUIBDÓ E.S.S.","ASOCIACIÓN MUTUAL EMPRESA SOLIDARIA DE SALUD DE NARIÑO E.S.S. EMSSANAR E.S.S.","ASOCIACIÓN MUTUAL LA ESPERANZA ASMET  SALUD","ASOCIACIÓN MUTUAL SER EMPRESA SOLIDARIA DE SALUD ESS","CAJA DE COMPENSACIÓN FAMILIAR  DE CARTAGENA COMFAMILIAR CARTAGENA","CAJA DE COMPENSACIÓN FAMILIAR C.C.F. DEL ORIENTE COLOMBIANO COMFAORIENTE","CAJA DE COMPENSACION FAMILIAR DE CORDOBA  COMFACOR","CAJA DE COMPENSACIÓN FAMILIAR DE CUNDINAMARCA COMFACUNDI","CAJA DE COMPENSACIÓN FAMILIAR DE LA GUAJIRA","CAJA DE COMPENSACIÓN FAMILIAR DE NARIÑO COMFAMILIAR NARIÑO","CAJA DE COMPENSACIÓN FAMILIAR DE SUCRE","CAJA DE COMPENSACIÓN FAMILIAR DEL CHOCÓ COMFACHOCO","CAJA DE COMPENSACIÓN FAMILIAR DEL HUILA COMFAMILIAR","CAJA DE DE COMPENSACION FAMILIAR  CAJACOPI ATLANTICO","CAPITAL SALUD","CAPRESOCA  EPS","COMFENALCO  VALLE  E.P.S.","COMPENSAR   E.P.S.","COOMEVA   E.P.S.  S.A.","COOPERATIVA DE SALUD COMUNITARIA-COMPARTA","COOPERATIVA DE SALUD Y DESARROLLO INTEGRAL ZONA SUR ORIENTAL DE CARTAGENA LTDA. COOSALUD E.S.S.","CRUZ BLANCA  EPS S.A.","E.P.S.  FAMISANAR  LTDA.","E.P.S.  SANITAS  S.A.","EMPRESA MUTUAL PARA EL DESARROLLO INTEGRAL  DE LA SALUD E.S.S. EMDISALUD ESS","ENTIDAD COOPERATIVA SOL.DE SALUD DEL NORTE DE SOACHA ECOOPSOS","EPS  CONVIDA","EPS SERVICIO OCCIDENTAL DE SALUD  S.A. - EPS S.O.S. S.A.","EPS Y MEDICINA PREPAGADA SURAMERICANA S.A","MALLAMAS","MEDIMAS","NUEVA EPS S.A.","PIJAOS SALUD EPSI","SALUD  TOTAL  S.A.  E.P.S.","SALUDVIDA S.A .E.P.S","SAVIA SALUD EPS"],{:include_blank => true}, {class: "form-control", id:"ident_caract_usuario"}%>
+          <%= f.select :pregunta2A, ["ALIANSALUD ENTIDAD PROMOTORA DE SALUD S.A.","ANASWAYUU","ASOCIACIÓN INDÍGENA DEL CAUCA","ASOCIACIÓN INDÍGENA DEL CESAR Y LA GUAJIRA  DUSAKAWI","ASOCIACIÓN MUTUAL BARRIOS UNIDOS DE QUIBDÓ E.S.S.","ASOCIACIÓN MUTUAL EMPRESA SOLIDARIA DE SALUD DE NARIÑO E.S.S. EMSSANAR E.S.S.","ASOCIACIÓN MUTUAL LA ESPERANZA ASMET  SALUD","ASOCIACIÓN MUTUAL SER EMPRESA SOLIDARIA DE SALUD ESS","CAJA DE COMPENSACIÓN FAMILIAR  DE CARTAGENA COMFAMILIAR CARTAGENA","CAJA DE COMPENSACIÓN FAMILIAR C.C.F. DEL ORIENTE COLOMBIANO COMFAORIENTE","CAJA DE COMPENSACION FAMILIAR DE CORDOBA  COMFACOR","CAJA DE COMPENSACIÓN FAMILIAR DE CUNDINAMARCA COMFACUNDI","CAJA DE COMPENSACIÓN FAMILIAR DE LA GUAJIRA","CAJA DE COMPENSACIÓN FAMILIAR DE NARIÑO COMFAMILIAR NARIÑO","CAJA DE COMPENSACIÓN FAMILIAR DE SUCRE","CAJA DE COMPENSACIÓN FAMILIAR DEL CHOCÓ COMFACHOCO","CAJA DE COMPENSACIÓN FAMILIAR DEL HUILA COMFAMILIAR","CAJA DE DE COMPENSACION FAMILIAR  CAJACOPI ATLANTICO","CAPITAL SALUD","CAPRESOCA  EPS","COMFENALCO  VALLE  E.P.S.","COMPENSAR   E.P.S.","COOMEVA   E.P.S.  S.A.","COOPERATIVA DE SALUD COMUNITARIA-COMPARTA","COOPERATIVA DE SALUD Y DESARROLLO INTEGRAL ZONA SUR ORIENTAL DE CARTAGENA LTDA. COOSALUD E.S.S.","CRUZ BLANCA  EPS S.A.","E.P.S.  FAMISANAR  LTDA.","E.P.S.  SANITAS  S.A.","EMPRESA MUTUAL PARA EL DESARROLLO INTEGRAL  DE LA SALUD E.S.S. EMDISALUD ESS","ENTIDAD COOPERATIVA SOL.DE SALUD DEL NORTE DE SOACHA ECOOPSOS","EPS  CONVIDA","EPS SERVICIO OCCIDENTAL DE SALUD  S.A. - EPS S.O.S. S.A.","EPS Y MEDICINA PREPAGADA SURAMERICANA S.A","MALLAMAS","MEDIMAS","NUEVA EPS S.A.","PIJAOS SALUD EPSI","SALUD  TOTAL  S.A.  E.P.S.","SALUDVIDA S.A .E.P.S","SAVIA SALUD EPS"],{:include_blank => true}, {class: "form-control", id:"ident_caract_usuario2a"}%>
       </div>
     </div>
     <div id="pregunta2B">  
       <div class="field">
           <%= f.label :pregunta2B, '2B. Régimen' %>
-          <%= f.select :pregunta2B, ["Contributivo","Subsidiado"],{:include_blank => true}, {class: "form-control", id:"ident_caract_usuario"}%>
+          <%= f.select :pregunta2B, ["Contributivo","Subsidiado"],{:include_blank => true}, {class: "form-control", id:"ident_caract_usuario2b"}%>
       </div>
     </div>  
     <div class="field">
@@ -164,32 +164,32 @@
     <div id="pregunta5">
       <label>5. ¿Cuál o cuáles fueron los motivos por los cuales se afilió a su EPS actual? (ENC: Espontanea - RM)</label>
       <div>
-      <%= check_box_tag 'encuestum[pregunta5][]', 'La seleccionó el empleador', checked('La seleccionó el empleador'), id: 'ident_caract_usuario' %>
-      <%= label_tag '5a', 'La seleccionó el empleador' , id: 'ident_caract_usuario' %>
+      <%= check_box_tag 'encuestum[pregunta5][]', 'La seleccionó el empleador', checked('La seleccionó el empleador'), id: 'ident_caract_usuario5_1' %>
+      <%= label_tag '5a', 'La seleccionó el empleador' , id: 'ident_caract_usuario5' %>
       </div>
       <div>
-        <%= check_box_tag 'encuestum[pregunta5][]', 'La seleccionó otra persona familiar, amigo o conocido', checked('La seleccionó otra persona familiar, amigo o conocido'), id: 'ident_caract_usuario' %>
-        <%= label_tag '5b', 'La seleccionó otra persona familiar, amigo o conocido' , id: 'ident_caract_usuario' %>
+        <%= check_box_tag 'encuestum[pregunta5][]', 'La seleccionó otra persona familiar, amigo o conocido', checked('La seleccionó otra persona familiar, amigo o conocido'), id: 'ident_caract_usuario5_2' %>
+        <%= label_tag '5b', 'La seleccionó otra persona familiar, amigo o conocido' , id: 'ident_caract_usuario5' %>
       </div>
       <div>
-        <%= check_box_tag 'encuestum[pregunta5][]', 'Solo existe esa opción en la ciudad (Oferta única en el territorio)', checked('Solo existe esa opción en la ciudad (Oferta única en el territorio)'), id: 'ident_caract_usuario' %>
-        <%= label_tag '5c', 'Solo existe esa opción en la ciudad (Oferta única en el territorio)' , id: 'ident_caract_usuario' %>
+        <%= check_box_tag 'encuestum[pregunta5][]', 'Solo existe esa opción en la ciudad (Oferta única en el territorio)', checked('Solo existe esa opción en la ciudad (Oferta única en el territorio)'), id: 'ident_caract_usuario5_3' %>
+        <%= label_tag '5c', 'Solo existe esa opción en la ciudad (Oferta única en el territorio)' , id: 'ident_caract_usuario5' %>
       </div>
       <div>
-        <%= check_box_tag 'encuestum[pregunta5][]', 'Por unificación familiar', checked('Por unificación familiar'), id: 'ident_caract_usuario' %>
-        <%= label_tag '5d', 'Por unificación familiar' , id: 'ident_caract_usuario'%>
+        <%= check_box_tag 'encuestum[pregunta5][]', 'Por unificación familiar', checked('Por unificación familiar'), id: 'ident_caract_usuario5_4' %>
+        <%= label_tag '5d', 'Por unificación familiar' , id: 'ident_caract_usuario5'%>
       </div>
       <div>
-        <%= check_box_tag 'encuestum[pregunta5][]', 'Le gusta la EPS', checked('Le gusta la EPS'), id: 'ident_caract_usuario' %>
-        <%= label_tag '5e', 'Le gusta la EPS' , id: 'ident_caract_usuario' %>
+        <%= check_box_tag 'encuestum[pregunta5][]', 'Le gusta la EPS', checked('Le gusta la EPS'), id: 'ident_caract_usuario5_5' %>
+        <%= label_tag '5e', 'Le gusta la EPS' , id: 'ident_caract_usuario5' %>
       </div>
       <div>
-        <%= check_box_tag 'encuestum[pregunta5][]', 'Se la recomendaron', checked('Se la recomendaron'), id: 'ident_caract_usuario' %>
-        <%= label_tag '5f', 'Se la recomendaron' , id: 'ident_caract_usuario' %>
+        <%= check_box_tag 'encuestum[pregunta5][]', 'Se la recomendaron', checked('Se la recomendaron'), id: 'ident_caract_usuario5_6' %>
+        <%= label_tag '5f', 'Se la recomendaron' , id: 'ident_caract_usuario5' %>
       </div>
       <div>
         <%= f.label :pregunta5A, 'Otra ¿Cuál?' , id: 'ident_caract_usuario'%>
-        <%= f.text_field :pregunta5A, class: 'form-control', placeholder:'Otra, ¿Cuál?', id: 'ident_caract_usuario' %>
+        <%= f.text_field :pregunta5A, class: 'form-control', placeholder:'Otra, ¿Cuál?', id: 'ident_caract_usuario5A' %>
       </div>
     </div>
   </div>
@@ -202,7 +202,7 @@
         (Entregue tarjeta P6 y lea)   En una escala de 1 a 5, donde 1 es Muy mala y 5 es muy buena, califique:
         </div>
         <%= f.label :pregunta6, '6. En general, ¿Cómo califica su estado de salud?' , id:"corres_usuario" %>
-        <%= f.select :pregunta6, ["Muy malo","Malo","Regular","Bueno","Muy bueno"],{:include_blank => true}, {class: "form-control", id:"corres_usuario"}%>
+        <%= f.select :pregunta6, ["Muy malo","Malo","Regular","Bueno","Muy bueno"],{:include_blank => true}, {class: "form-control", id:"res_pregunta6"}%>
     </div>
     <div class="field">
       <div class="alert alert-primary" role="alert">
@@ -212,22 +212,22 @@
       </label>
       <div class="input-group">
           <div class="col-md-4">
-            <%= f.label :pregunta7A, 'A. Preguntar por el costo de los servicios que recibió' , {style:"margin-right:30px;margin-left:13px;", id:"corres_usuario"} %>
+            <%= f.label :pregunta7A, 'A. Preguntar por el costo de los servicios que recibió' , {style:"margin-right:30px;margin-left:13px;", id:"res_pregun"} %>
           </div>
           <div class="col-md-8 input-group">
-            <%= f.radio_button :pregunta7A, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"}%>
+            <%= f.radio_button :pregunta7A, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7a"}%>
             <div style="padding-right: 15px;">Nunca
             </div>
-            <%= f.radio_button :pregunta7A, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %>
+            <%= f.radio_button :pregunta7A, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7a"} %>
             <div style="padding-right: 15px;">Casi nunca
             </div>
-            <%= f.radio_button :pregunta7A, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %>
+            <%= f.radio_button :pregunta7A, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7a"} %>
             <div style="padding-right: 15px;">Algunas veces
             </div>
-            <%= f.radio_button :pregunta7A, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %>
+            <%= f.radio_button :pregunta7A, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7a"} %>
             <div style="padding-right: 15px;">Casi siempre
             </div>
-            <%= f.radio_button :pregunta7A, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %>
+            <%= f.radio_button :pregunta7A, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7a"} %>
             <div style="padding-right: 15px;">Siempre
             </div>
           </div>
@@ -241,7 +241,7 @@
               <%= f.label :pregunta7B, 'B. Cotizar de conformidad con sus ingresos' , {style:"margin-right:30px;margin-left:13px;" , id:"corres_usuario"} %>
             </div>
           <div class="col-md-8 input-group">
-            <%= f.radio_button :pregunta7B, "Nunca" ,{class: "form-control", id:"pregunta7"}%><div style="padding-right: 15px;">Nunca</div>
+            <%= f.radio_button :pregunta7B, "Nunca" ,{class: "form-control", id:"pregunta7b"}%><div style="padding-right: 15px;">Nunca</div>
             <%= f.radio_button :pregunta7B, "Casi nunca", {class: "form-control", id:"pregunta7b"} %><div style="padding-right: 15px;">Casi nunca</div>
             <%= f.radio_button :pregunta7B, "Algunas veces", {class: "form-control", id:"pregunta7b"} %><div style="padding-right: 15px;">Algunas veces</div>
             <%= f.radio_button :pregunta7B, "Casi siempre", {class: "form-control", id:"pregunta7b"} %><div style="padding-right: 15px;">Casi siempre</div>
@@ -254,11 +254,11 @@
         <%= f.label :pregunta7C, 'C. Cancelar con anticipación las citas solicitadas cuando no puede asistir' , {style:"margin-right:30px;margin-left:13px;" , id:"corres_usuario"} %>
         </div>
         <div class="col-md-8 input-group">
-          <%= f.radio_button :pregunta7C, "Nunca" ,{class: "form-control", id:"corres_usuario"}%><div>Nunca</div>
-          <%= f.radio_button :pregunta7C, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Casi nunca</div>
-          <%= f.radio_button :pregunta7C, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Algunas veces</div>
-          <%= f.radio_button :pregunta7C, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Casi siempre</div>
-          <%= f.radio_button :pregunta7C, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Siempre</div>
+          <%= f.radio_button :pregunta7C, "Nunca" ,{class: "form-control", id:"res_pregunta7c"}%><div>Nunca</div>
+          <%= f.radio_button :pregunta7C, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7c"} %><div>Casi nunca</div>
+          <%= f.radio_button :pregunta7C, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7c"} %><div>Algunas veces</div>
+          <%= f.radio_button :pregunta7C, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7c"} %><div>Casi siempre</div>
+          <%= f.radio_button :pregunta7C, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7c"} %><div>Siempre</div>
         </div>
       </div>
       <div class="input-group">
@@ -266,11 +266,11 @@
           <%= f.label :pregunta7D, 'D. Reportar a su EPS alguna novedad, (Como por ejemplo la actualización de datos personales, reportar el fallecimiento de algún miembro del núcleo familiar - entre otras.) ' , {style:"margin-right:30px;margin-left:13px;" , id:"corres_usuario"} %>
         </div>
         <div class="col-md-8 input-group">
-          <%= f.radio_button :pregunta7D, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"}%><div>Nunca</div>
-          <%= f.radio_button :pregunta7D, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Casi nunca</div>
-          <%= f.radio_button :pregunta7D, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Algunas veces</div>
-          <%= f.radio_button :pregunta7D, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Casi siempre</div>
-          <%= f.radio_button :pregunta7D, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Siempre</div>
+          <%= f.radio_button :pregunta7D, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7d"}%><div>Nunca</div>
+          <%= f.radio_button :pregunta7D, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7d"} %><div>Casi nunca</div>
+          <%= f.radio_button :pregunta7D, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7d"} %><div>Algunas veces</div>
+          <%= f.radio_button :pregunta7D, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7d"} %><div>Casi siempre</div>
+          <%= f.radio_button :pregunta7D, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7d"} %><div>Siempre</div>
         </div>
       </div>
       <div class="input-group">
@@ -278,11 +278,11 @@
         <%= f.label :pregunta7E, 'E. Suministrar información veraz sobre sus síntomas y condición de salud para facilitar el diagnóstico ' , {style:"margin-right:30px;margin-left:13px;", id:"corres_usuario"} %>
         </div>
         <div class="col-md-8 input-group">
-          <%= f.radio_button :pregunta7E, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"}%><div>Nunca</div>
-          <%= f.radio_button :pregunta7E, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Casi nunca</div>
-          <%= f.radio_button :pregunta7E, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Algunas veces</div>
-          <%= f.radio_button :pregunta7E, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Casi siempre</div>
-          <%= f.radio_button :pregunta7E, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Siempre</div>
+          <%= f.radio_button :pregunta7E, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7e"}%><div>Nunca</div>
+          <%= f.radio_button :pregunta7E, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7e"} %><div>Casi nunca</div>
+          <%= f.radio_button :pregunta7E, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7e"} %><div>Algunas veces</div>
+          <%= f.radio_button :pregunta7E, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7e"} %><div>Casi siempre</div>
+          <%= f.radio_button :pregunta7E, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7e"} %><div>Siempre</div>
         </div>
       </div>
       <div class="input-group">
@@ -290,11 +290,11 @@
         <%= f.label :pregunta7F, 'F. Tomar medicamentos sin prescripción médica' , {style:"margin-right:30px;margin-left:13px;"} %>
         </div>
         <div class="col-md-8 input-group">
-          <%= f.radio_button :pregunta7F, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"}%><div>Nunca</div>
-          <%= f.radio_button :pregunta7F, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Casi nunca</div>
-          <%= f.radio_button :pregunta7F, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Algunas veces</div>
-          <%= f.radio_button :pregunta7F, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Casi siempre</div>
-          <%= f.radio_button :pregunta7F, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Siempre</div>
+          <%= f.radio_button :pregunta7F, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7f"}%><div>Nunca</div>
+          <%= f.radio_button :pregunta7F, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7f"} %><div>Casi nunca</div>
+          <%= f.radio_button :pregunta7F, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7f"} %><div>Algunas veces</div>
+          <%= f.radio_button :pregunta7F, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7f"} %><div>Casi siempre</div>
+          <%= f.radio_button :pregunta7F, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7f"} %><div>Siempre</div>
         </div>
       </div>
       <div class="input-group">
@@ -302,11 +302,11 @@
         <%= f.label :pregunta7G, 'G. Seguir las recomendaciones dadas por el personal de salud' , {style:"margin-right:30px;margin-left:13px;"} %>
         </div>
         <div class="col-md-8 input-group">
-          <%= f.radio_button :pregunta7G, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"}%><div>Nunca</div>
-          <%= f.radio_button :pregunta7G, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Casi nunca</div>
-          <%= f.radio_button :pregunta7G, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Algunas veces</div>
-          <%= f.radio_button :pregunta7G, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Casi siempre</div>
-          <%= f.radio_button :pregunta7G, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Siempre</div>
+          <%= f.radio_button :pregunta7G, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7g"}%><div>Nunca</div>
+          <%= f.radio_button :pregunta7G, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7g"} %><div>Casi nunca</div>
+          <%= f.radio_button :pregunta7G, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7g"} %><div>Algunas veces</div>
+          <%= f.radio_button :pregunta7G, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7g"} %><div>Casi siempre</div>
+          <%= f.radio_button :pregunta7G, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7g"} %><div>Siempre</div>
         </div>
       </div>
       <div class="input-group">
@@ -314,11 +314,11 @@
         <%= f.label :pregunta7H, 'H. Solicitar aclaración al personal de salud cuando tiene dudas sobre tratamientos, indicaciones, cuidados, fórmulas médicas, etc.' , {style:"margin-right:30px;margin-left:13px;", id:"corres_usuario"} %>
         </div>
         <div class="col-md-8 input-group">
-          <%= f.radio_button :pregunta7H, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"}%><div>Nunca</div>
-          <%= f.radio_button :pregunta7H, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Casi nunca</div>
-          <%= f.radio_button :pregunta7H, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Algunas veces</div>
-          <%= f.radio_button :pregunta7H, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Casi siempre</div>
-          <%= f.radio_button :pregunta7H, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Siempre</div>
+          <%= f.radio_button :pregunta7H, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7h"}%><div>Nunca</div>
+          <%= f.radio_button :pregunta7H, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7h"} %><div>Casi nunca</div>
+          <%= f.radio_button :pregunta7H, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7h"} %><div>Algunas veces</div>
+          <%= f.radio_button :pregunta7H, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7h"} %><div>Casi siempre</div>
+          <%= f.radio_button :pregunta7H, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7h"} %><div>Siempre</div>
         </div>
       </div>
       <div class="input-group">
@@ -326,11 +326,11 @@
         <%= f.label :pregunta7I, 'I. Llegar puntualmente a las citas programadas' , {style:"margin-right:30px;margin-left:13px;", id:"corres_usuario"} %>
         </div>
         <div class="col-md-8 input-group">
-          <%= f.radio_button :pregunta7I, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"}%><div>Nunca</div>
-          <%= f.radio_button :pregunta7I, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Casi nunca</div>
-          <%= f.radio_button :pregunta7I, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Algunas veces</div>
-          <%= f.radio_button :pregunta7I, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Casi siempre</div>
-          <%= f.radio_button :pregunta7I, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Siempre</div>
+          <%= f.radio_button :pregunta7I, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7i"}%><div>Nunca</div>
+          <%= f.radio_button :pregunta7I, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7i"} %><div>Casi nunca</div>
+          <%= f.radio_button :pregunta7I, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7i"} %><div>Algunas veces</div>
+          <%= f.radio_button :pregunta7I, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7i"} %><div>Casi siempre</div>
+          <%= f.radio_button :pregunta7I, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7i"} %><div>Siempre</div>
         </div>
       </div>
       <div class="input-group">
@@ -338,11 +338,11 @@
         <%= f.label :pregunta7J, 'J. Cumplir a cabalidad con el tratamiento médico ordenado' , {style:"margin-right:30px;margin-left:13px;", id:"corres_usuario"} %>
         </div>
         <div class="col-md-8 input-group">
-          <%= f.radio_button :pregunta7J, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"}%><div>Nunca</div>
-          <%= f.radio_button :pregunta7J, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Casi nunca</div>
-          <%= f.radio_button :pregunta7J, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Algunas veces</div>
-          <%= f.radio_button :pregunta7J, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Casi siempre</div>
-          <%= f.radio_button :pregunta7J, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Siempre</div>
+          <%= f.radio_button :pregunta7J, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7j"}%><div>Nunca</div>
+          <%= f.radio_button :pregunta7J, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7j"} %><div>Casi nunca</div>
+          <%= f.radio_button :pregunta7J, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7j"} %><div>Algunas veces</div>
+          <%= f.radio_button :pregunta7J, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7j"} %><div>Casi siempre</div>
+          <%= f.radio_button :pregunta7J, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7j"} %><div>Siempre</div>
         </div>
       </div>
       <div class="input-group">
@@ -350,11 +350,11 @@
         <%= f.label :pregunta7K, 'K. Hacer ejercicio y/o alimentación balanceada' , {style:"margin-right:30px;margin-left:13px;", id:"corres_usuario"} %>
         </div>
         <div class="col-md-8 input-group">
-          <%= f.radio_button :pregunta7K, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"}%><div>Nunca</div>
-          <%= f.radio_button :pregunta7K, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Casi nunca</div>
-          <%= f.radio_button :pregunta7K, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Algunas veces</div>
-          <%= f.radio_button :pregunta7K, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Casi siempre</div>
-          <%= f.radio_button :pregunta7K, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Siempre</div>
+          <%= f.radio_button :pregunta7K, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7k"}%><div>Nunca</div>
+          <%= f.radio_button :pregunta7K, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7k"} %><div>Casi nunca</div>
+          <%= f.radio_button :pregunta7K, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7k"} %><div>Algunas veces</div>
+          <%= f.radio_button :pregunta7K, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7k"} %><div>Casi siempre</div>
+          <%= f.radio_button :pregunta7K, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7k"} %><div>Siempre</div>
         </div>
       </div>
       <div class="input-group">
@@ -362,11 +362,11 @@
         <%= f.label :pregunta7L, 'L. Asistir a los controles médicos periódicos siguiendo las recomendaciones de su médico' , {style:"margin-right:30px;margin-left:13px;", id:"corres_usuario"} %>
         </div>
         <div class="col-md-8 input-group">
-          <%= f.radio_button :pregunta7L, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"}%><div>Nunca</div>
-          <%= f.radio_button :pregunta7L, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Casi nunca</div>
-          <%= f.radio_button :pregunta7L, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Algunas veces</div>
-          <%= f.radio_button :pregunta7L, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Casi siempre</div>
-          <%= f.radio_button :pregunta7L, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Siempre</div>
+          <%= f.radio_button :pregunta7L, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7l"}%><div>Nunca</div>
+          <%= f.radio_button :pregunta7L, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7l"} %><div>Casi nunca</div>
+          <%= f.radio_button :pregunta7L, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7l"} %><div>Algunas veces</div>
+          <%= f.radio_button :pregunta7L, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7l"} %><div>Casi siempre</div>
+          <%= f.radio_button :pregunta7L, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7l"} %><div>Siempre</div>
         </div>
       </div>
       <div class="input-group">
@@ -374,11 +374,11 @@
         <%= f.label :pregunta7M, 'M. Asistir a los programas de promoción de la salud y prevención de la enfermedad' , {style:"margin-right:30px;margin-left:13px;", id:"corres_usuario"} %>
         </div>
         <div class="col-md-8 input-group">
-          <%= f.radio_button :pregunta7M, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"}%><div>Nunca</div>
-          <%= f.radio_button :pregunta7M, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Casi nunca</div>
-          <%= f.radio_button :pregunta7M, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Algunas veces</div>
-          <%= f.radio_button :pregunta7M, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Casi siempre</div>
-          <%= f.radio_button :pregunta7M, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Siempre</div>
+          <%= f.radio_button :pregunta7M, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7m"}%><div>Nunca</div>
+          <%= f.radio_button :pregunta7M, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7m"} %><div>Casi nunca</div>
+          <%= f.radio_button :pregunta7M, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7m"} %><div>Algunas veces</div>
+          <%= f.radio_button :pregunta7M, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7m"} %><div>Casi siempre</div>
+          <%= f.radio_button :pregunta7M, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7m"} %><div>Siempre</div>
         </div>
       </div>
       <div class="input-group">
@@ -386,11 +386,11 @@
         <%= f.label :pregunta7N, 'N. Atender a las recomendaciones recibidas en los programas de promoción de la salud y prevención de la enfermedad' , {style:"margin-right:30px;margin-left:13px;", id:"corres_usuario"} %>
         </div>
         <div class="col-md-8 input-group">
-          <%= f.radio_button :pregunta7N, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"}%><div>Nunca</div>
-          <%= f.radio_button :pregunta7N, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Casi nunca</div>
-          <%= f.radio_button :pregunta7N, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Algunas veces</div>
-          <%= f.radio_button :pregunta7N, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Casi siempre</div>
-          <%= f.radio_button :pregunta7N, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"corres_usuario"} %><div>Siempre</div>
+          <%= f.radio_button :pregunta7N, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7n"}%><div>Nunca</div>
+          <%= f.radio_button :pregunta7N, "Casi nunca", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7n"} %><div>Casi nunca</div>
+          <%= f.radio_button :pregunta7N, "Algunas veces", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7n"} %><div>Algunas veces</div>
+          <%= f.radio_button :pregunta7N, "Casi siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7n"} %><div>Casi siempre</div>
+          <%= f.radio_button :pregunta7N, "Siempre", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7n"} %><div>Siempre</div>
         </div>
       </div>
     </div>
@@ -410,12 +410,12 @@
       <%= f.label :pregunta8A, 'A. El trato amable del personal administrativo: Oficinas de autorización, oficinas de atención al cliente, etc.' , {style:"margin-right:30px;margin-left:13px;", id:"importan_satis_fact_serv"} %>
       </div>
       <div class="col-md-8 input-group">
-        <%= f.select :pregunta8A, ["1","2","3","4","5","6","7"],{:include_blank => true}, {class: "form-control", id:"importan_satis_fact_serv", style:"width:50px;"}%>
-        <%= f.radio_button :pregunta9A, "Nada s." ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"}%><div>Nada sat.</div>
-        <%= f.radio_button :pregunta9A, "Poco s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Poco sat.</div>
-        <%= f.radio_button :pregunta9A, "Ni s. Ni ins.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Ni sat. Ni ins. </div>
-        <%= f.radio_button :pregunta9A, "Satisfecho", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Satisfecho</div>
-        <%= f.radio_button :pregunta9A, "Totalmente s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Totalmente sat.</div>
+        <%= f.select :pregunta8A, ["1","2","3","4","5","6","7"],{:include_blank => true}, {class: "form-control", id:"res_pregunta8a", style:"width:50px;"}%>
+        <%= f.radio_button :pregunta9A, "Nada s." ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta9a"}%><div>Nada sat.</div>
+        <%= f.radio_button :pregunta9A, "Poco s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta9a"} %><div>Poco sat.</div>
+        <%= f.radio_button :pregunta9A, "Ni s. Ni ins.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta9a"} %><div>Ni sat. Ni ins. </div>
+        <%= f.radio_button :pregunta9A, "Satisfecho", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta9a"} %><div>Satisfecho</div>
+        <%= f.radio_button :pregunta9A, "Totalmente s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta9a"} %><div>Totalmente sat.</div>
       </div>
     </div>
     <div class="input-group">
@@ -423,12 +423,12 @@
       <%= f.label :pregunta8B, 'B. El trato amable del personal asistencial: médicos, enfermeras, terapeutas, etc.' , {style:"margin-right:30px;margin-left:13px;" , id:"importan_satis_fact_serv"} %>
       </div>
       <div class="col-md-8 input-group">
-        <%= f.select :pregunta8B, ["1","2","3","4","5","6","7"],{:include_blank => true}, {class: "form-control", id:"importan_satis_fact_serv",style:"width:50px;"}%>
-        <%= f.radio_button :pregunta9B, "Nada s." ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"}%><div>Nada sat.</div>
-        <%= f.radio_button :pregunta9B, "Poco s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Poco sat.</div>
-        <%= f.radio_button :pregunta9B, "Ni s. Ni ins.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Ni sat. Ni ins. </div>
-        <%= f.radio_button :pregunta9B, "Satisfecho", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Satisfecho</div>
-        <%= f.radio_button :pregunta9B, "Totalmente s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"importan_satis_fact_serv"} %><div>Totalmente sat.</div>
+        <%= f.select :pregunta8B, ["1","2","3","4","5","6","7"],{:include_blank => true}, {class: "form-control", id:"res_pregunta8b",style:"width:50px;"}%>
+        <%= f.radio_button :pregunta9B, "Nada s." ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta9b"}%><div>Nada sat.</div>
+        <%= f.radio_button :pregunta9B, "Poco s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta9b"} %><div>Poco sat.</div>
+        <%= f.radio_button :pregunta9B, "Ni s. Ni ins.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta9b"} %><div>Ni sat. Ni ins. </div>
+        <%= f.radio_button :pregunta9B, "Satisfecho", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta9b"} %><div>Satisfecho</div>
+        <%= f.radio_button :pregunta9B, "Totalmente s.", {class: "form-control",style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta9b"} %><div>Totalmente sat.</div>
       </div>
     </div>
     <div class="input-group">
@@ -3526,11 +3526,11 @@
 
     <div>
         <%= f.label :pregunta51, '51. De acuerdo con su cultura, pueblo o rasgos físicos, es o se reconoce como… (ENC: Lea opciones, RU)' , id:"identicacion_caracterizacion_usuario"%>
-        <%= f.select :pregunta51, ["Indígena","Gitano (ROM)","Raizal del archipiélago","Palanquero","Negro, mulato (afro descendiente)","Ninguno de los anteriores"],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario"}%>
+        <%= f.select :pregunta51, ["Indígena","Gitano (ROM)","Raizal del archipiélago","Palanquero","Negro, mulato (afro descendiente)","Ninguno de los anteriores"],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario51"}%>
     </div>
     <div>
         <%= f.label :pregunta52, '52. Su estado civil actualmente es… (ENC: Lea opciones, RU)' , id:"identicacion_caracterizacion_usuario"%>
-        <%= f.select :pregunta52, ["Casado","Separado o divorciado","Viudo","Unión libre","Soltero"],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario"}%>
+        <%= f.select :pregunta52, ["Casado","Separado o divorciado","Viudo","Unión libre","Soltero"],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario52"}%>
     </div>
     <br>
     <div class="alert alert-primary" role="alert">
@@ -3538,7 +3538,7 @@
     </div>
     <div>
         <%= f.label :pregunta53, '53. ¿Cuál es el nivel educativo más alto que usted ha alcanzado? (Lea opciones, RU)' , id:"identicacion_caracterizacion_usuario"%>
-        <%= f.select :pregunta53, ["Ninguno","Preescolar","Básica primaria (1° a 5°)","Básica secundaria (6° a 9°)","Media (10° y 11°)","Técnico","Tecnólogo","Universitario sin título","Universitario con título","Postgrado sin título","Postgrado con título","No informa / No  sabe "],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario"}%>
+        <%= f.select :pregunta53, ["Ninguno","Preescolar","Básica primaria (1° a 5°)","Básica secundaria (6° a 9°)","Media (10° y 11°)","Técnico","Tecnólogo","Universitario sin título","Universitario con título","Postgrado sin título","Postgrado con título","No informa / No  sabe "],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario53"}%>
     </div>
     <br>
     <div class="alert alert-primary" role="alert">
@@ -3546,7 +3546,7 @@
     </div>
     <div>
         <%= f.label :pregunta54, '54. Estrato de la residencia: ' , id:"identicacion_caracterizacion_usuario"%>
-        <%= f.select :pregunta54, ["Estrato 1","Estrato 2","Estrato 3","Estrato 4","Estrato 5","Estrato 6","Indeterminado / Sin estrato"],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario"}%>
+        <%= f.select :pregunta54, ["Estrato 1","Estrato 2","Estrato 3","Estrato 4","Estrato 5","Estrato 6","Indeterminado / Sin estrato"],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario54"}%>
     </div>
     <br>
     <div class="alert alert-primary" role="alert">
@@ -3554,7 +3554,7 @@
     </div>
     <div>
         <%= f.label :pregunta55, '55. ¿A qué actividad se dedica la mayor parte del tiempo? (ENC: RU)' , id:"identicacion_caracterizacion_usuario"%>
-        <%= f.select :pregunta55, ["Estudiar","Trabajar","Trabajar y estudiar","Actividades del hogar","Desempleado","Pensionado / Renta","Retirado"],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario"}%>
+        <%= f.select :pregunta55, ["Estudiar","Trabajar","Trabajar y estudiar","Actividades del hogar","Desempleado","Pensionado / Renta","Retirado"],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario55"}%>
     </div>
     <div>
         <%= f.label :pregunta56, '56. La encuesta fue respondida por un persona diferente al usuario?  (Informante Idóneo/ acompañante) (ENC: Entiéndase informante idóneo) ' , id:"identicacion_caracterizacion_usuario"%>
@@ -3563,23 +3563,23 @@
     <div id="pregunta57585960">
       <div>
           <%= f.label :pregunta57, '57. Nombre del acompañante del encuestado (ENC: Informante idóneo):  ' , id:"identicacion_caracterizacion_usuario"%>
-          <%= f.text_field :pregunta57, {class: "form-control", id:"identicacion_caracterizacion_usuario"}%>
+          <%= f.text_field :pregunta57, {class: "form-control", id:"identicacion_caracterizacion_usuario57"}%>
       </div>
       <div>
           <%= f.label :pregunta58, '58. Género del informante idóneo' , id:"identicacion_caracterizacion_usuario"%>
-          <%= f.select :pregunta58, ["Masculino","Femenino"],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario"}%>
+          <%= f.select :pregunta58, ["Masculino","Femenino"],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario58"}%>
       </div>
       <div>
           <%= f.label :pregunta59, '59. ¿Cuantos años cumplidos tiene el acompañante?' , id:"identicacion_caracterizacion_usuario"%>
-          <%= f.text_field :pregunta59, {class: "form-control", id:"identicacion_caracterizacion_usuario"}%>
+          <%= f.text_field :pregunta59, {class: "form-control", id:"identicacion_caracterizacion_usuario59"}%>
       </div>
       <div>
           <%= f.label :pregunta60, '60. Parentesco del informante idóneo' , id:"identicacion_caracterizacion_usuario"%>
-          <%= f.select :pregunta60, ["Abuelo(a)","Cuñado(a)","Esposo(a)","Familiar lejano (3er grado)","Hermano(a)","Hijo(a)","Nieto(a)","Nuera/Yerno","Papa/Mama","Primo(a)","Sobrino(a)","Suegro(a)","Tio(a)"],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario"}%>
+          <%= f.select :pregunta60, ["Abuelo(a)","Cuñado(a)","Esposo(a)","Familiar lejano (3er grado)","Hermano(a)","Hijo(a)","Nieto(a)","Nuera/Yerno","Papa/Mama","Primo(a)","Sobrino(a)","Suegro(a)","Tio(a)"],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario60"}%>
       </div>
        <div>
           <%= f.label :pregunta61, '61. Hace cuanto tiempo vive en este municipio?' , id:"identicacion_caracterizacion_usuario"%>
-          <%= f.select :pregunta61, ["Menos de un año","Más de un año"],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario"}%>
+          <%= f.select :pregunta61, ["Menos de un año","Más de un año"],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario61"}%>
       </div>
      </div> 
     </div>
@@ -3591,34 +3591,34 @@
   <br>
   <div>
       <%= f.label :direccion, 'Dirección' , id:"ubicacion"%>
-      <%= f.text_field :direccion, {class: "form-control", id:"ubicacion"}%>
+      <%= f.text_field :direccion, {class: "form-control", id:"ubicacion_direccion"}%>
   </div>
   <div>
       <%= f.label :hora_final, 'Hora final' , id:"ubicacion"%>
-      <%= f.text_field :hora_final, {class: "form-control", id:"ubicacion"}%>
+      <%= f.text_field :hora_final, {class: "form-control", id:"ubicacion_horafinal"}%>
   </div>
   <div>
       <%= f.label :telefono, 'Teléfono' , id:"ubicacion"%>
-      <%= f.text_field :telefono, {class: "form-control", id:"ubicacion"}%>
+      <%= f.text_field :telefono, {class: "form-control", id:"ubicacion_telefono"}%>
   </div>
   <div>
       <%= f.label :telefono_celular, 'Teléfono celular' , id:"ubicacion"%>
-      <%= f.text_field :telefono_celular, {class: "form-control", id:"ubicacion"}%>
+      <%= f.text_field :telefono_celular, {class: "form-control", id:"ubicacion_celular"}%>
   </div>
   <br>
   <h2 id="operativo">XVIII. CONTROL OPERATIVO</h2>
   <br>
     <div>
         <%= f.label :nombre_encuestador, 'Nombre del encuestador' , id:"operativo"%>
-        <%= f.select :nombre_encuestador, ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40"],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario"}%>
+        <%= f.select :nombre_encuestador, ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40"],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario_encuestador"}%>
     </div>
     <div>
         <%= f.label :nombre_supervisor, 'Nombre del supervisor' , id:"operativo"%>
-        <%= f.select :nombre_supervisor, ["Angela Prieto","Cristina Fajardo","Dario Saldarriaga","Eliana Galindo","Francisco Mateus","Jimmy Bernal","Jose Luis Fuentes","Leydi Sierra","Lina Coronado","Lorena Guantiva","Martha Castellanos","Martin Barrientos","Milena Marulanda","Victor Torres","Yalila Goyeneche","Yaneth Sanchez"],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario"}%>
+        <%= f.select :nombre_supervisor, ["Angela Prieto","Cristina Fajardo","Dario Saldarriaga","Eliana Galindo","Francisco Mateus","Jimmy Bernal","Jose Luis Fuentes","Leydi Sierra","Lina Coronado","Lorena Guantiva","Martha Castellanos","Martin Barrientos","Milena Marulanda","Victor Torres","Yalila Goyeneche","Yaneth Sanchez"],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario_supervisor"}%>
     </div>
     <div>
         <%= f.label :nombre_coordinador, 'Nombre del coordinador' , id:"operativo"%>
-         <%= f.select :nombre_coordinador, ["Angela Prieto","Lorena Guantiva","Eliana Galindo"],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario"}%>
+         <%= f.select :nombre_coordinador, ["Angela Prieto","Lorena Guantiva","Eliana Galindo"],{:include_blank => true}, {class: "form-control", id:"identicacion_caracterizacion_usuario_coordinador"}%>
     </div>
   </div>
   <br>
@@ -3633,10 +3633,12 @@
   <% end %>
   <br>
   </div>
+<a href='#' onclick='downloadCSV({ filename: "MinSaludEncuesta.csv" });'>Descargar Encuesta</a>
+
 <script type="text/javascript">
 
 $(document).ready(function(){
-
+    
     $('#afiliadoeps1').change(function(){
         if($('#afiliadoeps1').val() == "No"){
         $("#afiliadoseps2").addClass('hidden');  
@@ -4435,6 +4437,7 @@ $(document).ready(function(){
 
     $('#Guardar_Sin_Internet').click(function(){
       alert("Encuesta Guardada con Exito");
+
     });
 
     $('#sexo_l8').change(function(){
@@ -4473,6 +4476,325 @@ $(document).ready(function(){
         }
     });
 });
-
+  
+    
+ 
+    function convertArrayOfObjectsToCSV(args) {
+        var result, ctr, keys, columnDelimiter, lineDelimiter, data;
+ 
+        data = args.data || null;
+        if (data == null || !data.length) {
+            return null;
+        }
+ 
+        columnDelimiter = args.columnDelimiter || ',';
+        lineDelimiter = args.lineDelimiter || '\n';
+ 
+        keys = Object.keys(data[0]);
+ 
+        result = '';
+        result += keys.join(columnDelimiter);
+        result += lineDelimiter;
+ 
+        data.forEach(function(item) {
+            ctr = 0;
+            keys.forEach(function(key) {
+                if (ctr > 0) result += columnDelimiter;
+ 
+                result += item[key];
+                ctr++;
+            });
+            result += lineDelimiter;
+        });
+ 
+        return result;
+    }
+ 
+    function downloadCSV(args) {
+        var data, filename, link;
+        
+        var stockData = [
+        {
+          Pregunta: "Departamento",
+          Respuesta : $("#DepartamentoEncuesta").val()
+        },
+        {
+          Pregunta: "Municipio",
+          Respuesta : $("#MunicipioEncuesta").val()
+        },
+        {
+          Pregunta: "Manzana",
+          Respuesta : $("#ManzanaEncuesta").val()
+        },
+        {
+          Pregunta: "Vivienda",
+          Respuesta : $("#ViviendaEncuesta").val()
+        },
+        {
+          Pregunta: "Hora",
+          Respuesta : $("#HoraEncuesta").val()
+        },
+        {
+          Pregunta: "PersonaActiva",
+          Respuesta : $("#PersonaActivaEncuesta").val()
+        },  
+        {
+          Pregunta: "Zona",
+          Respuesta : $("#ZonaEncuesta").val()
+        },
+        {
+          Pregunta: "Fecha",
+          Respuesta : $("#FechaEncuesta").val()
+        },
+        {
+          Pregunta: "HoraInicial",
+          Respuesta : $("#HoraInicialEncuesta").val()
+        },
+        {
+          Pregunta: "NombreEncuestado",
+          Respuesta : $("#nombreencuestadoEncuesta").val()
+        },
+        {
+          Pregunta: "Sexo",
+          Respuesta : $("#sexo_l8").val()
+        },
+        {
+          Pregunta: "Años",
+          Respuesta : $("#años_l9").val()
+        },  
+        {
+          Pregunta: "afiliadoeps1",
+          Respuesta : $("#afiliadoeps1").val()
+        },  
+        {
+          Pregunta: "afiliadoeps2",
+          Respuesta : $("#afiliadoeps2").val()
+        },  
+        {
+          Pregunta: "afiliadoeps3",
+          Respuesta : $("#afiliadoeps3").val()
+        },  
+        {
+          Pregunta: "prepagada1",
+          Respuesta : $("#prepagada1").val()
+        },  
+        {
+          Pregunta: "prepagada2",
+          Respuesta : $("#prepagada2").val()
+        }, 
+        {
+          Pregunta: "prepagada2",
+          Respuesta : $("#prepagada2").val()
+        }, 
+        {
+          Pregunta: "prepagada3",
+          Respuesta : $("#prepagada3").val()
+        }, 
+        {
+          Pregunta: "prepagada4",
+          Respuesta : $("#prepagada4").val()
+        }, 
+        {
+          Pregunta: "prepagada5",
+          Respuesta : $("#prepagada5").val()
+        }, 
+        {
+          Pregunta: "ident_caract_usuario1",
+          Respuesta : $("#ident_caract_usuario1").val()
+        },  
+        {
+          Pregunta: "res_pregunta2",
+          Respuesta : $("#res_pregunta2").val()
+        },
+        {
+          Pregunta: "ident_caract_usuario2a",
+          Respuesta : $("#ident_caract_usuario2a").val()
+        },
+        {
+          Pregunta: "ident_caract_usuario2b",
+          Respuesta : $("#ident_caract_usuario2b").val()
+        },
+        {
+          Pregunta: "res_pregunta3",
+          Respuesta : $("#res_pregunta3").val()
+        },
+        {
+          Pregunta: "res_pregunta4",
+          Respuesta : $("#res_pregunta4").val()
+        },
+        {
+          Pregunta: "ident_caract_usuario5_1",
+          Respuesta : $("#ident_caract_usuario5_1").val()
+        },
+        {
+          Pregunta: "ident_caract_usuario5_2",
+          Respuesta : $("#ident_caract_usuario5_2").val()
+        },
+        {
+          Pregunta: "ident_caract_usuario5_3",
+          Respuesta : $("#ident_caract_usuario5_3").val()
+        },
+        {
+          Pregunta: "ident_caract_usuario5_4",
+          Respuesta : $("#ident_caract_usuario5_4").val()
+        },   
+        {
+          Pregunta: "ident_caract_usuario5_5",
+          Respuesta : $("#ident_caract_usuario5_5").val()
+        },     
+        {
+          Pregunta: "ident_caract_usuario5_6",
+          Respuesta : $("#ident_caract_usuario5_6").val()
+        },     
+        {
+          Pregunta: "ident_caract_usuario5A",
+          Respuesta : $("#ident_caract_usuario5A").val()
+        },   
+        {
+          Pregunta: "res_pregunta7a",
+          Respuesta : $("#res_pregunta7a").val()
+        },   
+        {
+          Pregunta: "pregunta7b",
+          Respuesta : $("#pregunta7b").val()
+        },  
+        {
+          Pregunta: "res_pregunta7c",
+          Respuesta : $("#res_pregunta7c").val()
+        },
+        {
+          Pregunta: "res_pregunta7d",
+          Respuesta : $("#res_pregunta7d").val()
+        },
+        {
+          Pregunta: "res_pregunta7e",
+          Respuesta : $("#res_pregunta7e").val()
+        },
+        {
+          Pregunta: "res_pregunta7f",
+          Respuesta : $("#res_pregunta7f").val()
+        },
+        {
+          Pregunta: "res_pregunta7g",
+          Respuesta : $("#res_pregunta7g").val()
+        },
+        {
+          Pregunta: "res_pregunta7h",
+          Respuesta : $("#res_pregunta7h").val()
+        },
+        {
+          Pregunta: "res_pregunta7i",
+          Respuesta : $("#res_pregunta7i").val()
+        },
+        {
+          Pregunta: "res_pregunta7j",
+          Respuesta : $("#res_pregunta7j").val()
+        },
+        {
+          Pregunta: "res_pregunta7k",
+          Respuesta : $("#res_pregunta7k").val()
+        },
+        {
+          Pregunta: "res_pregunta7l",
+          Respuesta : $("#res_pregunta7l").val()
+        },
+        {
+          Pregunta: "res_pregunta7m",
+          Respuesta : $("#res_pregunta7m").val()
+        },
+        {
+          Pregunta: "res_pregunta7n",
+          Respuesta : $("#res_pregunta7n").val()
+        }, 
+        {
+          Pregunta: "pregunta51",
+          Respuesta : $("#identicacion_caracterizacion_usuario51").val()
+        }, 
+        {
+          Pregunta: "pregunta52",
+          Respuesta : $("#identicacion_caracterizacion_usuario52").val()
+        }, 
+        {
+          Pregunta: "pregunta53",
+          Respuesta : $("#identicacion_caracterizacion_usuario53").val()
+        }, 
+        {
+          Pregunta: "pregunta54",
+          Respuesta : $("#identicacion_caracterizacion_usuario54").val()
+        }, 
+        {
+          Pregunta: "pregunta55",
+          Respuesta : $("#identicacion_caracterizacion_usuario55").val()
+        },
+        {
+          Pregunta: "pregunta56",
+          Respuesta : $("#res_pregunta56").val()
+        }, 
+        {
+          Pregunta: "pregunta57",
+          Respuesta : $("#identicacion_caracterizacion_usuario57").val()
+        }, 
+        {
+          Pregunta: "pregunta58",
+          Respuesta : $("#identicacion_caracterizacion_usuario58").val()
+        }, 
+        {
+          Pregunta: "pregunta59",
+          Respuesta : $("#identicacion_caracterizacion_usuario59").val()
+        }, 
+        {
+          Pregunta: "pregunta60",
+          Respuesta : $("#identicacion_caracterizacion_usuario60").val()
+        }, 
+        {
+          Pregunta: "pregunta61",
+          Respuesta : $("#identicacion_caracterizacion_usuario61").val()
+        }, 
+        {
+          Pregunta: "Direccion",
+          Respuesta : $("#ubicacion_direccion").val()
+        }, 
+        {
+          Pregunta: "HoraFinal",
+          Respuesta : $("#ubicacion_horafinal").val()
+        }, 
+        {
+          Pregunta: "Telefono",
+          Respuesta : $("#ubicacion_telefono").val()
+        },
+        {
+          Pregunta: "Celular",
+          Respuesta : $("#ubicacion_celular").val()
+        }, 
+        {
+          Pregunta: "Encuestador",
+          Respuesta : $("#identicacion_caracterizacion_usuario_encuestador").val()
+        }, 
+        {
+          Pregunta: "Supervisor",
+          Respuesta : $("#identicacion_caracterizacion_usuario_supervisor").val()
+        }, 
+        {
+          Pregunta: "Coordinador",
+          Respuesta : $("#identicacion_caracterizacion_usuario_coordinador").val()
+        }, 
+        ];
+        var csv = convertArrayOfObjectsToCSV({
+            data: stockData
+        });
+        if (csv == null) return;
+ 
+        filename = args.filename || 'export.csv';
+ 
+        if (!csv.match(/^data:text\/csv/i)) {
+            csv = 'data:text/csv;charset=utf-8,' + csv;
+        }
+        data = encodeURI(csv);
+ 
+        link = document.createElement('a');
+        link.setAttribute('href', data);
+        link.setAttribute('download', filename);
+        link.click();
+    }
 
 </script>

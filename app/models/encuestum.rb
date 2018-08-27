@@ -19,8 +19,6 @@ class Encuestum < ApplicationRecord
   validates :años, :presence => true
   validates :F1, :presence => true
 
-
-
   before_save do
   self.pregunta5.gsub!(/[\[\]\"]/, "") if attribute_present?("pregunta5")
   self.pregunta14_1.gsub!(/[\[\]\"]/, "") if attribute_present?("pregunta14_1")
@@ -31,5 +29,5 @@ class Encuestum < ApplicationRecord
 	self.pregunta42.gsub!(/[\[\]\"]/, "") if attribute_present?("pregunta42")
 	self.pregunta47.gsub!(/[\[\]\"]/, "") if attribute_present?("pregunta47")
 	end
-  
+
 end
