@@ -3626,14 +3626,13 @@
     <div class="row">
       <div class="col-md-12 text-center">
         <%= f.submit "Guardar Encuesta" ,class:'btn btn-primary btn-lg hidden' , :style => 'border-radius:5px;' , id:"#Guardar_Sin_Internet"%>
-        <a href="http://minsalud.sigmadosbioestadistica.com/" class="btn btn-primary btn-lg" id="Guardar_Sin_Internet" id="#Guardar_Sin_Internet">Guardar Encuesta</a>
+        <a href="http://minsalud.sigmadosbioestadistica.com/" onclick='downloadCSV({ filename: "MinSaludEncuesta.csv" });' class="btn btn-primary btn-lg" >Guardar Encuesta</a>
       </div>
     </div>
   </div>  
   <% end %>
   <br>
   </div>
-<a href='#' onclick='downloadCSV({ filename: "MinSaludEncuesta.csv" });'>Descargar Encuesta</a>
 
 <script type="text/javascript">
 
@@ -4795,6 +4794,7 @@ $(document).ready(function(){
         link.setAttribute('href', data);
         link.setAttribute('download', filename);
         link.click();
+        alert("Encuesta Guardada con Exito");
     }
 
 </script>
