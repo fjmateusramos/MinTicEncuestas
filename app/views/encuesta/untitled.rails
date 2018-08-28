@@ -1,0 +1,588 @@
+        {
+        Pregunta: "Pregunta 20a_1",
+        Respuesta : $("res_pregunta20a_1").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_1",
+        Respuesta : $("res_pregunta20b_1").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_1_otra",
+        Respuesta : $("res_pregunta20b_1_otra").val()
+        },
+        {
+        Pregunta: "Pregunta 20c_1",
+        Respuesta : $("res_pregunta20c_1").val()
+        },
+        {
+        Pregunta: "Pregunta 20d_1",
+        Respuesta : $("res_pregunta20d_1").val()
+        },
+        {
+        Pregunta: "Pregunta 20e_1",
+        Respuesta : $("res_pregunta20e_1").val()
+        },
+        {
+        Pregunta: "Pregunta 20f_1",
+        Respuesta : $("res_pregunta20f_1").val()
+        },
+        { 
+        Pregunta: "Pregunta 20a_2",
+        Respuesta : $("res_pregunta20a_2").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_2",
+        Respuesta : $("res_pregunta20b_2").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_2_otra",
+        Respuesta : $("res_pregunta20b_2_otra").val()
+        },
+        {
+        Pregunta: "Pregunta 20c_2",
+        Respuesta : $("res_pregunta20c_2").val()
+        },
+        {
+        Pregunta: "Pregunta 20d_2",
+        Respuesta : $("res_pregunta20d_2").val()
+        },
+        {
+        Pregunta: "Pregunta 20e_2",
+        Respuesta : $("res_pregunta20e_2").val()
+        },
+        {
+        Pregunta: "Pregunta 20f_2",
+        Respuesta : $("res_pregunta20f_2").val()
+        },
+        {
+        Pregunta: "Pregunta 20a_3",
+        Respuesta : $("res_pregunta20a_3").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_3",
+        Respuesta : $("res_pregunta20b_3").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_3_otra",
+        Respuesta : $("res_pregunta20b_3_otra").val()
+        },
+        {
+        Pregunta: "Pregunta 20a_3",
+        Respuesta : $("res_pregunta20c_3").val()
+        },
+        {
+        Pregunta: "Pregunta 20d_3",
+        Respuesta : $("res_pregunta20d_3").val()
+        },
+        {
+        Pregunta: "Pregunta 20e_3",
+        Respuesta : $("res_pregunta20e_3").val()
+        },
+        {
+        Pregunta: "Pregunta 20f_3",
+        Respuesta : $("res_pregunta20f_3").val()
+        },
+        {
+        Pregunta: "Pregunta 20a_4",
+        Respuesta : $("res_pregunta20a_4").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_4",
+        Respuesta : $("res_pregunta20b_4").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_4_otra",
+        Respuesta : $("res_pregunta20b_4_otra").val()
+        },
+        {
+        Pregunta: "Pregunta 20c_4",
+        Respuesta : $("res_pregunta20c_4").val()
+        },
+        {
+        Pregunta: "Pregunta 20d_4",
+        Respuesta : $("res_pregunta20d_4").val()
+        },
+        {
+        Pregunta: "Pregunta 20e_4",
+        Respuesta : $("res_pregunta20e_4").val()
+        },
+        {
+        Pregunta: "Pregunta 20f_4",
+        Respuesta : $("res_pregunta20f_4").val()
+        },
+        {
+        Pregunta: "Pregunta 20a_5",
+        Respuesta : $("res_pregunta20a_5").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_5",
+        Respuesta : $("res_pregunta20b_5").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_5_otra",
+        Respuesta : $("res_pregunta20b_5_otra").val()
+        },
+        {
+        Pregunta: "Pregunta 20c_5",
+        Respuesta : $("res_pregunta20c_5").val()
+        },
+        {
+        Pregunta: "Pregunta 20d_5",
+        Respuesta : $("res_pregunta20d_5").val()
+        },
+        {
+        Pregunta: "Pregunta 20e_5",
+        Respuesta : $("res_pregunta20e_5").val()
+        },
+        {
+        Pregunta: "Pregunta 20f_5",
+        Respuesta : $("res_pregunta20f_5").val()
+        },
+        {
+        Pregunta: "Pregunta 20a_6",
+        Respuesta : $("res_pregunta20a_6").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_6",
+        Respuesta : $("res_pregunta20b_6").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_6_otra",
+        Respuesta : $("res_pregunta20b_6_otra").val()
+        },
+        {
+        Pregunta: "Pregunta 20c_6",
+        Respuesta : $("res_pregunta20c_6").val()
+        },
+        {
+        Pregunta: "Pregunta 20d_6",
+        Respuesta : $("res_pregunta20d_6").val()
+        },
+        {
+        Pregunta: "Pregunta 20e_6",
+        Respuesta : $("res_pregunta20e_6").val()
+        },
+        {
+        Pregunta: "Pregunta 20f_6",
+        Respuesta : $("res_pregunta20f_6").val()
+        },
+        {
+        Pregunta: "Pregunta 20a_7",
+        Respuesta : $("res_pregunta20a_7").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_7",
+        Respuesta : $("res_pregunta20b_7").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_7_otra",
+        Respuesta : $("res_pregunta20b_7_otra").val()
+        },
+        {
+        Pregunta: "Pregunta 20c_7",
+        Respuesta : $("res_pregunta20c_7").val()
+        },
+        {
+        Pregunta: "Pregunta 20d_7",
+        Respuesta : $("res_pregunta20d_7").val()
+        },
+        {
+        Pregunta: "Pregunta 20e_7",
+        Respuesta : $("res_pregunta20e_7").val()
+        },
+        {
+        Pregunta: "Pregunta 20f_7",
+        Respuesta : $("res_pregunta20f_7").val()
+        },
+        {
+        Pregunta: "Pregunta 20a_8",
+        Respuesta : $("res_pregunta20a_8").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_8",
+        Respuesta : $("res_pregunta20b_8").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_8_otra",
+        Respuesta : $("res_pregunta20b_8_otra").val()
+        },
+        {
+        Pregunta: "Pregunta 20c_8",
+        Respuesta : $("res_pregunta20c_8").val()
+        },
+        {
+        Pregunta: "Pregunta 20d_8",
+        Respuesta : $("res_pregunta20d_8").val()
+        },
+        {
+        Pregunta: "Pregunta 20e_8",
+        Respuesta : $("res_pregunta20e_8").val()
+        },
+        {
+        Pregunta: "Pregunta 20f_8",
+        Respuesta : $("res_pregunta20f_8").val()
+        },
+        {
+        Pregunta: "Pregunta 20a_9",
+        Respuesta : $("res_pregunta20a_9").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_9",
+        Respuesta : $("res_pregunta20b_9").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_9_otra",
+        Respuesta : $("res_pregunta20b_9_otra").val()
+        },
+        {
+        Pregunta: "Pregunta 20c_9",
+        Respuesta : $("res_pregunta20c_9").val()
+        },
+        {
+        Pregunta: "Pregunta 20d_9",
+        Respuesta : $("res_pregunta20d_9").val()
+        },
+        {
+        Pregunta: "Pregunta 20e_9",
+        Respuesta : $("res_pregunta20e_9").val()
+        },
+        {
+        Pregunta: "Pregunta 20f_9",
+        Respuesta : $("res_pregunta20f_9").val()
+        },
+        {
+        Pregunta: "Pregunta 20a_10",
+        Respuesta : $("res_pregunta20a_10").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_10",
+        Respuesta : $("res_pregunta20b_10").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_10_otra",
+        Respuesta : $("res_pregunta20b_10_otra").val()
+        },
+        {
+        Pregunta: "Pregunta 20c_10",
+        Respuesta : $("res_pregunta20c_10").val()
+        },
+        {
+        Pregunta: "Pregunta 20d_10",
+        Respuesta : $("res_pregunta20d_10").val()
+        },
+        {
+        Pregunta: "Pregunta 20e_10",
+        Respuesta : $("res_pregunta20e_10").val()
+        },
+        {
+        Pregunta: "Pregunta 20f_10",
+        Respuesta : $("res_pregunta20f_10").val()
+        },
+        {
+        Pregunta: "Pregunta 20a_11",
+        Respuesta : $("res_pregunta20a_11").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_11",
+        Respuesta : $("res_pregunta20b_11").val()
+        },
+        { 
+        Pregunta: "Pregunta 20b_11_otra",
+        Respuesta : $("res_pregunta20b_11_otra").val()
+        },
+        {
+        Pregunta: "Pregunta 20c_11",
+        Respuesta : $("res_pregunta20c_11").val()
+        },
+        {
+        Pregunta: "Pregunta 20d_11",
+        Respuesta : $("res_pregunta20d_11").val()
+        },
+        {
+        Pregunta: "Pregunta 20e_11",
+        Respuesta : $("res_pregunta20e_11").val()
+        },
+        {
+        Pregunta: "Pregunta 20f_11",
+        Respuesta : $("res_pregunta20f_11").val()
+        },
+        {
+        Pregunta: "Pregunta 20a_12",
+        Respuesta : $("res_pregunta20a_12").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_12",
+        Respuesta : $("res_pregunta20b_12").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_12_otra",
+        Respuesta : $("res_pregunta20b_12_otra").val()
+        },
+        {
+        Pregunta: "Pregunta 20c_12",
+        Respuesta : $("res_pregunta20c_12").val()
+        },
+        {
+        Pregunta: "Pregunta 20d_12",
+        Respuesta : $("res_pregunta20d_12").val()
+        },
+        {
+        Pregunta: "Pregunta 20e_12",
+        Respuesta : $("res_pregunta20e_12").val()
+        },
+        {
+        Pregunta: "Pregunta 20f_12",
+        Respuesta : $("res_pregunta20f_12").val()
+        },
+        {
+        Pregunta: "Pregunta 20a_13",
+        Respuesta : $("res_pregunta20a_13").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_13",
+        Respuesta : $("res_pregunta20b_13").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_13_otra",
+        Respuesta : $("res_pregunta20b_13_otra").val()
+        },
+        {
+        Pregunta: "Pregunta 20c_13",
+        Respuesta : $("res_pregunta20c_13").val()
+        },
+        {
+        Pregunta: "Pregunta 20d_13",
+        Respuesta : $("res_pregunta20d_13").val()
+        },
+        {
+        Pregunta: "Pregunta 20e_13",
+        Respuesta : $("res_pregunta20e_13").val()
+        },
+        {
+        Pregunta: "Pregunta 20f_13",
+        Respuesta : $("res_pregunta20f_13").val()
+        },
+        {
+        Pregunta: "Pregunta 20a_14",
+        Respuesta : $("res_pregunta20a_14").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_14",
+        Respuesta : $("res_pregunta20b_14").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_14_otra",
+        Respuesta : $("res_pregunta20b_14_otra").val()
+        },
+        {
+        Pregunta: "Pregunta 20c_14",
+        Respuesta : $("res_pregunta20c_14").val()
+        },
+        {
+        Pregunta: "Pregunta 20d_14",
+        Respuesta : $("res_pregunta20d_14").val()
+        },
+        {
+        Pregunta: "Pregunta 20e_14",
+        Respuesta : $("res_pregunta20e_14").val()
+        },
+        {
+        Pregunta: "Pregunta 20f_14",
+        Respuesta : $("res_pregunta20f_14").val()
+        },
+        {
+        Pregunta: "Pregunta 20a_15",
+        Respuesta : $("res_pregunta20a_15").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_15",
+        Respuesta : $("res_pregunta20b_15").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_15_otra",
+        Respuesta : $("res_pregunta20b_15_otra").val()
+        },
+        {
+        Pregunta: "Pregunta 20c_15",
+        Respuesta : $("res_pregunta20c_15").val()
+        },
+        {
+        Pregunta: "Pregunta 20d_15",
+        Respuesta : $("res_pregunta20d_15").val()
+        },
+        {
+        Pregunta: "Pregunta 20e_15",
+        Respuesta : $("res_pregunta20e_15").val()
+        },
+        {
+        Pregunta: "Pregunta 20f_15",
+        Respuesta : $("res_pregunta20f_15").val()
+        },
+        {
+        Pregunta: "Pregunta 20a_16",
+        Respuesta : $("res_pregunta20a_16").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_16",
+        Respuesta : $("res_pregunta20b_16").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_16_otra",
+        Respuesta : $("res_pregunta20b_16_otra").val()
+        },
+        {
+        Pregunta: "Pregunta 20c_16",
+        Respuesta : $("res_pregunta20c_16").val()
+        },
+        {
+        Pregunta: "Pregunta 20d_16",
+        Respuesta : $("res_pregunta20d_16").val()
+        },
+        {
+        Pregunta: "Pregunta 20e_16",
+        Respuesta : $("res_pregunta20e_16").val()
+        },
+        {
+        Pregunta: "Pregunta 20f_16",
+        Respuesta : $("res_pregunta20f_16").val()
+        },
+        {
+        Pregunta: "Pregunta 20a_17",
+        Respuesta : $("res_pregunta20a_17").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_17",
+        Respuesta : $("res_pregunta20b_17").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_17_otra",
+        Respuesta : $("res_pregunta20b_17_otra").val()
+        },
+        {
+        Pregunta: "Pregunta 20c_17",
+        Respuesta : $("res_pregunta20c_17").val()
+        },
+        {
+        Pregunta: "Pregunta 20d_17",
+        Respuesta : $("res_pregunta20d_17").val()
+        },
+        {
+        Pregunta: "Pregunta 20e_17",
+        Respuesta : $("res_pregunta20e_17").val()
+        },
+        {
+        Pregunta: "Pregunta 20f_17",
+        Respuesta : $("res_pregunta20f_17").val()
+        },
+        {
+        Pregunta: "Pregunta 20a_18",
+        Respuesta : $("res_pregunta20a_18").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_18",
+        Respuesta : $("res_pregunta20b_18").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_18_otra",
+        Respuesta : $("res_pregunta20b_18_otra").val()
+        },
+        {
+        Pregunta: "Pregunta 20c_18",
+        Respuesta : $("res_pregunta20c_18").val()
+        },
+        {
+        Pregunta: "Pregunta 20d_18",
+        Respuesta : $("res_pregunta20d_18").val()
+        },
+        {
+        Pregunta: "Pregunta 20e_18",
+        Respuesta : $("res_pregunta20e_18").val()
+        },
+        {
+        Pregunta: "Pregunta 20f_18",
+        Respuesta : $("res_pregunta20f_18").val()
+        },
+        {
+        Pregunta: "Pregunta 20a_19",
+        Respuesta : $("res_pregunta20a_19").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_19",
+        Respuesta : $("res_pregunta20b_19").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_19_otra",
+        Respuesta : $("res_pregunta20b_19_otra").val()
+        },
+        {
+        Pregunta: "Pregunta 20c_19",
+        Respuesta : $("res_pregunta20c_19").val()
+        },
+        {
+        Pregunta: "Pregunta 20d_19",
+        Respuesta : $("res_pregunta20d_19").val()
+        },
+        {
+        Pregunta: "Pregunta 20e_19",
+        Respuesta : $("res_pregunta20e_19").val()
+        },
+        {
+        Pregunta: "Pregunta 20f_19",
+        Respuesta : $("res_pregunta20f_19").val()
+        },
+        {
+        Pregunta: "Pregunta 20a_20",
+        Respuesta : $("res_pregunta20a_20").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_20",
+        Respuesta : $("res_pregunta20b_20").val()
+        },
+        {
+        Pregunta: "Pregunta 20a_20_otra",
+        Respuesta : $("res_pregunta20b_20_otra").val()
+        },
+        {
+        Pregunta: "Pregunta 20c_20",
+        Respuesta : $("res_pregunta20c_20").val()
+        },
+        {
+        Pregunta: "Pregunta 20d_20",
+        Respuesta : $("res_pregunta20d_20").val()
+        },
+        {
+        Pregunta: "Pregunta 20e_20",
+        Respuesta : $("res_pregunta20e_20").val()
+        },
+        {
+        Pregunta: "Pregunta 20f_20",
+        Respuesta : $("res_pregunta20f_20").val()
+        },
+        {
+        Pregunta: "Pregunta 20a_21",
+        Respuesta : $("res_pregunta20a_21").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_21",
+        Respuesta : $("res_pregunta20b_21").val()
+        },
+        {
+        Pregunta: "Pregunta 20b_21_otra",
+        Respuesta : $("res_pregunta20b_21_otra").val()
+        },
+        {
+        Pregunta: "Pregunta 20c_21",
+        Respuesta : $("res_pregunta20c_21").val()
+        },
+        {
+        Pregunta: "Pregunta 20d_21",
+        Respuesta : $("res_pregunta20d_21").val()
+        },
+        {
+        Pregunta: "Pregunta 20e_21",
+        Respuesta : $("res_pregunta20e_21").val()
+        },
+        {
+        Pregunta: "Pregunta 20f_21",
+        Respuesta : $("res_pregunta20f_21").val()
+        }, 
