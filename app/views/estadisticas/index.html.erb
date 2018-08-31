@@ -1671,7 +1671,7 @@
 <h3>13. ¿De acuerdo a las opciones de esta tarjeta, como le pareció el tiempo de espera para ser atendido en el servicio de ______? </h3>
  <div id="Pregunta13A">
     <label> <strong> 13. A. Consulta de medicina general </strong> </label>
-    <%= column_chart Encuestum.group(:pregunta13_a).count(:id) %>
+    <%= column_chart Encuestum.group(:pregunta13_a).having("pregunta13_a != ?", "--").having("pregunta13_a != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -1706,7 +1706,7 @@
   </div>
   <div id="Pregunta13B1">
     <label> <strong> 13. B1. Consulta de Obstetricia - control embarazo </strong> </label>
-    <%= column_chart Encuestum.group(:pregunta13_b1).count(:id) %>
+    <%= column_chart Encuestum.group(:pregunta13_b1).having("pregunta13_b1 != ?", "--").having("pregunta13_b1 != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -1741,7 +1741,7 @@
   </div>
   <div id="Pregunta13B2">
     <label> <strong> 13. B2. Consulta de ginecología: citologías, y otros relacionados sin incluir embarazo </strong> </label>
-    <%= column_chart Encuestum.group(:pregunta13_b2).count(:id) %>
+    <%= column_chart Encuestum.group(:pregunta13_b2).having("pregunta13_b2 != ?", "--").having("pregunta13_b2 != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -1776,7 +1776,7 @@
   </div>
   <div id="Pregunta13B3">
     <label> <strong> 13. B3. Consulta de medicina interna: internista </strong> </label>
-    <%= column_chart Encuestum.group(:pregunta13_b3).count(:id) %>
+    <%= column_chart Encuestum.group(:pregunta13_b3).having("pregunta13_b3 != ?", "--").having("pregunta13_b3 != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -1811,7 +1811,7 @@
   </div>  
   <div id="Pregunta13B4">
     <label> <strong> 13. B4. Consulta de pediatría </strong> </label>
-    <%= column_chart Encuestum.group(:pregunta13_b4).count(:id) %>
+    <%= column_chart Encuestum.group(:pregunta13_b4).having("pregunta13_b4 != ?", "--").having("pregunta13_b4 != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -1846,7 +1846,7 @@
   </div>
   <div id="Pregunta13B5">
     <label> <strong> 13. B5. Cirugía general </strong> </label>
-    <%= column_chart Encuestum.group(:pregunta13_b5).count(:id) %>
+    <%= column_chart Encuestum.group(:pregunta13_b5).having("pregunta13_b5 != ?", "--").having("pregunta13_b5 != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -1881,7 +1881,7 @@
   </div>
   <div id="Pregunta13B6">
     <label> <strong> 13. B6. Otras consultas de medicina especializada: cardiología, neurología y ortopedia </strong> </label>
-    <%= column_chart Encuestum.group(:pregunta13_b6).count(:id) %>
+    <%= column_chart Encuestum.group(:pregunta13_b6).having("pregunta13_b6 != ?", "--").having("pregunta13_b6 != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -1916,7 +1916,7 @@
   </div> 
   <div id="Pregunta13C">
     <label> <strong> 13. C. Citas prioritarias cita no programada </strong> </label>
-    <%= column_chart Encuestum.group(:pregunta13_c).count(:id) %>
+    <%= column_chart Encuestum.group(:pregunta13_c).having("pregunta13_c != ?", "--").having("pregunta13_c != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -1951,7 +1951,7 @@
   </div> 
   <div id="Pregunta13D">
     <label> <strong> 13. D. Urgencias </strong> </label>
-    <%= column_chart Encuestum.group(:pregunta13_d).count(:id) %>
+    <%= column_chart Encuestum.group(:pregunta13_d).having("pregunta13_d != ?", "--").having("pregunta13_d != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -1986,7 +1986,7 @@
   </div> 
   <div id="Pregunta13E">
     <label> <strong> 13. E. Hospitalización </strong> </label>
-    <%= column_chart Encuestum.group(:pregunta13_e).count(:id) %>
+    <%= column_chart Encuestum.group(:pregunta13_e).having("pregunta13_e != ?", "--").having("pregunta13_e != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -2021,7 +2021,7 @@
   </div> 
   <div id="Pregunta13F">
     <label> <strong> 13. F. Domiciliario: médicos, cuidados </strong> </label>
-    <%= column_chart Encuestum.group(:pregunta13_f).count(:id) %>
+    <%= column_chart Encuestum.group(:pregunta13_f).having("pregunta13_f != ?", "--").having("pregunta13_f != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -2056,7 +2056,7 @@
   </div> 
   <div id="Pregunta13G">
     <label> <strong> 13. G. Entrega de medicamentos </strong> </label>
-    <%= column_chart Encuestum.group(:pregunta13_g).count(:id) %>
+    <%= column_chart Encuestum.group(:pregunta13_g).having("pregunta13_g != ?", "--").having("pregunta13_g != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -2091,7 +2091,7 @@
   </div> 
   <div id="Pregunta13H">
     <label> <strong> 13. H. Tratamientos asistidos: quimioterapia-radioterapias-diálisis </strong> </label>
-    <%= column_chart Encuestum.group(:pregunta13_h).count(:id) %>
+    <%= column_chart Encuestum.group(:pregunta13_h).having("pregunta13_h != ?", "--").having("pregunta13_h != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -2126,7 +2126,7 @@
   </div> 
   <div id="Pregunta13I">
     <label> <strong> 13. I. Programas de promoción de la salud y prevención de la enfermedad (PyP) </strong> </label>
-    <%= column_chart Encuestum.group(:pregunta13_i).count(:id) %>
+    <%= column_chart Encuestum.group(:pregunta13_i).having("pregunta13_i != ?", "--").having("pregunta13_i != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -2161,7 +2161,7 @@
   </div> 
   <div id="Pregunta13J">
     <label> <strong> 13. J. Odontología </strong> </label>
-    <%= column_chart Encuestum.group(:pregunta13_j).count(:id) %>
+    <%= column_chart Encuestum.group(:pregunta13_j).having("pregunta13_j != ?", "--").having("pregunta13_j != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -2196,7 +2196,7 @@
   </div> 
   <div id="Pregunta13K">
     <label> <strong> 13. K. Exámenes de laboratorio </strong> </label>
-    <%= column_chart Encuestum.group(:pregunta13_k).count(:id) %>
+    <%= column_chart Encuestum.group(:pregunta13_k).having("pregunta13_k != ?", "--").having("pregunta13_k != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -2231,7 +2231,7 @@
   </div> 
   <div id="Pregunta13L">
     <label> <strong> 13. L. Radiografías, imágenes o pruebas de diagnóstico </strong> </label>
-    <%= column_chart Encuestum.group(:pregunta13_l).count(:id) %>
+    <%= column_chart Encuestum.group(:pregunta13_l).having("pregunta13_l != ?", "--").having("pregunta13_l != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -2266,7 +2266,7 @@
   </div> 
   <div id="Pregunta13M">
     <label> <strong> 13. M. Terapias en la EPS: físicas, respiratorias, ocupacional, de lenguaje </strong> </label>
-    <%= column_chart Encuestum.group(:pregunta13_m).count(:id) %>
+    <%= column_chart Encuestum.group(:pregunta13_m).having("pregunta13_m != ?", "--").having("pregunta13_m != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -2301,7 +2301,7 @@
   </div>     
   <div id="Pregunta13N">
     <label> <strong> 13. N. Suministro de oxígeno  </strong> </label>
-    <%= column_chart Encuestum.group(:pregunta13_n).count(:id) %>
+    <%= column_chart Encuestum.group(:pregunta13_n).having("pregunta13_n != ?", "--").having("pregunta13_n != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -2336,7 +2336,7 @@
   </div>   
   <div id="Pregunta14">
     <label> <strong> 14. Usted me indica que en los últimos seis meses fue usuario del servicio de urgencias  </strong> </label>
-    <%= pie_chart Encuestum.group(:pregunta14).count(:id) %>
+    <%= pie_chart Encuestum.group(:pregunta14).having("pregunta14 != ?", "--").having("pregunta14 != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -2371,7 +2371,7 @@
   </div>  
   <div id="Pregunta14a">
     <label> <strong> 14.1. ¿Por cuales de las siguientes razones usó en los últimos seis meses el servicio de urgencias? Por favor, si usted utilizó varias veces el servicio de urgencias en los últimos seis meses, refiérase solo a la última vez que lo utilizó.  </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta14_1).count(:id) %>
+    <%= bar_chart Encuestum.group(:pregunta14_1).having("pregunta14_1 != ?", "--").having("pregunta14_1 != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -2406,7 +2406,7 @@
   </div>  
   <div id="Pregunta15A">
     <label> <strong> 15. a. Anteriormente me indicó que en los últimos seis meses solicitó y/o le entregaron medicamentos  </strong> </label>
-    <%= pie_chart Encuestum.group(:pregunta15_a).count(:id) %>
+    <%= pie_chart Encuestum.group(:pregunta15_a).having("pregunta15_a != ?", "--").having("pregunta15_a != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -2441,7 +2441,7 @@
   </div>     
   <div id="Pregunta15B">
     <label> <strong> 15. B. ¿Le entregaron todos los medicamentos la primera vez que los solicitó ?  </strong> </label>
-    <%= pie_chart Encuestum.group(:pregunta15_b).count(:id) %>
+    <%= pie_chart Encuestum.group(:pregunta15_b).having("pregunta15_b != ?", "--").having("pregunta15_b != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -2476,7 +2476,7 @@
   </div>  
   <div id="Pregunta15C">
     <label> <strong> 15. C. ¿Le ofrecieron la posibilidad de entregarle los medicamentos faltantes a domicilio?   </strong> </label>
-    <%= pie_chart Encuestum.group(:pregunta15_c).count(:id) %>
+    <%= pie_chart Encuestum.group(:pregunta15_c).having("pregunta15_c != ?", "--").having("pregunta15_c != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -2511,7 +2511,7 @@
   </div>  
   <div id="Pregunta15D">
     <label> <strong> 15. D. ¿Aceptó usted esa opción de entrega?  </strong> </label>
-    <%= pie_chart Encuestum.group(:pregunta15_d).count(:id) %>
+    <%= pie_chart Encuestum.group(:pregunta15_d).having("pregunta15_d != ?", "--").having("pregunta15_d != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -2546,7 +2546,7 @@
   </div>  
   <div id="Pregunta15E">
     <label> <strong> 15. E. ¿Le llegaron los medicamentos faltantes al domicilio?  </strong> </label>
-    <%= pie_chart Encuestum.group(:pregunta15_e).count(:id) %>
+    <%= pie_chart Encuestum.group(:pregunta15_e).having("pregunta15_e != ?", "--").having("pregunta15_e != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -2582,7 +2582,7 @@
   
   <div id="Pregunta16">
     <label> <strong> 16. En los últimos 6 meses, cuando usted solicitó que le prestaran un servicio de salud, ¿Fue informado que no había agenda?   </strong> </label>
-    <%= pie_chart Encuestum.group(:pregunta16).count(:id) %>
+    <%= pie_chart Encuestum.group(:pregunta16).having("pregunta16 != ?", "--").having("pregunta16 != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -2617,7 +2617,7 @@
   </div>   
   <div id="Pregunta17">
     <label> <strong> 17. En los últimos 6 meses, ¿su EPS le ha negado algún servicio? </strong> </label>
-    <%= pie_chart Encuestum.group(:pregunta17).count(:id) %>
+    <%= pie_chart Encuestum.group(:pregunta17).having("pregunta17 != ?", "--").having("pregunta17 != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -2653,7 +2653,7 @@
        
   <div id="Pregunta18">
     <label> <strong> 18. En los últimos 6 meses, ¿para cubrir los costos de consulta médica, exámenes o medicamentos, utilizó recursos propios y/o familiares? </strong> </label>
-    <%= pie_chart Encuestum.group(:pregunta18).count(:id) %>
+    <%= pie_chart Encuestum.group(:pregunta18).having("pregunta18 != ?", "--").having("pregunta18 != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -2688,7 +2688,7 @@
   </div>      
   <div id="Pregunta19">
     <label> <strong> 19. ¿Por qué razón(es) utilizó recursos propios y/o familiares para cubrir la atención en salud? </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta19).count(:id) %>
+    <%= bar_chart Encuestum.group(:pregunta19).having("pregunta19 != ?", "--").having("pregunta19 != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -2724,7 +2724,7 @@
 
   <div id="Pregunta21">
     <label> <strong> 21. ¿ De qué forma solicita regularmente sus citas medicas? </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta21).count(:id) %>
+    <%= bar_chart Encuestum.group(:pregunta21).having("pregunta21 != ?", "--").having("pregunta21 != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
