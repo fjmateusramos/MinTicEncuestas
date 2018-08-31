@@ -1,10 +1,11 @@
 class EncuestaController < ApplicationController
   before_action :set_encuestum, only: [:show, :edit, :update, :destroy]
-
+  respond_to :html, :json
   # GET /encuesta
   # GET /encuesta.json
   def index
     @encuesta = Encuestum.all
+    respond_with(@encuesta)
   end
 
   # GET /encuesta/1
@@ -28,8 +29,8 @@ class EncuestaController < ApplicationController
 
     respond_to do |format|
       if @encuestum.save
-        format.html { redirect_to root_path, notice: 'Encuestum was successfully created.' }
-        format.json { render :show, status: :created, location: @encuestum }
+        format.html { render :new, notice: 'Encuestum was successfully created.' }
+        format.json { render :new, status: :created, location: @encuestum }
       else
         format.html { render :new }
         format.json { render json: @encuestum.errors, status: :unprocessable_entity }

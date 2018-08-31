@@ -19,11 +19,13 @@
 //= require popper
 //= require bootstrap
 //= require bootstrap-sprockets
+//= require jquery-tmpl
 //= require Chart.bundle
 //= require chartkick
 //= require_tree .
 $(function() {
   $(window.applicationCache).bind("error", function() {
-    alert("There was an error when loading the cache manifest.");
+    console.log("There was an error when loading the cache manifest.");
   });
+
 });
