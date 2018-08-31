@@ -1005,7 +1005,7 @@
 <h3>11. Utilizando una escala de 1 a 5, 1 corresponde a un muy mal servicio y donde 5 indica un muy buen servicio. ¿Cómo califica el servicio de____ recibido en los últimos 6 meses? </h3>
  <div id="Pregunta11A">
     <label> <strong> 11. A. Consulta de medicina general </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta11_a).count(:id) %>
+    <%= bar_chart Encuestum.group(:pregunta11_a).having("pregunta11_a != ?", "--").having("pregunta11_a != ?", "").count(:id) %>
 <br>
     <table class="table">
       <thead>
@@ -1040,7 +1040,7 @@
   </div>
   <div id="Pregunta11B1">
     <label> <strong> 11. B1. Consulta de Obstetricia - control embarazo </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta11_b1).count(:id) %>
+    <%= bar_chart Encuestum.group(:pregunta11_b1).having("pregunta11_b1 != ?", "--").having("pregunta11_b1 != ?", "").count(:id) %>
 <br>
     <table class="table">
       <thead>
@@ -1075,7 +1075,7 @@
   </div>
   <div id="Pregunta11B2">
     <label> <strong> 11. B2. Consulta de ginecología: citologías, y otros relacionados sin incluir embarazo </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta11_b2).count(:id) %>
+    <%= bar_chart Encuestum.group(:pregunta11_b2).having("pregunta11_b2 != ?", "--").having("pregunta11_b2 != ?", "").count(:id) %>
 <br>
     <table class="table">
       <thead>
@@ -1110,7 +1110,7 @@
   </div>
   <div id="Pregunta11B3">
     <label> <strong> 11. B3. Consulta de medicina interna: internista </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta11_b3).count(:id) %>
+    <%= bar_chart Encuestum.group(:pregunta11_b3).having("pregunta11_b3 != ?", "--").having("pregunta11_b3 != ?", "").count(:id) %>
 <br>
     <table class="table">
       <thead>
@@ -1145,7 +1145,7 @@
   </div>  
   <div id="Pregunta11B4">
     <label> <strong> 11. B4. Consulta de pediatría </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta11_b4).count(:id) %>
+    <%= bar_chart Encuestum.group(:pregunta11_b4).having("pregunta11_b4 != ?", "--").having("pregunta11_b4 != ?", "").count(:id) %>
 <br>
     <table class="table">
       <thead>
@@ -1180,7 +1180,7 @@
   </div>
   <div id="Pregunta11B5">
     <label> <strong> 11. B5. Cirugía general </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta11_b5).count(:id) %>
+    <%= bar_chart Encuestum.group(:pregunta11_b5).having("pregunta11_b5 != ?", "--").having("pregunta11_b5 != ?", "").count(:id) %>
 <br>
     <table class="table">
       <thead>
@@ -1215,7 +1215,7 @@
   </div>
   <div id="Pregunta11B6">
     <label> <strong> 11. B6. Otras consultas de medicina especializada: cardiología, neurología y ortopedia </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta11_b6).count(:id) %>
+    <%= bar_chart Encuestum.group(:pregunta11_b6).having("pregunta11_b6 != ?", "--").having("pregunta11_b6 != ?", "").count(:id) %>
 <br>
     <table class="table">
       <thead>
@@ -1250,7 +1250,7 @@
   </div> 
   <div id="Pregunta11C">
     <label> <strong> 11. C. Citas prioritarias cita no programada </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta11_c).count(:id) %>
+    <%= bar_chart Encuestum.group(:pregunta11_c).having("pregunta11_c != ?", "--").having("pregunta11_c != ?", "").count(:id) %>
 <br>
     <table class="table">
       <thead>
@@ -1285,7 +1285,7 @@
   </div> 
   <div id="Pregunta11D">
     <label> <strong> 11. D. Urgencias </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta11_d).count(:id) %>
+    <%= bar_chart Encuestum.group(:pregunta11_d).having("pregunta11_d != ?", "--").having("pregunta11_d != ?", "").count(:id) %>
   <br>
     <table class="table">
       <thead>
@@ -1320,7 +1320,7 @@
   </div> 
   <div id="Pregunta11E">
     <label> <strong> 11. E. Hospitalización </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta11_e).count(:id) %>
+    <%= bar_chart Encuestum.group(:pregunta11_e).having("pregunta11_e != ?", "--").having("pregunta11_e != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -1355,7 +1355,7 @@
   </div> 
   <div id="Pregunta11F">
     <label> <strong> 11. F. Domiciliario: médicos, cuidados </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta11_f).count(:id) %>
+    <%= bar_chart Encuestum.group(:pregunta11_f).having("pregunta11_f != ?", "--").having("pregunta11_f != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -1390,7 +1390,7 @@
   </div> 
   <div id="Pregunta11G">
     <label> <strong> 11. G. Entrega de medicamentos </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta11_g).count(:id) %>
+    <%= bar_chart Encuestum.group(:pregunta11_g).having("pregunta11_g != ?", "--").having("pregunta11_g != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -1425,7 +1425,7 @@
   </div> 
   <div id="Pregunta11H">
     <label> <strong> 11. H. Tratamientos asistidos: quimioterapia-radioterapias-diálisis </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta11_h).count(:id) %>
+    <%= bar_chart Encuestum.group(:pregunta11_h).having("pregunta11_h != ?", "--").having("pregunta11_h != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -1460,7 +1460,7 @@
   </div> 
   <div id="Pregunta11I">
     <label> <strong> 11. I. Programas de promoción de la salud y prevención de la enfermedad (PyP) </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta11_i).count(:id) %>
+    <%= bar_chart Encuestum.group(:pregunta11_i).having("pregunta11_i != ?", "--").having("pregunta11_i != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -1495,7 +1495,7 @@
   </div> 
   <div id="Pregunta11J">
     <label> <strong> 11. J. Odontología </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta11_j).count(:id) %>
+    <%= bar_chart Encuestum.group(:pregunta11_j).having("pregunta11_j != ?", "--").having("pregunta11_j != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -1530,7 +1530,7 @@
   </div> 
   <div id="Pregunta11K">
     <label> <strong> 11. K. Exámenes de laboratorio </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta11_k).count(:id) %>
+    <%= bar_chart Encuestum.group(:pregunta11_k).having("pregunta11_k != ?", "--").having("pregunta11_k != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -1565,7 +1565,7 @@
   </div> 
   <div id="Pregunta11L">
     <label> <strong> 11. L. Radiografías, imágenes o pruebas de diagnóstico </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta11_l).count(:id) %>
+    <%= bar_chart Encuestum.group(:pregunta11_l).having("pregunta11_l != ?", "--").having("pregunta11_l != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -1600,7 +1600,7 @@
   </div> 
   <div id="Pregunta11M">
     <label> <strong> 11. M. Terapias en la EPS: físicas, respiratorias, ocupacional, de lenguaje </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta11_m).count(:id) %>
+    <%= bar_chart Encuestum.group(:pregunta11_m).having("pregunta11_m != ?", "--").having("pregunta11_m != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
@@ -1635,7 +1635,7 @@
   </div>     
   <div id="Pregunta11N">
     <label> <strong> 11. N. Suministro de oxígeno  </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta11_n).count(:id) %>
+    <%= bar_chart Encuestum.group(:pregunta11_n).having("pregunta11_n != ?", "--").having("pregunta11_n != ?", "").count(:id) %>
     <br>
     <table class="table">
       <thead>
