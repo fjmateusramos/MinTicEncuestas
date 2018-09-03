@@ -309,7 +309,7 @@
       </label>
       <div class="input-group">
           <div class="col-md-4">
-            <%= f.label :pregunta7A, 'A. Preguntar por el costo de los servicios que recibió' , {style:"margin-right:30px;margin-left:13px;", id:"res_pregun"} %>
+            <%= f.label :pregunta7A, 'A. Preguntar por el costo de los servicios que recibió' , {style:"margin-right:30px;margin-left:13px;", id:"res_pregunta7a"} %>
           </div>
           <div class="col-md-8 input-group">
             <%= f.radio_button :pregunta7A, "Nunca" ,{class: "form-control", style:"margin-right: 5px; margin-left: 5px; width:2%;", id:"res_pregunta7a"}%>
@@ -3777,7 +3777,7 @@
         </div>
       </div>
       <div class="col-md-6 text-center">  
-        <a href="http://minsalud.sigmadosbioestadistica.com/" onclick='downloadCSV({ filename: "MinSaludEncuesta.csv" });' class="btn btn-primary btn-lg" style="color: #fff;">Guardar Encuesta en la tablet</a>
+        <a onclick='downloadCSV({ filename: "MinSaludEncuesta.csv" });' class="btn btn-primary btn-lg" style="color: #fff;">Guardar Encuesta en la tablet</a>
       </div>
     </div>
   </div>  
@@ -4914,7 +4914,9 @@ $(document).ready(function(){
         $('#Departamento_vaupes').addClass('hidden');                    
       }  
     });
-
+     $('#MunicipioEncuesta').change(function(){
+        var municipio = $('#MunicipioEncuesta').val();
+     });
     $('#afiliadoeps1').change(function(){
         if($('#afiliadoeps1').val() == "No"){
         $("#afiliadoseps2").addClass('hidden');  
@@ -5805,7 +5807,7 @@ $(document).ready(function(){
           alert ("El campo departamento está vacio");
           var estado = "falta";
         }
-        if ($("#MunicipioEncuesta").val() == "") {
+        if (municipio = "") {
           alert("El campo municipio está vacio");
           var estado = "falta";
         }
@@ -5880,7 +5882,84 @@ $(document).ready(function(){
         if ($("#prepagada4").val() == "") {
           alert("El campo D. Servicios domiciliarios de emergencias médicas esta vacio");
           var estado = "falta";
-        }                    
+        }
+        if ($("#ident_caract_usuario1").val() == "") {
+          alert("El campo ¿A qué EPS se encuentra afiliado actualmente? esta vacio");
+          var estado = "falta";
+        }
+        if ($("#ident_caract_usuario1a").val() == "") {
+          alert("El campo 1A. ¿Cuánto tiempo lleva afiliado a esta EPS: esta vacio");
+          var estado = "falta";
+        }
+        if ($("#res_pregunta2").val() == "") {
+          alert("El campo 2. Cuando recibió el último servicio de salud, ¿Estaba usted afiliado a esta misma EPS? esta vacio");
+          var estado = "falta";
+        }
+        if ($("#res_pregunta3").val() == "") {
+          alert("El campo 3. Qué tipo de afiliado es usted en la EPS? esta vacio");
+          var estado = "falta";
+        }
+        if ($("#rres_pregunta6").val() == "") {
+          alert("El campo 6. En general, ¿Cómo califica su estado de salud? esta vacio");
+          var estado = "falta";
+        }
+        if ($("#res_pregunta7a").val() == "") {
+          alert("El campo A. Preguntar por el costo de los servicios que recibió esta vacio");
+          var estado = "falta";
+        }
+        if ($("#pregunta7b").val() == "") {
+          alert("El campo B. Cotizar de conformidad con sus ingresos esta vacio");
+          var estado = "falta";
+        }
+        if ($("#res_pregunta7c").val() == "") {
+          alert("El campo C. Cancelar con anticipación las citas solicitadas cuando no puede asistir esta vacio");
+          var estado = "falta";
+        }
+        if ($("#res_pregunta7d").val() == "") {
+          alert("El campo D. Reportar a su EPS alguna novedad esta vacio");
+          var estado = "falta";
+        }
+        if ($("#res_pregunta7e").val() == "") {
+          alert("El campo E. Suministrar información veraz sobre sus síntomas y condición de salud para facilitar el diagnóstico esta vacio");
+          var estado = "falta";
+        }
+        if ($("#res_pregunta7f").val() == "") {
+          alert("El campo F. Tomar medicamentos sin prescripción médica esta vacio");
+          var estado = "falta";
+        }
+        if ($("#res_pregunta7g").val() == "") {
+          alert("El campo G. Seguir las recomendaciones dadas por el personal de salud esta vacio");
+          var estado = "falta";
+        }
+        if ($("#res_pregunta7h").val() == "") {
+          alert("El campo H. Solicitar aclaración al personal de salud cuando tiene dudas sobre tratamientos, indicaciones, cuidados, fórmulas médicas, etc esta vacio");
+          var estado = "falta";
+        }
+        if ($("#res_pregunta7i").val() == "") {
+          alert("El campo I. Llegar puntualmente a las citas programadas esta vacio");
+          var estado = "falta";
+        }
+        if ($("#res_pregunta7j").val() == "") {
+          alert("El campo J. Cumplir a cabalidad con el tratamiento médico ordenado esta vacio");
+          var estado = "falta";
+        }
+        if ($("#res_pregunta7k").val() == "") {
+          alert("El campo K. Hacer ejercicio y/o alimentación balanceada esta vacio");
+          var estado = "falta";
+        }
+        if ($("#res_pregunta7l").val() == "") {
+          alert("El campo L. Asistir a los controles médicos periódicos siguiendo las recomendaciones de su médico esta vacio");
+          var estado = "falta";
+        }
+        if ($("#res_pregunta7m").val() == "") {
+          alert("El campo M. Asistir a los programas de promoción de la salud y prevención de la enfermedad esta vacio");
+          var estado = "falta";
+        }
+        if ($("#res_pregunta7n").val() == "") {
+          alert("El campo N. Atender a las recomendaciones recibidas en los programas de promoción de la salud y prevención de la enfermedad esta vacio");
+          var estado = "falta";
+        }
+
 
 
         var stockData = [
@@ -5890,7 +5969,7 @@ $(document).ready(function(){
         },
         {
           Pregunta: "Municipio",
-          Respuesta : $("#MunicipioEncuesta").val()
+          Respuesta : municipio
         },
         {
           Pregunta: "Manzana",
