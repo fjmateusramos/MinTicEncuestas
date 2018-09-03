@@ -981,4 +981,280 @@
       </tbody>  
     </table>
   </div>
+  <div class="col-lg-12">
+    <label><strong>3. Control por EPS </strong></label>
+    <table class="table">
+      <thead>
+        <tr>  
+          <th scope="col">EPS</th>
+          <th scope="col">No. Encuestas a la fecha</th>
+          <th scope="col">No. Encuestas a realizar</th>
+          <th scope="col">% de Cumplimiento</th>
+        </tr>
+      </thead>
+      <tbody>  
+        <% total = Encuestum.where(municipio: "ALIANSALUD ENTIDAD PROMOTORA DE SALUD S.A.").count(:id) %>
+        <tr>
+          <td scope="row"> ALIANSALUD ENTIDAD PROMOTORA DE SALUD S.A. </td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "ANASWAYUU").count(:id) %>
+        <tr>
+          <td scope="row"> ANASWAYUU </td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "ASOCIACIÓN INDÍGENA DEL CAUCA").count(:id) %>
+        <tr>
+          <td scope="row"> ASOCIACIÓN INDÍGENA DEL CAUCA </td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "ASOCIACIÓN INDÍGENA DEL CESAR Y LA GUAJIRA  DUSAKAWI").count(:id) %>
+        <tr>
+          <td scope="row"> ASOCIACIÓN INDÍGENA DEL CESAR Y LA GUAJIRA  DUSAKAWI </td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "ASOCIACIÓN MUTUAL BARRIOS UNIDOS DE QUIBDÓ E.S.S.").count(:id) %>
+        <tr>
+          <td scope="row"> ASOCIACIÓN MUTUAL BARRIOS UNIDOS DE QUIBDÓ E.S.S. </td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "ASOCIACIÓN MUTUAL EMPRESA SOLIDARIA DE SALUD DE NARIÑO E.S.S. EMSSANAR E.S.S.").count(:id) %>
+        <tr>
+          <td scope="row"> ASOCIACIÓN MUTUAL EMPRESA SOLIDARIA DE SALUD DE NARIÑO E.S.S. EMSSANAR E.S.S. </td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "ASOCIACIÓN MUTUAL LA ESPERANZA ASMET  SALUD").count(:id) %>
+        <tr>ASOCIACIÓN MUTUAL LA ESPERANZA ASMET  SALUD </td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "ASOCIACIÓN MUTUAL SER EMPRESA SOLIDARIA DE SALUD ESS").count(:id) %>
+        <tr>ASOCIACIÓN MUTUAL SER EMPRESA SOLIDARIA DE SALUD ESS</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR  DE CARTAGENA COMFAMILIAR CARTAGENA").count(:id) %>
+        <tr>CAJA DE COMPENSACIÓN FAMILIAR  DE CARTAGENA COMFAMILIAR CARTAGENA</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR C.C.F. DEL ORIENTE COLOMBIANO COMFAORIENTE").count(:id) %>
+        <tr>CAJA DE COMPENSACIÓN FAMILIAR C.C.F. DEL ORIENTE COLOMBIANO COMFAORIENTE</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "CAJA DE COMPENSACION FAMILIAR DE CORDOBA  COMFACOR").count(:id) %>
+        <tr>CAJA DE COMPENSACION FAMILIAR DE CORDOBA  COMFACOR</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DE CUNDINAMARCA COMFACUNDI").count(:id) %>
+        <tr>CAJA DE COMPENSACIÓN FAMILIAR DE CUNDINAMARCA COMFACUNDI</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DE LA GUAJIRA").count(:id) %>
+        <tr>CAJA DE COMPENSACIÓN FAMILIAR DE LA GUAJIRA</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DE NARIÑO COMFAMILIAR NARIÑO").count(:id) %>
+        <tr>CAJA DE COMPENSACIÓN FAMILIAR DE LA GUAJIRA</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DE SUCRE").count(:id) %>
+        <tr>CAJA DE COMPENSACIÓN FAMILIAR DE SUCRE</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DEL CHOCÓ COMFACHOCO").count(:id) %>
+        <tr>CAJA DE COMPENSACIÓN FAMILIAR DEL CHOCÓ COMFACHOCO</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DEL HUILA COMFAMILIAR").count(:id) %>
+        <tr>CAJA DE COMPENSACIÓN FAMILIAR DEL HUILA COMFAMILIAR</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "CAJA DE DE COMPENSACION FAMILIAR  CAJACOPI ATLANTICO").count(:id) %>
+        <tr>CAJA DE DE COMPENSACION FAMILIAR  CAJACOPI ATLANTICO</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "CAPITAL SALUD").count(:id) %>
+        <tr>CAPITAL SALUD</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "CAPRESOCA  EPS").count(:id) %>
+        <tr>CAPRESOCA  EPS</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "COMFENALCO  VALLE  E.P.S.").count(:id) %>
+        <tr>COMFENALCO  VALLE  E.P.S.</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "COMPENSAR   E.P.S.").count(:id) %>
+        <tr>COMPENSAR   E.P.S.</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "COOMEVA   E.P.S.  S.A.").count(:id) %>
+        <tr>COOMEVA   E.P.S.  S.A.</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "COOPERATIVA DE SALUD COMUNITARIA-COMPARTA").count(:id) %>
+        <tr>COOPERATIVA DE SALUD COMUNITARIA-COMPARTA</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "COOPERATIVA DE SALUD Y DESARROLLO INTEGRAL ZONA SUR ORIENTAL DE CARTAGENA LTDA. COOSALUD E.S.S.").count(:id) %>
+        <tr>COOPERATIVA DE SALUD Y DESARROLLO INTEGRAL ZONA SUR ORIENTAL DE CARTAGENA LTDA. COOSALUD E.S.S.</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "CRUZ BLANCA  EPS S.A.").count(:id) %>
+        <tr>CRUZ BLANCA  EPS S.A.</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "E.P.S.  FAMISANAR  LTDA.").count(:id) %>
+        <tr>E.P.S.  FAMISANAR  LTDA.</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "E.P.S.  SANITAS  S.A.").count(:id) %>
+        <tr>E.P.S.  SANITAS  S.A.</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "EMPRESA MUTUAL PARA EL DESARROLLO INTEGRAL  DE LA SALUD E.S.S.").count(:id) %>
+        <tr>EMPRESA MUTUAL PARA EL DESARROLLO INTEGRAL  DE LA SALUD E.S.S.</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "EMDISALUD ESS").count(:id) %>
+        <tr>EMDISALUD ESS</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "ENTIDAD COOPERATIVA SOL.DE SALUD DEL NORTE DE SOACHA ECOOPSOS").count(:id) %>
+        <tr>ENTIDAD COOPERATIVA SOL.DE SALUD DEL NORTE DE SOACHA ECOOPSOS</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "EPS  CONVIDA").count(:id) %>
+        <tr>EPS  CONVIDA</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "EPS SERVICIO OCCIDENTAL DE SALUD  S.A. - EPS S.O.S. S.A.").count(:id) %>
+        <tr>EPS SERVICIO OCCIDENTAL DE SALUD  S.A. - EPS S.O.S. S.A.</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "EPS Y MEDICINA PREPAGADA SURAMERICANA S.A").count(:id) %>
+        <tr>EPS Y MEDICINA PREPAGADA SURAMERICANA S.A</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "MALLAMAS").count(:id) %>
+        <tr>MALLAMAS</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "MEDIMAS").count(:id) %>
+        <tr>MEDIMAS</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "NUEVA EPS S.A.").count(:id) %>
+        <tr>NUEVA EPS S.A.</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "PIJAOS SALUD EPSI").count(:id) %>
+        <tr>PIJAOS SALUD EPSI</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "SALUD  TOTAL  S.A.  E.P.S.").count(:id) %>
+        <tr>SALUD  TOTAL  S.A.  E.P.S.</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "SALUDVIDA S.A .E.P.S").count(:id) %>
+        <tr>SALUDVIDA S.A .E.P.S</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "SAVIA SALUD EPS").count(:id) %>
+        <tr>SAVIA SALUD EPS</td>
+          <td><%= total %></td>
+          <td>426</td>
+          <td><%= (100* total/426.to_f).round(2) %></td>
+        </tr>
+        <thead>
+          <tr>
+            <th scope="col"> <strong> Total </strong></td>
+            <th scope="col"> <strong> <%= Encuestum.count(:id) %> </strong></td>
+            <th scope="col"> <strong> 21.753 </strong></td>
+            <th scope="col"> <strong><%= (100* Encuestum.count(:id)/21753.to_f).round(2) %></strong></td>
+          </tr>
+        </thead>
+      </tbody>  
+    </table>
+  </div>  
+        
 </div>  
