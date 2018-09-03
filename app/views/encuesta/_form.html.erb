@@ -5903,10 +5903,6 @@ $(document).ready(function(){
           alert("El campo 6. En general, ¿Cómo califica su estado de salud? esta vacio");
           var estado = "falta";
         }
-        if ($("#res_pregunta7a").val() == "") {
-          alert("El campo A. Preguntar por el costo de los servicios que recibió esta vacio");
-          var estado = "falta";
-        }
         if ($("#pregunta7b").val() == "") {
           alert("El campo B. Cotizar de conformidad con sus ingresos esta vacio");
           var estado = "falta";
@@ -7815,6 +7811,7 @@ $(document).ready(function(){
           link.setAttribute('download', filename);
           link.click();
           alert("Encuesta Guardada con Exito");
+          setTimeout(function(){document.location.href = "http://minsalud.sigmadosbioestadistica.com";},500);
         } else {
           alert("Complete los campos indicados"); 
         }
