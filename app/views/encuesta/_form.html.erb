@@ -5858,100 +5858,121 @@ $(document).ready(function(){
         if ($("#afiliadoeps1").val() == "") {
           alert("El campo F1. ¿Actualmente esta afiliado a una EPS? está vacio");
           var estado = "falta";
+        }
+        if ($("#afiliadoeps1").val() == "No") {
+          var acabar = "falta";
         }  
-        if ($("#afiliadoeps2").val() == "") {
+        if ($("#afiliadoeps2").val() == "" &&  acabar != "falta") {
           alert("El campo F1A. ¿Usted ha hecho uso de los servicios de la EPS en los últimos 6 meses? está vacio");
           var estado = "falta";
         }
-        if ($("#afiliadoeps3").val() == "") {
+        if ($("#afiliadoeps2").val() == "No") {
+          var acabar = "falta";
+        } 
+        if ($("#afiliadoeps3").val() == "" &&  acabar != "falta") {
           alert("El campo F2. ¿Pertenece a algún régimen especial (fuerza militar-Policía/ docentes Magisterio/ Ecopetrol)? está vacio");
           var estado = "falta";
         }  
-        if ($("#prepagada1").val() == "") {
+        if ($("#afiliadoeps3").val() == "Si") {
+          var acabar = "falta";
+        } 
+        if ($("#prepagada1").val() == "" &&  acabar != "falta") {
           alert("El campo A. Medicina prepagada está vacio");
           var estado = "falta";
-        }  
-        if ($("#prepagada2").val() == "") {
+        } 
+        if ($("#prepagada1").val() == "Si") {
+          var acabar = "falta";
+        }
+        if ($("#prepagada2").val() == "" &&  acabar != "falta") {
           alert("El campo B. Plan complementario está vacio");
           var estado = "falta";
         }  
-        if ($("#prepagada3").val() == "") {
+        if ($("#prepagada2").val() == "Si") {
+          var acabar = "falta";
+        }
+        if ($("#prepagada3").val() == "" &&  acabar != "falta") {
           alert("El campo C. Otro seguro privado de salud está vacio");
           var estado = "falta";
         }   
-        if ($("#prepagada4").val() == "") {
+        if ($("#prepagada3").val() == "Si") {
+          var acabar = "falta";
+        }
+        if ($("#prepagada4").val() == "" &&  acabar != "falta") {
           alert("El campo D. Servicios domiciliarios de emergencias médicas esta vacio");
           var estado = "falta";
         }
-        if ($("#ident_caract_usuario1").val() == "") {
+        if ($("#prepagada4").val() == "Si") {
+          var acabar = "falta";
+        }
+        if ($("#ident_caract_usuario1").val() == "" &&  acabar != "falta") {
           alert("El campo ¿A qué EPS se encuentra afiliado actualmente? esta vacio");
           var estado = "falta";
         }
-        if ($("#ident_caract_usuario1a").val() == "") {
+        if ($("#ident_caract_usuario1a").val() == "" &&  acabar != "falta") {
           alert("El campo 1A. ¿Cuánto tiempo lleva afiliado a esta EPS: esta vacio");
           var estado = "falta";
         }
-        if ($("#res_pregunta2").val() == "") {
+        if ($("#res_pregunta2").val() == "" &&  acabar != "falta") {
           alert("El campo 2. Cuando recibió el último servicio de salud, ¿Estaba usted afiliado a esta misma EPS? esta vacio");
           var estado = "falta";
         }
-        if ($("#res_pregunta3").val() == "") {
+        if ($("#res_pregunta3").val() == "" &&  acabar != "falta") {
           alert("El campo 3. Qué tipo de afiliado es usted en la EPS? esta vacio");
           var estado = "falta";
         }
-        if ($("#rres_pregunta6").val() == "") {
+        if ($("#res_pregunta6").val() == "" &&  acabar != "falta") {
           alert("El campo 6. En general, ¿Cómo califica su estado de salud? esta vacio");
           var estado = "falta";
         }
-        if ($("#pregunta7b").val() == "") {
+        if ($("#pregunta7b").val() == "" &&  acabar != "falta") {
           alert("El campo B. Cotizar de conformidad con sus ingresos esta vacio");
           var estado = "falta";
         }
-        if ($("#res_pregunta7c").val() == "") {
+        if ($("#res_pregunta7c").val() == "" &&  acabar != "falta") {
           alert("El campo C. Cancelar con anticipación las citas solicitadas cuando no puede asistir esta vacio");
           var estado = "falta";
         }
-        if ($("#res_pregunta7d").val() == "") {
+        if ($("#res_pregunta7d").val() == "" &&  acabar != "falta") {
           alert("El campo D. Reportar a su EPS alguna novedad esta vacio");
           var estado = "falta";
         }
-        if ($("#res_pregunta7e").val() == "") {
+        if ($("#res_pregunta7e").val() == "" &&  acabar != "falta") {
           alert("El campo E. Suministrar información veraz sobre sus síntomas y condición de salud para facilitar el diagnóstico esta vacio");
           var estado = "falta";
         }
-        if ($("#res_pregunta7f").val() == "") {
+        if ($("#res_pregunta7f").val() == "" &&  acabar != "falta") {
           alert("El campo F. Tomar medicamentos sin prescripción médica esta vacio");
           var estado = "falta";
         }
-        if ($("#res_pregunta7g").val() == "") {
+        if ($("#res_pregunta7g").val() == "" &&  acabar != "falta") {
           alert("El campo G. Seguir las recomendaciones dadas por el personal de salud esta vacio");
           var estado = "falta";
         }
-        if ($("#res_pregunta7h").val() == "") {
+        if ($("#res_pregunta7h").val() == "" &&  acabar != "falta") {
           alert("El campo H. Solicitar aclaración al personal de salud cuando tiene dudas sobre tratamientos, indicaciones, cuidados, fórmulas médicas, etc esta vacio");
           var estado = "falta";
         }
-        if ($("#res_pregunta7i").val() == "") {
+        if ($("#res_pregunta7i").val() == "" &&  acabar != "falta") {
           alert("El campo I. Llegar puntualmente a las citas programadas esta vacio");
           var estado = "falta";
         }
-        if ($("#res_pregunta7j").val() == "") {
+        if ($("#res_pregunta7j").val() == "" &&  acabar != "falta") {
           alert("El campo J. Cumplir a cabalidad con el tratamiento médico ordenado esta vacio");
           var estado = "falta";
         }
-        if ($("#res_pregunta7k").val() == "") {
+        if ($("#res_pregunta7k").val() == "" &&  acabar != "falta") {
           alert("El campo K. Hacer ejercicio y/o alimentación balanceada esta vacio");
           var estado = "falta";
         }
-        if ($("#res_pregunta7l").val() == "") {
+        if ($("#res_pregunta7l").val() == "" &&  acabar != "falta") {
           alert("El campo L. Asistir a los controles médicos periódicos siguiendo las recomendaciones de su médico esta vacio");
           var estado = "falta";
         }
-        if ($("#res_pregunta7m").val() == "") {
+        if ($("#res_pregunta7m").val() == "" &&  acabar != "falta") {
           alert("El campo M. Asistir a los programas de promoción de la salud y prevención de la enfermedad esta vacio");
           var estado = "falta";
         }
-        if ($("#res_pregunta7n").val() == "") {
+        if ($("#res_pregunta7n").val() == "" &&  acabar != "falta") {
           alert("El campo N. Atender a las recomendaciones recibidas en los programas de promoción de la salud y prevención de la enfermedad esta vacio");
           var estado = "falta";
         }
