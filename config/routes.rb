@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   root 'encuesta#new'
   get "/application.manifest" => Rails::Offline
   get 'estadisticas/index'
+  get 'muestra/index'
 end

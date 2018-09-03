@@ -1,0 +1,274 @@
+<header>  
+  <div class="row">
+    <div class="col-md-4">
+      <img src="<%= asset_path 'bioestadistica.png' %>">
+    </div>
+    <div class="col-md-4">
+      <img src="<%= asset_path 'logo_min_salud.png' %>">
+    </div>
+    <div class="col-md-4">
+      <img src="<%= asset_path 'gss2.png' %>">
+    </div>
+  </div>
+</header>
+<% total_encuestas = Encuestum.count(:id) %>
+<div class="container">
+  <h2 class="text-center">Cuadro de control del estudio de servicios de las EPS por parte de los usuarios, en el régimen contributivo y subsidiado.</h2>
+    <div class="alert alert-danger" role="alert">
+    Los datos que se muestran, corresponden a la última actualización de la base de datos, puede que existan datos pendientes de actualizar.
+    </div>
+  <br>
+  <div class="col-lg-10">
+    <label><strong>1. Control por Departamentos </strong></label>
+    <table class="table">
+      <thead>
+        <tr>  
+          <th scope="col">Departamento</th>
+          <th scope="col">No. Encuestas a la fecha</th>
+          <th scope="col">No. Encuestas a realizar</th>
+          <th scope="col">% de Cumplimiento</th>
+        </tr>
+      </thead>
+      <tbody>  
+        <% total = Encuestum.where(departamento: "Amazonas").count(:id) %>
+        <tr>
+          <td scope="row"> Amazonas </td>
+          <td><%= total %></td>
+          <td>428</td>
+          <td><%= (100* total/428.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Antioquia").count(:id) %>
+        <tr>
+          <td scope="row"> Antioquia </td>
+          <td><%= total %></td>
+          <td>1162</td>
+          <td><%= (100* total/1162.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Arauca").count(:id) %>
+        <tr>
+          <td scope="row"> Arauca </td>
+          <td><%= total %></td>
+          <td>430</td>
+          <td><%= (100* total/430.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Archipiélago de San Andrés").count(:id) %>
+        <tr>
+          <td scope="row"> Archipiélago de San Andrés </td>
+          <td><%= total %></td>
+          <td>427</td>
+          <td><%= (100* total/427.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Atlántico").count(:id) %>
+        <tr>
+          <td scope="row"> Atlántico </td>
+          <td><%= total %></td>
+          <td>552</td>
+          <td><%= (100* total/552.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Bogotá, D.C.").count(:id) %>
+        <tr>
+          <td scope="row"> Bogotá, D.C. </td>
+          <td><%= total %></td>
+          <td>2061</td>
+          <td><%= (100* total/2061.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Bolívar").count(:id) %>
+        <tr>
+          <td scope="row"> Bolívar. </td>
+          <td><%= total %></td>
+          <td>943</td>
+          <td><%= (100* total/943.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Boyacá").count(:id) %>
+        <tr>
+          <td scope="row"> Boyacá </td>
+          <td><%= total %></td>
+          <td>607</td>
+          <td><%= (100* total/607.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Caldas").count(:id) %>
+        <tr>
+          <td scope="row"> Caldas </td>
+          <td><%= total %></td>
+          <td>433</td>
+          <td><%= (100* total/433.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Caquetá").count(:id) %>
+        <tr>
+          <td scope="row"> Caquetá </td>
+          <td><%= total %></td>
+          <td>430</td>
+          <td><%= (100* total/430.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Casanare").count(:id) %>
+        <tr>
+          <td scope="row"> Casanare </td>
+          <td><%= total %></td>
+          <td>493</td>
+          <td><%= (100* total/493.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Cauca").count(:id) %>
+        <tr>
+          <td scope="row"> Cauca </td>
+          <td><%= total %></td>
+          <td>478</td>
+          <td><%= (100* total/478.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Cesar").count(:id) %>
+        <tr>
+          <td scope="row"> Cesar </td>
+          <td><%= total %></td>
+          <td>524</td>
+          <td><%= (100* total/524.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Chocó").count(:id) %>
+        <tr>
+          <td scope="row"> Chocó </td>
+          <td><%= total %></td>
+          <td>656</td>
+          <td><%= (100* total/656.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Córdoba").count(:id) %>
+        <tr>
+          <td scope="row"> Córdoba </td>
+          <td><%= total %></td>
+          <td>456</td>
+          <td><%= (100* total/456.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Cundinamarca").count(:id) %>
+        <tr>
+          <td scope="row"> Cundinamarca </td>
+          <td><%= total %></td>
+          <td>1257</td>
+          <td><%= (100* total/1257.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Guainía").count(:id) %>
+        <tr>
+          <td scope="row"> Guainía </td>
+          <td><%= total %></td>
+          <td>428</td>
+          <td><%= (100* total/428.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Guaviare").count(:id) %>
+        <tr>
+          <td scope="row"> Guaviare </td>
+          <td><%= total %></td>
+          <td>429</td>
+          <td><%= (100* total/429.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Huila").count(:id) %>
+        <tr>
+          <td scope="row"> Huila </td>
+          <td><%= total %></td>
+          <td>525</td>
+          <td><%= (100* total/525.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "La Guajira").count(:id) %>
+        <tr>
+          <td scope="row"> La Guajira </td>
+          <td><%= total %></td>
+          <td>1246</td>
+          <td><%= (100* total/1246.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Magdalena").count(:id) %>
+        <tr>
+          <td scope="row">Magdalena</td>
+          <td><%= total %></td>
+          <td>505</td>
+          <td><%= (100* total/505.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Meta").count(:id) %>
+        <tr>
+          <td scope="row">Meta</td>
+          <td><%= total %></td>
+          <td>542</td>
+          <td><%= (100* total/542.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Nariño").count(:id) %>
+        <tr>
+          <td scope="row">Nariño</td>
+          <td><%= total %></td>
+          <td>791</td>
+          <td><%= (100* total/791.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Norte de Santander").count(:id) %>
+        <tr>
+          <td scope="row">Norte de Santander</td>
+          <td><%= total %></td>
+          <td>951</td>
+          <td><%= (100* total/951.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Putumayo").count(:id) %>
+        <tr>
+          <td scope="row">Putumayo</td>
+          <td><%= total %></td>
+          <td>430</td>
+          <td><%= (100* total/430.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Quindio").count(:id) %>
+        <tr>
+          <td scope="row">Quindio</td>
+          <td><%= total %></td>
+          <td>432</td>
+          <td><%= (100* total/432.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Risaralda").count(:id) %>
+        <tr>
+          <td scope="row">Risaralda</td>
+          <td><%= total %></td>
+          <td>433</td>
+          <td><%= (100* total/433.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Santander").count(:id) %>
+        <tr>
+          <td scope="row">Santander</td>
+          <td><%= total %></td>
+          <td>433</td>
+          <td><%= (100* total/433.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Sucre").count(:id) %>
+        <tr>
+          <td scope="row">Sucre</td>
+          <td><%= total %></td>
+          <td>775</td>
+          <td><%= (100* total/775.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Tolima").count(:id) %>
+        <tr>
+          <td scope="row">Tolima</td>
+          <td><%= total %></td>
+          <td>561</td>
+          <td><%= (100* total/561.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Valle del Cauca").count(:id) %>
+        <tr>
+          <td scope="row">Valle del Cauca</td>
+          <td><%= total %></td>
+          <td>1279</td>
+          <td><%= (100* total/1279.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Vaupés").count(:id) %>
+        <tr>
+          <td scope="row">Vaupés</td>
+          <td><%= total %></td>
+          <td>428</td>
+          <td><%= (100* total/428.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(departamento: "Vichada").count(:id) %>
+        <tr>
+          <td scope="row">Vichada</td>
+          <td><%= total %></td>
+          <td>428</td>
+          <td><%= (100* total/428.to_f).round(2) %></td>
+        </tr>
+        <thead>
+          <tr>
+            <th scope="col"> <strong> Total </strong></td>
+            <th scope="col"> <strong> <%= Encuestum.count(:id) %> </strong></td>
+            <th scope="col"> <strong> 100% </strong></td>
+          </tr>
+        </thead>
+      </tbody>  
+    </table>
+  </div>
+</div>  
