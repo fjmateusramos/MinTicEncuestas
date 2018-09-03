@@ -18,7 +18,7 @@
     Los datos que se muestran, corresponden a la última actualización de la base de datos, puede que existan datos pendientes de actualizar.
     </div>
   <br>
-  <div class="col-lg-10">
+  <div class="col-lg-12">
     <label><strong>1. Control por Departamentos </strong></label>
     <table class="table">
       <thead>
@@ -265,7 +265,717 @@
           <tr>
             <th scope="col"> <strong> Total </strong></td>
             <th scope="col"> <strong> <%= Encuestum.count(:id) %> </strong></td>
-            <th scope="col"> <strong> 100% </strong></td>
+            <th scope="col"> <strong> 21.753 </strong></td>
+            <th scope="col"> <strong><%= (100* Encuestum.count(:id)/21753.to_f).round(2) %></strong></td>
+          </tr>
+        </thead>
+      </tbody>  
+    </table>
+  </div>
+  <div class="col-lg-12">
+    <label><strong>2. Control por Municipios </strong></label>
+    <table class="table">
+      <thead>
+        <tr>  
+          <th scope="col">Municipio</th>
+          <th scope="col">No. Encuestas a la fecha</th>
+          <th scope="col">No. Encuestas a realizar</th>
+          <th scope="col">% de Cumplimiento</th>
+        </tr>
+      </thead>
+      <tbody>  
+        <% total = Encuestum.where(municipio: "Acacías").count(:id) %>
+        <tr>
+          <td scope="row"> Acacías </td>
+          <td><%= total %></td>
+          <td>60</td>
+          <td><%= (100* total/60.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Aipe").count(:id) %>
+        <tr>
+          <td scope="row"> Aipe </td>
+          <td><%= total %></td>
+          <td>125</td>
+          <td><%= (100* total/125.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Aracataca").count(:id) %>
+        <tr>
+          <td scope="row"> Aracataca </td>
+          <td><%= total %></td>
+          <td>105</td>
+          <td><%= (100* total/105.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Aranzazu").count(:id) %>
+        <tr>
+          <td scope="row"> Aranzazu </td>
+          <td><%= total %></td>
+          <td>53</td>
+          <td><%= (100* total/53.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Aratoca").count(:id) %>
+        <tr>
+          <td scope="row"> Aratoca </td>
+          <td><%= total %></td>
+          <td>40</td>
+          <td><%= (100* total/40.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Arauca").count(:id) %>
+        <tr>
+          <td scope="row"> Arauca </td>
+          <td><%= total %></td>
+          <td>430</td>
+          <td><%= (100* total/430.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Armenia").count(:id) %>
+        <tr>
+          <td scope="row"> Armenia </td>
+          <td><%= total %></td>
+          <td>350</td>
+          <td><%= (100* total/350.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Barbosa").count(:id) %>
+        <tr>
+          <td scope="row"> Barbosa </td>
+          <td><%= total %></td>
+          <td>90</td>
+          <td><%= (100* total/90.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Barranquilla").count(:id) %>
+        <tr>
+          <td scope="row"> Barranquilla </td>
+          <td><%= total %></td>
+          <td>400</td>
+          <td><%= (100* total/400.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Bogotá, D.C.").count(:id) %>
+        <tr>
+          <td scope="row"> Bogotá, D.C. </td>
+          <td><%= total %></td>
+          <td>2061</td>
+          <td><%= (100* total/2061.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Bosconia").count(:id) %>
+        <tr>
+          <td scope="row"> Bosconia </td>
+          <td><%= total %></td>
+          <td>124</td>
+          <td><%= (100* total/124.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Bucaramanga").count(:id) %>
+        <tr>
+          <td scope="row"> Bucaramanga </td>
+          <td><%= total %></td>
+          <td>203</td>
+          <td><%= (100* total/203.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Caldas").count(:id) %>
+        <tr>
+          <td scope="row"> Caldas </td>
+          <td><%= total %></td>
+          <td>90</td>
+          <td><%= (100* total/90.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Cali").count(:id) %>
+        <tr>
+          <td scope="row"> Cali </td>
+          <td><%= total %></td>
+          <td>600</td>
+          <td><%= (100* total/600.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Calima").count(:id) %>
+        <tr>
+          <td scope="row"> Calima </td>
+          <td><%= total %></td>
+          <td>60</td>
+          <td><%= (100* total/60.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Candelaria").count(:id) %>
+        <tr>
+          <td scope="row"> Candelaria </td>
+          <td><%= total %></td>
+          <td>100</td>
+          <td><%= (100* total/100.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Cartagena").count(:id) %>
+        <tr>
+          <td scope="row"> Cartagena </td>
+          <td><%= total %></td>
+          <td>700</td>
+          <td><%= (100* total/700.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Cepitá").count(:id) %>
+        <tr>
+          <td scope="row"> Cepitá </td>
+          <td><%= total %></td>
+          <td>40</td>
+          <td><%= (100* total/40.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Chinchiná").count(:id) %>
+        <tr>
+          <td scope="row"> Chinchiná </td>
+          <td><%= total %></td>
+          <td>80</td>
+          <td><%= (100* total/80.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Chiquinquirá").count(:id) %>
+        <tr>
+          <td scope="row"> Chiquinquirá </td>
+          <td><%= total %></td>
+          <td>80</td>
+          <td><%= (100* total/80.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Clemencia").count(:id) %>
+        <tr>
+          <td scope="row"> Clemencia </td>
+          <td><%= total %></td>
+          <td>100</td>
+          <td><%= (100* total/100.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Coello").count(:id) %>
+        <tr>
+          <td scope="row"> Coello </td>
+          <td><%= total %></td>
+          <td>50</td>
+          <td><%= (100* total/50.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Corozal").count(:id) %>
+        <tr>
+          <td scope="row"> Corozal </td>
+          <td><%= total %></td>
+          <td>175</td>
+          <td><%= (100* total/175.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Cúcuta").count(:id) %>
+        <tr>
+          <td scope="row"> Cúcuta </td>
+          <td><%= total %></td>
+          <td>550</td>
+          <td><%= (100* total/550.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "El Paujil").count(:id) %>
+        <tr>
+          <td scope="row"> El Paujil </td>
+          <td><%= total %></td>
+          <td>100</td>
+          <td><%= (100* total/100.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Entrerrios").count(:id) %>
+        <tr>
+          <td scope="row"> Entrerrios </td>
+          <td><%= total %></td>
+          <td>80</td>
+          <td><%= (100* total/80.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Espinal").count(:id) %>
+        <tr>
+          <td scope="row"> Espinal </td>
+          <td><%= total %></td>
+          <td>86</td>
+          <td><%= (100* total/86.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Filandia").count(:id) %>
+        <tr>
+          <td scope="row"> Filandia </td>
+          <td><%= total %></td>
+          <td>82</td>
+          <td><%= (100* total/82.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Florencia").count(:id) %>
+        <tr>
+          <td scope="row"> Florencia </td>
+          <td><%= total %></td>
+          <td>330</td>
+          <td><%= (100* total/330.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Giraldo").count(:id) %>
+        <tr>
+          <td scope="row"> Giraldo </td>
+          <td><%= total %></td>
+          <td>70</td>
+          <td><%= (100* total/70.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Girón").count(:id) %>
+        <tr>
+          <td scope="row"> Girón </td>
+          <td><%= total %></td>
+          <td>60</td>
+          <td><%= (100* total/60.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Guamal").count(:id) %>
+        <tr>
+          <td scope="row"> Guamal </td>
+          <td><%= total %></td>
+          <td>32</td>
+          <td><%= (100* total/32.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Guateque").count(:id) %>
+        <tr>
+          <td scope="row"> Guateque </td>
+          <td><%= total %></td>
+          <td>30</td>
+          <td><%= (100* total/30.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Hatonuevo").count(:id) %>
+        <tr>
+          <td scope="row"> Hatonuevo </td>
+          <td><%= total %></td>
+          <td>146</td>
+          <td><%= (100* total/146.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Honda").count(:id) %>
+        <tr>
+          <td scope="row"> Honda </td>
+          <td><%= total %></td>
+          <td>75</td>
+          <td><%= (100* total/75.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Ibagué").count(:id) %>
+        <tr>
+          <td scope="row"> Ibagué </td>
+          <td><%= total %></td>
+          <td>350</td>
+          <td><%= (100* total/350.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Inírida").count(:id) %>
+        <tr>
+          <td scope="row"> Inírida </td>
+          <td><%= total %></td>
+          <td>428</td>
+          <td><%= (100* total/428.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Ipiales").count(:id) %>
+        <tr>
+          <td scope="row"> Ipiales </td>
+          <td><%= total %></td>
+          <td>151</td>
+          <td><%= (100* total/151.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Istmina").count(:id) %>
+        <tr>
+          <td scope="row"> Istmina </td>
+          <td><%= total %></td>
+          <td>106</td>
+          <td><%= (100* total/106.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Jenesano").count(:id) %>
+        <tr>
+          <td scope="row"> Jenesano </td>
+          <td><%= total %></td>
+          <td>40</td>
+          <td><%= (100* total/40.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "La Ceja").count(:id) %>
+        <tr>
+          <td scope="row"> La Ceja </td>
+          <td><%= total %></td>
+          <td>90</td>
+          <td><%= (100* total/90.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "La Florida").count(:id) %>
+        <tr>
+          <td scope="row"> La Florida </td>
+          <td><%= total %></td>
+          <td>70</td>
+          <td><%= (100* total/70.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "La Unión").count(:id) %>
+        <tr>
+          <td scope="row"> La Unión </td>
+          <td><%= total %></td>
+          <td>69</td>
+          <td><%= (100* total/69.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Leticia").count(:id) %>
+        <tr>
+          <td scope="row"> Leticia </td>
+          <td><%= total %></td>
+          <td>428</td>
+          <td><%= (100* total/428.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Madrid").count(:id) %>
+        <tr>
+          <td scope="row"> Madrid </td>
+          <td><%= total %></td>
+          <td>150</td>
+          <td><%= (100* total/150.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Maicao").count(:id) %>
+        <tr>
+          <td scope="row"> Maicao </td>
+          <td><%= total %></td>
+          <td>200</td>
+          <td><%= (100* total/200.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Maní").count(:id) %>
+        <tr>
+          <td scope="row"> Maní </td>
+          <td><%= total %></td>
+          <td>143</td>
+          <td><%= (100* total/143.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Manizales").count(:id) %>
+        <tr>
+          <td scope="row"> Manizales </td>
+          <td><%= total %></td>
+          <td>300</td>
+          <td><%= (100* total/300.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Medellín").count(:id) %>
+        <tr>
+          <td scope="row"> Medellín </td>
+          <td><%= total %></td>
+          <td>502</td>
+          <td><%= (100* total/502.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Mitú").count(:id) %>
+        <tr>
+          <td scope="row"> Mitú </td>
+          <td><%= total %></td>
+          <td>428</td>
+          <td><%= (100* total/428.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Mocoa").count(:id) %>
+        <tr>
+          <td scope="row"> Mocoa </td>
+          <td><%= total %></td>
+          <td>430</td>
+          <td><%= (100* total/430.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Momil").count(:id) %>
+        <tr>
+          <td scope="row"> Momil </td>
+          <td><%= total %></td>
+          <td>40</td>
+          <td><%= (100* total/40.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Montelíbano").count(:id) %>
+        <tr>
+          <td scope="row"> Montelíbano </td>
+          <td><%= total %></td>
+          <td>66</td>
+          <td><%= (100* total/66.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Montería").count(:id) %>
+        <tr>
+          <td scope="row"> Montería </td>
+          <td><%= total %></td>
+          <td>350</td>
+          <td><%= (100* total/350.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Neiva").count(:id) %>
+        <tr>
+          <td scope="row"> Neiva </td>
+          <td><%= total %></td>
+          <td>400</td>
+          <td><%= (100* total/400.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Nobsa").count(:id) %>
+        <tr>
+          <td scope="row"> Nobsa </td>
+          <td><%= total %></td>
+          <td>60</td>
+          <td><%= (100* total/60.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Ocaña").count(:id) %>
+        <tr>
+          <td scope="row"> Ocaña </td>
+          <td><%= total %></td>
+          <td>150</td>
+          <td><%= (100* total/150.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Pacho").count(:id) %>
+        <tr>
+          <td scope="row"> Pacho </td>
+          <td><%= total %></td>
+          <td>80</td>
+          <td><%= (100* total/80.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Palmira").count(:id) %>
+        <tr>
+          <td scope="row"> Palmira </td>
+          <td><%= total %></td>
+          <td>225</td>
+          <td><%= (100* total/225.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Pamplonita").count(:id) %>
+        <tr>
+          <td scope="row"> Pamplonita </td>
+          <td><%= total %></td>
+          <td>51</td>
+          <td><%= (100* total/51.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Pasto").count(:id) %>
+        <tr>
+          <td scope="row"> Pasto </td>
+          <td><%= total %></td>
+          <td>500</td>
+          <td><%= (100* total/500.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Patía").count(:id) %>
+        <tr>
+          <td scope="row"> Patía </td>
+          <td><%= total %></td>
+          <td>50</td>
+          <td><%= (100* total/50.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Pereira").count(:id) %>
+        <tr>
+          <td scope="row"> Pereira </td>
+          <td><%= total %></td>
+          <td>350</td>
+          <td><%= (100* total/350.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Popayán").count(:id) %>
+        <tr>
+          <td scope="row"> Popayán </td>
+          <td><%= total %></td>
+          <td>328</td>
+          <td><%= (100* total/328.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Puerto Carreño").count(:id) %>
+        <tr>
+          <td scope="row"> Puerto Carreño </td>
+          <td><%= total %></td>
+          <td>428</td>
+          <td><%= (100* total/428.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Puerto Colombia").count(:id) %>
+        <tr>
+          <td scope="row"> Puerto Colombia </td>
+          <td><%= total %></td>
+          <td>75</td>
+          <td><%= (100* total/75.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Puerto López").count(:id) %>
+        <tr>
+          <td scope="row"> Puerto López </td>
+          <td><%= total %></td>
+          <td>50</td>
+          <td><%= (100* total/50.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Puerto Tejada").count(:id) %>
+        <tr>
+          <td scope="row"> Puerto Tejada </td>
+          <td><%= total %></td>
+          <td>100</td>
+          <td><%= (100* total/100.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Quibdó").count(:id) %>
+        <tr>
+          <td scope="row"> Quibdó </td>
+          <td><%= total %></td>
+          <td>550</td>
+          <td><%= (100* total/550.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Ricaurte").count(:id) %>
+        <tr>
+          <td scope="row"> Ricaurte </td>
+          <td><%= total %></td>
+          <td>80</td>
+          <td><%= (100* total/80.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Riohacha").count(:id) %>
+        <tr>
+          <td scope="row"> Riohacha </td>
+          <td><%= total %></td>
+          <td>700</td>
+          <td><%= (100* total/700.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Rionegro").count(:id) %>
+        <tr>
+          <td scope="row"> Rionegro </td>
+          <td><%= total %></td>
+          <td>40</td>
+          <td><%= (100* total/40.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Sabanagrande").count(:id) %>
+        <tr>
+          <td scope="row"> Sabanagrande </td>
+          <td><%= total %></td>
+          <td>77</td>
+          <td><%= (100* total/77.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Salgar").count(:id) %>
+        <tr>
+          <td scope="row"> Salgar </td>
+          <td><%= total %></td>
+          <td>80</td>
+          <td><%= (100* total/80.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "San Andrés").count(:id) %>
+        <tr>
+          <td scope="row"> San Andrés </td>
+          <td><%= total %></td>
+          <td>427</td>
+          <td><%= (100* total/427.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "San Gil").count(:id) %>
+        <tr>
+          <td scope="row"> San Gil </td>
+          <td><%= total %></td>
+          <td>50</td>
+          <td><%= (100* total/50.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "San Jacinto").count(:id) %>
+        <tr>
+          <td scope="row"> San Jacinto </td>
+          <td><%= total %></td>
+          <td>143</td>
+          <td><%= (100* total/143.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "San José del Guaviare").count(:id) %>
+        <tr>
+          <td scope="row"> San José del Guaviare </td>
+          <td><%= total %></td>
+          <td>429</td>
+          <td><%= (100* total/429.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "San Pedro").count(:id) %>
+        <tr>
+          <td scope="row"> San Pedro </td>
+          <td><%= total %></td>
+          <td>80</td>
+          <td><%= (100* total/80.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Santa Marta").count(:id) %>
+        <tr>
+          <td scope="row"> Santa Marta </td>
+          <td><%= total %></td>
+          <td>400</td>
+          <td><%= (100* total/400.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Santuario").count(:id) %>
+        <tr>
+          <td scope="row"> Santuario </td>
+          <td><%= total %></td>
+          <td>83</td>
+          <td><%= (100* total/83.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Sincelejo").count(:id) %>
+        <tr>
+          <td scope="row"> Sincelejo </td>
+          <td><%= total %></td>
+          <td>600</td>
+          <td><%= (100* total/600.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Soacha").count(:id) %>
+        <tr>
+          <td scope="row"> Soacha </td>
+          <td><%= total %></td>
+          <td>600</td>
+          <td><%= (100* total/600.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Sotaquirá").count(:id) %>
+        <tr>
+          <td scope="row"> Sotaquirá </td>
+          <td><%= total %></td>
+          <td>40</td>
+          <td><%= (100* total/40.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Sutatausa").count(:id) %>
+        <tr>
+          <td scope="row"> Sutatausa </td>
+          <td><%= total %></td>
+          <td>80</td>
+          <td><%= (100* total/80.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Tibaná").count(:id) %>
+        <tr>
+          <td scope="row"> Tibaná </td>
+          <td><%= total %></td>
+          <td>40</td>
+          <td><%= (100* total/40.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Titiribí").count(:id) %>
+        <tr>
+          <td scope="row"> Titiribí </td>
+          <td><%= total %></td>
+          <td>80</td>
+          <td><%= (100* total/80.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Tuluá").count(:id) %>
+        <tr>
+          <td scope="row"> Tuluá </td>
+          <td><%= total %></td>
+          <td>225</td>
+          <td><%= (100* total/225.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Tunja").count(:id) %>
+        <tr>
+          <td scope="row"> Tunja </td>
+          <td><%= total %></td>
+          <td>257</td>
+          <td><%= (100* total/257.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Túquerres").count(:id) %>
+        <tr>
+          <td scope="row"> Túquerres </td>
+          <td><%= total %></td>
+          <td>70</td>
+          <td><%= (100* total/70.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Ubaque").count(:id) %>
+        <tr>
+          <td scope="row"> Ubaque </td>
+          <td><%= total %></td>
+          <td>80</td>
+          <td><%= (100* total/80.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Uribia").count(:id) %>
+        <tr>
+          <td scope="row"> Uribia </td>
+          <td><%= total %></td>
+          <td>200</td>
+          <td><%= (100* total/200.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Valledupar").count(:id) %>
+        <tr>
+          <td scope="row"> Valledupar </td>
+          <td><%= total %></td>
+          <td>400</td>
+          <td><%= (100* total/400.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Villa de Leyva").count(:id) %>
+        <tr>
+          <td scope="row"> Villa de Leyva </td>
+          <td><%= total %></td>
+          <td>60</td>
+          <td><%= (100* total/60.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Villa de San Diego de Ubate").count(:id) %>
+        <tr>
+          <td scope="row"> Villa de San Diego de Ubate </td>
+          <td><%= total %></td>
+          <td>107</td>
+          <td><%= (100* total/107.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Villavicencio").count(:id) %>
+        <tr>
+          <td scope="row"> Villavicencio </td>
+          <td><%= total %></td>
+          <td>400</td>
+          <td><%= (100* total/400.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Villeta").count(:id) %>
+        <tr>
+          <td scope="row"> Villeta </td>
+          <td><%= total %></td>
+          <td>80</td>
+          <td><%= (100* total/80.to_f).round(2) %></td>
+        </tr>
+        <% total = Encuestum.where(municipio: "Yopal").count(:id) %>
+        <tr>
+          <td scope="row"> Yopal </td>
+          <td><%= total %></td>
+          <td>350</td>
+          <td><%= (100* total/350.to_f).round(2) %></td>
+        </tr>
+        <thead>
+          <tr>
+            <th scope="col"> <strong> Total </strong></td>
+            <th scope="col"> <strong> <%= Encuestum.count(:id) %> </strong></td>
+            <th scope="col"> <strong> 21.753 </strong></td>
+            <th scope="col"> <strong><%= (100* Encuestum.count(:id)/21753.to_f).round(2) %></strong></td>
           </tr>
         </thead>
       </tbody>  
