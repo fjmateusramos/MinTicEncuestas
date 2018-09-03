@@ -197,7 +197,6 @@
       <%= f.select :F2, ["Si","No"],{:include_blank => true}, {class: "form-control", id:"afiliadoeps3"}%>
   </div>
   <div id="filtros_de_seleccion">
-    <label>F3. ¿Además de la EPS usted cuenta actualmente con un plan de…?    (ENC: Lea cada opción, RM)</label>
     <div class="alert alert-primary" role="alert">
       ENC: Si la respuesta es SI en por lo menos un numeral a hasta d. TERMINE ENCUESTA
     </div>
@@ -5837,7 +5836,51 @@ $(document).ready(function(){
         if ($("#HoraInicial").val() == "") {
           alert("El campo Hora Inicial está vacio");
           var estado = "falta";
-        }                
+        } 
+        if ($("#HoraInicial").val() == "") {
+          alert("El campo Hora Inicial está vacio");
+          var estado = "falta";
+        }
+        if ($("#nombreencuestadoEncuesta").val() == "") {
+          alert("El campo Nombre encuestado está vacio");
+          var estado = "falta";
+        }
+        if ($("#sexo_l8").val() == "") {
+          alert("El campo Sexo está vacio");
+          var estado = "falta";
+        }   
+        if ($("#años_l9").val() == "") {
+          alert("El campo Años está vacio");
+          var estado = "falta";
+        }
+        if ($("#afiliadoeps1").val() == "") {
+          alert("El campo F1. ¿Actualmente esta afiliado a una EPS? está vacio");
+          var estado = "falta";
+        }  
+        if ($("#afiliadoeps2").val() == "") {
+          alert("El campo F1A. ¿Usted ha hecho uso de los servicios de la EPS en los últimos 6 meses? está vacio");
+          var estado = "falta";
+        }
+        if ($("#afiliadoeps3").val() == "") {
+          alert("El campo F2. ¿Pertenece a algún régimen especial (fuerza militar-Policía/ docentes Magisterio/ Ecopetrol)? está vacio");
+          var estado = "falta";
+        }  
+        if ($("#prepagada1").val() == "") {
+          alert("El campo A. Medicina prepagada está vacio");
+          var estado = "falta";
+        }  
+        if ($("#prepagada2").val() == "") {
+          alert("El campo B. Plan complementario está vacio");
+          var estado = "falta";
+        }  
+        if ($("#prepagada3").val() == "") {
+          alert("El campo C. Otro seguro privado de salud está vacio");
+          var estado = "falta";
+        }   
+        if ($("#prepagada4").val() == "") {
+          alert("El campo D. Servicios domiciliarios de emergencias médicas esta vacio");
+          var estado = "falta";
+        }                    
 
 
         var stockData = [
