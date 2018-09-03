@@ -1071,7 +1071,8 @@
           <td><%= (100* total/431.to_f).round(2) %></td>
         </tr>
         <% total = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DE CUNDINAMARCA COMFACUNDI").count(:id) %>
-        <tr>CAJA DE COMPENSACIÓN FAMILIAR DE CUNDINAMARCA COMFACUNDI</td>
+        <tr>
+          <td>CAJA DE COMPENSACIÓN FAMILIAR DE CUNDINAMARCA COMFACUNDI</td>
           <td><%= total %></td>
           <td>426</td>
           <td><%= (100* total/426.to_f).round(2) %></td>
