@@ -28,8 +28,106 @@
   </div>
   <div class="field">
     <%= f.label :municipio, 'L2. Municipio' %>
-    <%= f.select :municipio, ["Acacías","Aipe","Aracataca","Aranzazu","Aratoca","Arauca","Armenia","Barbosa","Barranquilla","Bogotá, D.C.","Bosconia","Bucaramanga","Caldas","Cali","Calima","Candelaria","Cartagena",
-      "Cepitá","Chinchiná","Chiquinquirá","Clemencia","Coello","Corozal","Cúcuta","El Paujil","Entrerrios","Espinal","Filandia","Florencia","Giraldo","Girón","Guamal","Guateque","Hatonuevo","Honda","Ibagué","Inírida","Ipiales","Istmina","Jenesano","La Ceja","La Florida","La Unión","Leticia","Madrid","Maicao","Maní","Manizales","Medellín","Mitú","Mocoa","Momil","Montelíbano","Montería","Neiva","Nobsa","Ocaña","Pacho","Palmira","Pamplonita","Pasto","Patía","Pereira","Popayán","Puerto Carreño","Puerto Colombia","Puerto López","Puerto Tejada","Quibdó","Ricaurte","Riohacha","Rionegro","Sabanagrande","Salgar","San Andrés","San Gil","San Jacinto","San José del Guaviare","San Pedro","Santa Marta","Santuario","Sincelejo","Soacha","Sotaquirá","Sutatausa","Tibaná","Titiribí","Tuluá","Tunja","Túquerres","Ubaque","Uribia","Valledupar","Villa de Leyva","Villa de San Diego de Ubate","Villavicencio","Villeta","Yopal"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    <div class="hidden" id="Departamento_Amazonas">
+    <%= f.select :municipio, ["Leticia"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_Antioquia">
+    <%= f.select :municipio, ["Barbosa","Caldas","Entrerrios","Giraldo","La Ceja","Medellín","Salgar","San Pedro","Titiribí"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_Arauca">
+    <%= f.select :municipio, ["Arauca"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_SanAndres">
+    <%= f.select :municipio, ["San Andrés"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_Atlantico">
+    <%= f.select :municipio, ["Barranquilla","Puerto Colombia","Sabanagrande"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_Bogota">
+    <%= f.select :municipio, ["Bogotá, D.C."],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_Bolivar">
+    <%= f.select :municipio, ["Cartagena","Clemencia","San Jacinto"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_Boyaca">
+    <%= f.select :municipio, ["Chiquinquirá","Guateque","Jenesano","Nobsa","Sotaquirá","Tibaná","Tunja","Túquerres","Villa de Leyva"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_Caldas">
+    <%= f.select :municipio, ["Aranzazu","Chinchiná","Manizales"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_Caqueta">
+    <%= f.select :municipio, ["El Paujil","Florencia"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_Casanare">
+    <%= f.select :municipio, ["Maní","Yopal"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_Cauca">
+    <%= f.select :municipio, ["Patía","Popayán","Puerto Tejada"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_Cesar">
+    <%= f.select :municipio, ["Bosconia","Valledupar"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_choco">
+    <%= f.select :municipio, ["Istmina","Quibdó"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_cordova">
+    <%= f.select :municipio, ["Momil","Montelíbano","Montería"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_cundinamarca">
+    <%= f.select :municipio, ["Madrid","Pacho","Ricaurte","Soacha","Sutatausa","Ubaque","Villa de San Diego de Ubate""Villeta"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_guania">
+    <%= f.select :municipio, ["Inírida"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_guaviare">
+    <%= f.select :municipio, ["San José del Guaviare"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_huila">
+    <%= f.select :municipio, ["Aipe","Neiva"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_guajira">
+    <%= f.select :municipio, ["Hatonuevo","Maicao","Riohacha","Uribia"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_magdalena">
+    <%= f.select :municipio, ["Aracataca","Santa Marta"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_Meta">
+    <%= f.select :municipio, ["Acacías","Guamal","Puerto López","Villavicencio"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_nariño">
+    <%= f.select :municipio, ["Ipiales","La Florida","Pasto","Túquerres"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_nortesantander">
+    <%= f.select :municipio, ["Cúcuta","Ocaña","Pamplonita"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_putumayo">
+    <%= f.select :municipio, ["Mocoa"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_quindio">
+    <%= f.select :municipio, ["Armenia","Filandia",],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_risaralda">
+    <%= f.select :municipio, ["Pereira","Santuario"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_santander">
+    <%= f.select :municipio, ["Aratoca","Bucaramanga",
+      "Cepitá","Girón","Rionegro","San Gil"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_sucre">
+    <%= f.select :municipio, ["Corozal","Sincelejo"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_tolima">
+    <%= f.select :municipio, ["Coello","Espinal","Honda","Ibagué"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_valle">
+    <%= f.select :municipio, ["Cali","Calima","Candelaria","La Unión","Palmira","Tuluá"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_vaupes">
+    <%= f.select :municipio, ["Mitú"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
+    <div class="hidden" id="Departamento_vichada">
+    <%= f.select :municipio, ["Puerto Carreño"],{:include_blank => true}, {class: "form-control", id:"MunicipioEncuesta"}%>
+    </div>
   <div class="field">
     <%= f.label :manzana, 'L3b. Manzana' %>
     <%= f.text_field :manzana, class: 'form-control', placeholder:'Manzana', id:'ManzanaEncuesta' %>
@@ -3692,6 +3790,8 @@
 
 $(document).ready(function(){
     
+    
+
     $('#afiliadoeps1').change(function(){
         if($('#afiliadoeps1').val() == "No"){
         $("#afiliadoseps2").addClass('hidden');  
@@ -4949,7 +5049,7 @@ $(document).ready(function(){
           Pregunta: "Pregunta 12a",
           Respuesta : $("#res_pregunta12_a").val()
         },
-
+        {
           Pregunta: "Pregunta 12a hora",
           Respuesta : $("#res_pregunta12_a_hora").val()
         },    
