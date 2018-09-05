@@ -1,4 +1,4 @@
-<style type="text/css">
+ <style type="text/css">
   .hidden {
   display: none !important;}
 </style>
@@ -6279,10 +6279,6 @@ $(document).ready(function(){
      if($('#res_pregunta7n_normal').is(':checked')){
         pregunta7n = $('#res_pregunta7n_normal').val();
      }
-        if (pregunta7b == "" &&  acabar != "falta") {
-          alert("El campo B. Cotizar de conformidad con sus ingresos esta vacio");
-          var estado = "falta";
-        }
         if (pregunta7c == "" &&  acabar != "falta") {
           alert("El campo C. Cancelar con anticipación las citas solicitadas cuando no puede asistir esta vacio");
           var estado = "falta";
@@ -9020,6 +9016,7 @@ $(document).ready(function(){
         ];
 
         if (estado == "") {
+
           var csv = convertArrayOfObjectsToCSV({
             data: stockData
           });
