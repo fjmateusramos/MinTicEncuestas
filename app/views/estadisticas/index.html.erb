@@ -2268,41 +2268,7 @@
     </table>
     <br> 
   </div>  
-  <div id="Pregunta14a">
-    <label> <strong> 14.1. ¿Por cuales de las siguientes razones usó en los últimos seis meses el servicio de urgencias? Por favor, si usted utilizó varias veces el servicio de urgencias en los últimos seis meses, refiérase solo a la última vez que lo utilizó.  </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta14_1).having("pregunta14_1 != ?", "--").having("pregunta14_1 != ?", "").count(:id) %>
-    <br>
-    <table class="table">
-      <thead>
-        <tr>  
-          <th scope="col">Item</th>
-          <th scope="col">Cantidad</th>
-          <th scope="col">%</th>
-        </tr>
-      </thead>
-      <tbody>  
-        <% total  = 0 %>
-        <% Encuestum.group(:pregunta14).having("pregunta14 != ?", "--").having("pregunta14 != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
-          <% total = total + item %>
-        <%end%>
-        <% Encuestum.group(:pregunta14).having("pregunta14 != ?", "--").having("pregunta14 != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
-        <tr>
-          <td scope="row"><%= value %></td>
-          <td><%= item %></td>
-          <td><%= (100*item/total.to_f).round(2) %></td>
-        </tr>
-        <%end%>
-        <thead>
-        <tr>
-          <th scope="col"> <strong> Total </strong></td>
-          <th scope="col"> <strong> <%= total %> </strong></td>
-          <th scope="col"> <strong> 100% </strong></td>
-        </tr>
-        </thead>
-      </tbody>   
-    </table>
-    <br> 
-  </div>  
+   
   <div id="Pregunta15A">
     <label> <strong> 15. a. Anteriormente me indicó que en los últimos seis meses solicitó y/o le entregaron medicamentos  </strong> </label>
     <%= pie_chart Encuestum.group(:pregunta15_a).having("pregunta15_a != ?", "--").having("pregunta15_a != ?", "").count(:id) %>
@@ -2585,41 +2551,7 @@
     </table>
     <br> 
   </div>      
-  <div id="Pregunta19">
-    <label> <strong> 19. ¿Por qué razón(es) utilizó recursos propios y/o familiares para cubrir la atención en salud? </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta19).having("pregunta19 != ?", "--").having("pregunta19 != ?", "").count(:id) %>
-    <br>
-    <table class="table">
-      <thead>
-        <tr>  
-          <th scope="col">Item</th>
-          <th scope="col">Cantidad</th>
-          <th scope="col">%</th>
-        </tr>
-      </thead>
-      <tbody>  
-        <% total  = 0 %>
-        <% Encuestum.group(:pregunta19).having("pregunta19 != ?", "--").having("pregunta19 != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
-          <% total = total + item %>
-        <%end%>
-        <% Encuestum.group(:pregunta19).having("pregunta19 != ?", "--").having("pregunta19 != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
-        <tr>
-          <td scope="row"><%= value %></td>
-          <td><%= item %></td>
-          <td><%= (100*item/total.to_f).round(2) %></td>
-        </tr>
-        <%end%>
-        <thead>
-        <tr>
-          <th scope="col"> <strong> Total </strong></td>
-          <th scope="col"> <strong> <%= total %> </strong></td>
-          <th scope="col"> <strong> 100% </strong></td>
-        </tr>
-        </thead>
-      </tbody> 
-    </table>
-    <br> 
-  </div>  
+   
 
   <div id="Pregunta21">
     <label> <strong> 21. ¿ De qué forma solicita regularmente sus citas medicas? </strong> </label>
@@ -2656,41 +2588,7 @@
     </table>
     <br>
   </div>
-  <div id="Pregunta22">
-    <label> <strong> 22. ¿Por qué utiliza regularmente esta opción para solicitar la cita medica? </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta22).having("pregunta22 != ?", "--").having("pregunta22 != ?", "").count(:id) %>
-    <br>
-    <table class="table">
-      <thead>
-        <tr>  
-          <th scope="col">Item</th>
-          <th scope="col">Cantidad</th>
-          <th scope="col">%</th>
-        </tr>
-      </thead>
-         <tbody>  
-        <% total  = 0 %>
-        <% Encuestum.group(:pregunta22).having("pregunta22 != ?", "--").having("pregunta22 != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
-          <% total = total + item %>
-        <%end%>
-        <% Encuestum.group(:pregunta22).having("pregunta22 != ?", "--").having("pregunta22 != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
-        <tr>
-          <td scope="row"><%= value %></td>
-          <td><%= item %></td>
-          <td><%= (100*item/total.to_f).round(2) %></td>
-        </tr>
-        <%end%>
-        <thead>
-        <tr>
-          <th scope="col"> <strong> Total </strong></td>
-          <th scope="col"> <strong> <%= total %> </strong></td>
-          <th scope="col"> <strong> 100% </strong></td>
-        </tr>
-        </thead>
-      </tbody>   
-    </table>
-    <br>
-  </div>
+  
   <div id="Pregunta23">
     <label> <strong> 23. En general  ¿Cómo califica la comunicación que brinda su EPS,  sobre los servicios que presta? </strong> </label>
     <%= bar_chart Encuestum.group(:pregunta23).having("pregunta23 != ?", "--").having("pregunta23 != ?", "").count(:id) %>
@@ -3744,76 +3642,8 @@
     </table>
     <br>
   </div> 
-  <div id="Pregunta32C">
-    <label> <strong> 32. C. Cuando necesita una cita con médico especialista, ¿La EPS le permite escoger el centro de atención dentro de la red contratada? </strong> </label>
-    <%= column_chart Encuestum.group(:pregunta32_c).having("pregunta32_c != ?", "--").having("pregunta32_c != ?", "").count(:id) %>
-    <br>
-    <table class="table">
-      <thead>
-        <tr>  
-          <th scope="col">Item</th>
-          <th scope="col">Cantidad</th>
-          <th scope="col">%</th>
-        </tr>
-      </thead>
-       <tbody>  
-        <% total  = 0 %>
-        <% Encuestum.group(:pregunta32_c).having("pregunta32_c != ?", "--").having("pregunta32_c != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
-          <% total = total + item %>
-        <%end%>
-        <% Encuestum.group(:pregunta32_c).having("pregunta32_c != ?", "--").having("pregunta32_c != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
-        <tr>
-          <td scope="row"><%= value %></td>
-          <td><%= item %></td>
-          <td><%= (100*item/total.to_f).round(2) %></td>
-        </tr>
-        <%end%>
-        <thead>
-        <tr>
-          <th scope="col"> <strong> Total </strong></td>
-          <th scope="col"> <strong> <%= total %> </strong></td>
-          <th scope="col"> <strong> 100% </strong></td>
-        </tr>
-        </thead>
-      </tbody>   
-    </table>
-    <br>
-  </div> 
-  <div id="Pregunta32D">
-    <label> <strong> 32. D. Cuando necesita una cita con médico especialista, ¿Su EPS le permite escoger el médico especialista? </strong> </label>
-    <%= column_chart Encuestum.group(:pregunta32_d).having("pregunta32_d != ?", "--").having("pregunta32_d != ?", "").count(:id) %>
-    <br>
-    <table class="table">
-      <thead>
-        <tr>  
-          <th scope="col">Item</th>
-          <th scope="col">Cantidad</th>
-          <th scope="col">%</th>
-        </tr>
-      </thead>
-       <tbody>  
-        <% total  = 0 %>
-        <% Encuestum.group(:pregunta32_d).having("pregunta32_d != ?", "--").having("pregunta32_d != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
-          <% total = total + item %>
-        <%end%>
-        <% Encuestum.group(:pregunta32_d).having("pregunta32_d != ?", "--").having("pregunta32_d != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
-        <tr>
-          <td scope="row"><%= value %></td>
-          <td><%= item %></td>
-          <td><%= (100*item/total.to_f).round(2) %></td>
-        </tr>
-        <%end%>
-        <thead>
-        <tr>
-          <th scope="col"> <strong> Total </strong></td>
-          <th scope="col"> <strong> <%= total %> </strong></td>
-          <th scope="col"> <strong> 100% </strong></td>
-        </tr>
-        </thead>
-      </tbody>  
-    </table>
-    <br>
-  </div> 
+  
+ 
   <div id="Pregunta33">
     <label> <strong> 33. En los últimos 6 meses usted, ¿Ha tenido algún(os) problema(s) en la atención con su prestador de servicios? (médico, clínica u hospital, farmacia, ambulancia o prestador de atención domiciliario) </strong> </label>
     <%= pie_chart Encuestum.group(:pregunta33).having("pregunta33 != ?", "--").having("pregunta33 != ?", "").count(:id) %>
@@ -3919,41 +3749,7 @@
     </table>
     <br>
   </div>  
-  <div id="Pregunta36">
-    <label> <strong> 36. Usted que le mejoraría a su EPS.  </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta36).having("pregunta36 != ?", "--").having("pregunta36 != ?", "").count(:id) %>
-    <br>
-    <table class="table">
-      <thead>
-        <tr>  
-          <th scope="col">Item</th>
-          <th scope="col">Cantidad</th>
-          <th scope="col">%</th>
-        </tr>
-      </thead>
-      <tbody>  
-        <% total  = 0 %>
-        <% Encuestum.group(:pregunta36).having("pregunta36 != ?", "--").having("pregunta36 != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
-          <% total = total + item %>
-        <%end%>
-        <% Encuestum.group(:pregunta36).having("pregunta36 != ?", "--").having("pregunta36 != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
-        <tr>
-          <td scope="row"><%= value %></td>
-          <td><%= item %></td>
-          <td><%= (100*item/total.to_f).round(2) %></td>
-        </tr>
-        <%end%>
-        <thead>
-        <tr>
-          <th scope="col"> <strong> Total </strong></td>
-          <th scope="col"> <strong> <%= total %> </strong></td>
-          <th scope="col"> <strong> 100% </strong></td>
-        </tr>
-        </thead>
-      </tbody>   
-    </table>
-    <br>
-  </div>  
+  
   <div id="Pregunta37">
     <label> <strong> 37. En los últimos 6 meses, para acceder a los servicios de su EPS </strong> </label>
     <%= bar_chart Encuestum.group(:pregunta37).having("pregunta37 != ?", "--").having("pregunta37 != ?", "").count(:id) %>
@@ -4129,41 +3925,7 @@
     </table>
     <br>
   </div>  
-  <div id="Pregunta42">
-    <label> <strong> 42. ¿Por qué no ha interpuesto la queja o petición? </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta42).having("pregunta42 != ?", "--").having("pregunta42 != ?", "").count(:id) %>
-    <br>
-    <table class="table">
-      <thead>
-        <tr>  
-          <th scope="col">Item</th>
-          <th scope="col">Cantidad</th>
-          <th scope="col">%</th>
-        </tr>
-      </thead>
-      <tbody>  
-        <% total  = 0 %>
-        <% Encuestum.group(:pregunta42).having("pregunta42 != ?", "--").having("pregunta42 != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
-          <% total = total + item %>
-        <%end%>
-        <% Encuestum.group(:pregunta42).having("pregunta42 != ?", "--").having("pregunta42 != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
-        <tr>
-          <td scope="row"><%= value %></td>
-          <td><%= item %></td>
-          <td><%= (100*item/total.to_f).round(2) %></td>
-        </tr>
-        <%end%>
-        <thead>
-        <tr>
-          <th scope="col"> <strong> Total </strong></td>
-          <th scope="col"> <strong> <%= total %> </strong></td>
-          <th scope="col"> <strong> 100% </strong></td>
-        </tr>
-        </thead>
-      </tbody>   
-    </table>
-    <br>
-  </div>   
+   
   <div id="Pregunta43">
     <label> <strong> 43. ¿Cuál fue el principal motivo de la última queja que presentó?  </strong> </label>
     <%= bar_chart Encuestum.group(:pregunta43).having("pregunta43 != ?", "--").having("pregunta43 != ?", "").count(:id) %>
@@ -4304,41 +4066,7 @@
     </table>
     <br>
   </div>
-  <div id="Pregunta47">
-    <label> <strong> 47. ¿Por qué razones no ha cambiado de EPS?  </strong> </label>
-    <%= bar_chart Encuestum.group(:pregunta47).having("pregunta47 != ?", "--").having("pregunta47 != ?", "").count(:id) %>
-    <br>
-    <table class="table">
-      <thead>
-        <tr>  
-          <th scope="col">Item</th>
-          <th scope="col">Cantidad</th>
-          <th scope="col">%</th>
-        </tr>
-      </thead>
-      <tbody>  
-        <% total  = 0 %>
-        <% Encuestum.group(:pregunta47).having("pregunta47 != ?", "--").having("pregunta47 != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
-          <% total = total + item %>
-        <%end%>
-        <% Encuestum.group(:pregunta47).having("pregunta47 != ?", "--").having("pregunta47 != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
-        <tr>
-          <td scope="row"><%= value %></td>
-          <td><%= item %></td>
-          <td><%= (100*item/total.to_f).round(2) %></td>
-        </tr>
-        <%end%>
-        <thead>
-        <tr>
-          <th scope="col"> <strong> Total </strong></td>
-          <th scope="col"> <strong> <%= total %> </strong></td>
-          <th scope="col"> <strong> 100% </strong></td>
-        </tr>
-        </thead>
-      </tbody>  
-    </table>
-    <br>
-  </div>   
+   
   <div id="Pregunta48">
     <label> <strong> 48. ¿Sabe usted que en caso que cambie su situación laboral (ejemplo quedar desempleado o conseguir empleo), usted tiene derecho a cambiarse de régimen dentro de su misma EPS? </strong> </label>
     <%= pie_chart Encuestum.group(:pregunta48).having("pregunta48 != ?", "--").having("pregunta48 != ?", "").count(:id) %>
