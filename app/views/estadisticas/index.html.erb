@@ -238,7 +238,7 @@
 <h3>10. En los últimos 6 meses ¿Cuáles de los siguientes servicios de salud ha utilizado usted a través de su EPS?</h3>
  <div id="Pregunta10A">
     <label> <strong> 10. A. Consulta de medicina general </strong> </label>
-    <%= pie_chart Encuestum.group(:pregunta10_a).count(:id) %>
+    <%= pie_chart Encuestum.group(:pregunta10_a).having("pregunta10_a != ?", "--").having("pregunta10_a != ?", "").count(:id) %>
 <br>
     <table class="table">
       <thead>
@@ -273,7 +273,7 @@
   </div>
   <div id="Pregunta10B1">
     <label> <strong> 10. B1. Consulta de Obstetricia - control embarazo </strong> </label>
-    <%= pie_chart Encuestum.group(:pregunta10_b1).count(:id) %>
+    <%= pie_chart Encuestum.group(:pregunta10_b1).having("pregunta10_b1 != ?", "--").having("pregunta10_b1 != ?", "").count(:id) %>
 <br>
     <table class="table">
       <thead>
@@ -308,7 +308,7 @@
   </div>
   <div id="Pregunta10B2">
     <label> <strong> 10. B2. Consulta de ginecología: citologías, y otros relacionados sin incluir embarazo </strong> </label>
-    <%= pie_chart Encuestum.group(:pregunta10_b2).count(:id) %>
+    <%= pie_chart Encuestum.group(:pregunta10_b2).having("pregunta10_b2 != ?", "--").having("pregunta10_b2 != ?", "").count(:id) %>
 <br>
     <table class="table">
       <thead>
@@ -343,7 +343,7 @@
   </div>
   <div id="Pregunta10B3">
     <label> <strong> 10. B3. Consulta de medicina interna: internista </strong> </label>
-    <%= pie_chart Encuestum.group(:pregunta10_b3).count(:id) %>
+    <%= pie_chart Encuestum.group(:pregunta10_b3).having("pregunta10_b3 != ?", "--").having("pregunta10_b3 != ?", "").count(:id) %>
 <br>
     <table class="table">
       <thead>
@@ -378,7 +378,7 @@
   </div>  
   <div id="Pregunta10B4">
     <label> <strong> 10. B4. Consulta de pediatría </strong> </label>
-    <%= pie_chart Encuestum.group(:pregunta10_b4).count(:id) %>
+    <%= pie_chart Encuestum.group(:pregunta10_b4).having("pregunta10_b4 != ?", "--").having("pregunta10_b4 != ?", "").count(:id) %>
 <br>
     <table class="table">
       <thead>
@@ -413,7 +413,7 @@
   </div>
   <div id="Pregunta10B5">
     <label> <strong> 10. B5. Cirugía general </strong> </label>
-    <%= pie_chart Encuestum.group(:pregunta10_b5).count(:id) %>
+    <%= pie_chart Encuestum.group(:pregunta10_b5).having("pregunta10_b5 != ?", "--").having("pregunta10_b5 != ?", "").count(:id) %>
 <br>
     <table class="table">
       <thead>
@@ -448,7 +448,7 @@
   </div>
   <div id="Pregunta10B6">
     <label> <strong> 10. B6. Otras consultas de medicina especializada: cardiología, neurología y ortopedia </strong> </label>
-    <%= pie_chart Encuestum.group(:pregunta10_b6).count(:id) %>
+    <%= pie_chart Encuestum.group(:pregunta10_b6).having("pregunta10_b6 != ?", "--").having("pregunta10_b6 != ?", "").count(:id) %>
 <br>
     <table class="table">
       <thead>
