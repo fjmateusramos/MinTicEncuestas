@@ -1000,7 +1000,7 @@
       </thead>
         <tbody>  
         <% total = Encuestum.where(pregunta1: "ALIANSALUD ENTIDAD PROMOTORA DE SALUD S.A.").count(:id) %>
-        <% total_contribitivo = Encuestum.where(pregunta1: "ALIANSALUD ENTIDAD PROMOTORA DE SALUD S.A.").where(pregunta3: "Cotizante en el regimen contributivo").where(pregunta3:"Beneficiario en el regimen contributivo").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "ALIANSALUD ENTIDAD PROMOTORA DE SALUD S.A." , pregunta3: "Cotizante en el regimen contributivo").count(:id) + Encuestum.where(pregunta1: "ALIANSALUD ENTIDAD PROMOTORA DE SALUD S.A." ,pregunta3:"Beneficiario en el regimen contributivo").count(:id) %>
         <% total_subsidiado = Encuestum.where(pregunta1: "ALIANSALUD ENTIDAD PROMOTORA DE SALUD S.A.").where(pregunta3:"Afiliado al regimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td scope="row"> ALIANSALUD ENTIDAD PROMOTORA DE SALUD S.A. </td>
@@ -1015,7 +1015,7 @@
           <td><%= (100* total/426.to_f).round(2) %></td>
         </tr>
       <% total = Encuestum.where(pregunta1: "ANASWAYUU").count(:id) %>
-        <% total_contribitivo = Encuestum.where(pregunta1: "ANASWAYUU").where(pregunta3: "Cotizante en el regimen contributivo").where(pregunta3:"Beneficiario en el regimen contributivo").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "ANASWAYUU", pregunta3: "Cotizante en el regimen contributivo").count(:id) + Encuestum.where(pregunta1: "ANASWAYUU", pregunta3:"Beneficiario en el regimen contributivo").count(:id) %>
         <% total_subsidiado = Encuestum.where(pregunta1: "ANASWAYUU").where(pregunta3:"Afiliado al regimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td scope="row"> ANASWAYUU </td>
