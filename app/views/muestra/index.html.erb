@@ -990,18 +990,18 @@
           <th scope="col">No. Encuestas a la fecha - Contributivo</th>
           <th scope="col">No. Encuestas a realizar - Contributivo</th>
           <th scope="col">% de Cumplimiento - Contributivo</th>
-          <th scope="col">No. Encuestas a la fecha - Subsiadiado</th>
-          <th scope="col">No. Encuestas a realizar - Subsiadiado</th>
+          <th scope="col">No. Encuestas a la fecha - Subsidiado</th>
+          <th scope="col">No. Encuestas a realizar - Subsidiado</th>
           <th scope="col">% de Cumplimiento - Subsidiado</th>
           <th scope="col">No. Encuestas a la fecha</th>
           <th scope="col">No. Encuestas a realizar</th>
           <th scope="col">% de Cumplimiento</th>
         </tr>
       </thead>
-      <tbody>  
-        <% total = Encuestum.where(municipio: "ALIANSALUD ENTIDAD PROMOTORA DE SALUD S.A.").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "ALIANSALUD ENTIDAD PROMOTORA DE SALUD S.A.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "ALIANSALUD ENTIDAD PROMOTORA DE SALUD S.A.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <tbody>  
+        <% total = Encuestum.where(pregunta1: "ALIANSALUD ENTIDAD PROMOTORA DE SALUD S.A.").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "ALIANSALUD ENTIDAD PROMOTORA DE SALUD S.A.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "ALIANSALUD ENTIDAD PROMOTORA DE SALUD S.A.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td scope="row"> ALIANSALUD ENTIDAD PROMOTORA DE SALUD S.A. </td>
           <td><%= total_contribitivo %></td>
@@ -1014,9 +1014,9 @@
           <td>426</td>
           <td><%= (100* total/426.to_f).round(2) %></td>
         </tr>
-      <% total = Encuestum.where(municipio: "ANASWAYUU").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "ANASWAYUU").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "ANASWAYUU").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+      <% total = Encuestum.where(pregunta1: "ANASWAYUU").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "ANASWAYUU").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "ANASWAYUU").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td scope="row"> ANASWAYUU </td>
           <td><%= total_contribitivo %></td>
@@ -1029,9 +1029,9 @@
           <td>426</td>
           <td><%= (100* total/426.to_f).round(2) %></td>
         </tr>
-        <% total = Encuestum.where(municipio: "ASOCIACIÓN INDÍGENA DEL CAUCA").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "ASOCIACIÓN INDÍGENA DEL CAUCA").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "ASOCIACIÓN INDÍGENA DEL CAUCA").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total = Encuestum.where(pregunta1: "ASOCIACIÓN INDÍGENA DEL CAUCA").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "ASOCIACIÓN INDÍGENA DEL CAUCA").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "ASOCIACIÓN INDÍGENA DEL CAUCA").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td scope="row"> ASOCIACIÓN INDÍGENA DEL CAUCA </td>
           <td><%= total_contribitivo %></td>
@@ -1044,9 +1044,9 @@
           <td>471</td>
           <td><%= (100* total/471.to_f).round(2) %></td>
         </tr>
-        <% total = Encuestum.where(municipio: "ASOCIACIÓN INDÍGENA DEL CESAR Y LA GUAJIRA  DUSAKAWI").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "ASOCIACIÓN INDÍGENA DEL CESAR Y LA GUAJIRA  DUSAKAWI").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "ASOCIACIÓN INDÍGENA DEL CESAR Y LA GUAJIRA  DUSAKAWI").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total = Encuestum.where(pregunta1: "ASOCIACIÓN INDÍGENA DEL CESAR Y LA GUAJIRA  DUSAKAWI").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "ASOCIACIÓN INDÍGENA DEL CESAR Y LA GUAJIRA  DUSAKAWI").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "ASOCIACIÓN INDÍGENA DEL CESAR Y LA GUAJIRA  DUSAKAWI").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td scope="row"> ASOCIACIÓN INDÍGENA DEL CESAR Y LA GUAJIRA  DUSAKAWI </td>
           <td><%= total_contribitivo %></td>
@@ -1060,8 +1060,8 @@
           <td><%= (100* total/428.to_f).round(2) %></td>
         </tr>
         <% total = Encuestum.where(pregunta1: "ASOCIACIÓN MUTUAL BARRIOS UNIDOS DE QUIBDÓ E.S.S.").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "ASOCIACIÓN MUTUAL BARRIOS UNIDOS DE QUIBDÓ E.S.S.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "ASOCIACIÓN MUTUAL BARRIOS UNIDOS DE QUIBDÓ E.S.S.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "ASOCIACIÓN MUTUAL BARRIOS UNIDOS DE QUIBDÓ E.S.S.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "ASOCIACIÓN MUTUAL BARRIOS UNIDOS DE QUIBDÓ E.S.S.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td scope="row"> ASOCIACIÓN MUTUAL BARRIOS UNIDOS DE QUIBDÓ E.S.S. </td>
           <td><%= total_contribitivo %></td>
@@ -1074,9 +1074,9 @@
           <td>432</td>
           <td><%= (100* total/432.to_f).round(2) %></td>
         </tr>
-        <% total = Encuestum.where(municipio: "ASOCIACIÓN MUTUAL EMPRESA SOLIDARIA DE SALUD DE NARIÑO E.S.S. EMSSANAR E.S.S.").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "ASOCIACIÓN MUTUAL EMPRESA SOLIDARIA DE SALUD DE NARIÑO E.S.S. EMSSANAR E.S.S.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "ASOCIACIÓN MUTUAL EMPRESA SOLIDARIA DE SALUD DE NARIÑO E.S.S. EMSSANAR E.S.S.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total = Encuestum.where(pregunta1: "ASOCIACIÓN MUTUAL EMPRESA SOLIDARIA DE SALUD DE NARIÑO E.S.S. EMSSANAR E.S.S.").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "ASOCIACIÓN MUTUAL EMPRESA SOLIDARIA DE SALUD DE NARIÑO E.S.S. EMSSANAR E.S.S.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "ASOCIACIÓN MUTUAL EMPRESA SOLIDARIA DE SALUD DE NARIÑO E.S.S. EMSSANAR E.S.S.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td scope="row"> ASOCIACIÓN MUTUAL EMPRESA SOLIDARIA DE SALUD DE NARIÑO E.S.S. EMSSANAR E.S.S. </td>
           <td><%= total_contribitivo %></td>
@@ -1090,8 +1090,8 @@
           <td><%= (100* total/566.to_f).round(2) %></td>
         </tr>
         <% total = Encuestum.where(pregunta1: "ASOCIACIÓN MUTUAL LA ESPERANZA ASMET  SALUD").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "ASOCIACIÓN MUTUAL LA ESPERANZA ASMET  SALUD").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "ASOCIACIÓN MUTUAL LA ESPERANZA ASMET  SALUD").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "ASOCIACIÓN MUTUAL LA ESPERANZA ASMET  SALUD").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "ASOCIACIÓN MUTUAL LA ESPERANZA ASMET  SALUD").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>ASOCIACIÓN MUTUAL LA ESPERANZA ASMET  SALUD </td>
           <td><%= total_contribitivo %></td>
@@ -1105,8 +1105,8 @@
           <td><%= (100* total/769.to_f).round(2) %></td>
         </tr>
         <% total = Encuestum.where(pregunta1: "ASOCIACIÓN MUTUAL SER EMPRESA SOLIDARIA DE SALUD ESS").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "ASOCIACIÓN MUTUAL SER EMPRESA SOLIDARIA DE SALUD ESS").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "ASOCIACIÓN MUTUAL SER EMPRESA SOLIDARIA DE SALUD ESS").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "ASOCIACIÓN MUTUAL SER EMPRESA SOLIDARIA DE SALUD ESS").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "ASOCIACIÓN MUTUAL SER EMPRESA SOLIDARIA DE SALUD ESS").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>ASOCIACIÓN MUTUAL SER EMPRESA SOLIDARIA DE SALUD ESS</td>
           <td><%= total_contribitivo %></td>
@@ -1119,9 +1119,9 @@
           <td>431</td>
           <td><%= (100* total/431.to_f).round(2) %></td>
         </tr>
-        <% total = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR  DE CARTAGENA COMFAMILIAR CARTAGENA").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR  DE CARTAGENA COMFAMILIAR CARTAGENA").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR  DE CARTAGENA COMFAMILIAR CARTAGENA").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total = Encuestum.where(pregunta1: "CAJA DE COMPENSACIÓN FAMILIAR  DE CARTAGENA COMFAMILIAR CARTAGENA").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "CAJA DE COMPENSACIÓN FAMILIAR  DE CARTAGENA COMFAMILIAR CARTAGENA").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "CAJA DE COMPENSACIÓN FAMILIAR  DE CARTAGENA COMFAMILIAR CARTAGENA").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>CAJA DE COMPENSACIÓN FAMILIAR  DE CARTAGENA COMFAMILIAR CARTAGENA</td>
           <td><%= total_contribitivo %></td>
@@ -1134,9 +1134,9 @@
           <td>426</td>
           <td><%= (100* total/426.to_f).round(2) %></td>
         </tr>
-        <% total = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR C.C.F. DEL ORIENTE COLOMBIANO COMFAORIENTE").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR C.C.F. DEL ORIENTE COLOMBIANO COMFAORIENTE").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR C.C.F. DEL ORIENTE COLOMBIANO COMFAORIENTE").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total = Encuestum.where(pregunta1: "CAJA DE COMPENSACIÓN FAMILIAR C.C.F. DEL ORIENTE COLOMBIANO COMFAORIENTE").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "CAJA DE COMPENSACIÓN FAMILIAR C.C.F. DEL ORIENTE COLOMBIANO COMFAORIENTE").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "CAJA DE COMPENSACIÓN FAMILIAR C.C.F. DEL ORIENTE COLOMBIANO COMFAORIENTE").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>CAJA DE COMPENSACIÓN FAMILIAR C.C.F. DEL ORIENTE COLOMBIANO COMFAORIENTE</td>
           <td><%= total_contribitivo %></td>
@@ -1149,9 +1149,9 @@
           <td>424</td>
           <td><%= (100* total/424.to_f).round(2) %></td>
         </tr>
-        <% total = Encuestum.where(municipio: "CAJA DE COMPENSACION FAMILIAR DE CORDOBA  COMFACOR").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "CAJA DE COMPENSACION FAMILIAR DE CORDOBA  COMFACOR").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "CAJA DE COMPENSACION FAMILIAR DE CORDOBA  COMFACOR").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total = Encuestum.where(pregunta1: "CAJA DE COMPENSACION FAMILIAR DE CORDOBA  COMFACOR").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "CAJA DE COMPENSACION FAMILIAR DE CORDOBA  COMFACOR").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "CAJA DE COMPENSACION FAMILIAR DE CORDOBA  COMFACOR").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>CAJA DE COMPENSACION FAMILIAR DE CORDOBA  COMFACOR</td>
           <td><%= total_contribitivo %></td>
@@ -1164,9 +1164,9 @@
           <td>431</td>
           <td><%= (100* total/431.to_f).round(2) %></td>
         </tr>
-        <% total = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DE CUNDINAMARCA COMFACUNDI").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DE CUNDINAMARCA COMFACUNDI").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DE CUNDINAMARCA COMFACUNDI").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total = Encuestum.where(pregunta1: "CAJA DE COMPENSACIÓN FAMILIAR DE CUNDINAMARCA COMFACUNDI").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "CAJA DE COMPENSACIÓN FAMILIAR DE CUNDINAMARCA COMFACUNDI").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "CAJA DE COMPENSACIÓN FAMILIAR DE CUNDINAMARCA COMFACUNDI").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>CAJA DE COMPENSACIÓN FAMILIAR DE CUNDINAMARCA COMFACUNDI</td>
           <td><%= total_contribitivo %></td>
@@ -1179,9 +1179,9 @@
           <td>426</td>
           <td><%= (100* total/426.to_f).round(2) %></td>
         </tr>
-        <% total = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DE LA GUAJIRA").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DE LA GUAJIRA").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DE LA GUAJIRA").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total = Encuestum.where(pregunta1: "CAJA DE COMPENSACIÓN FAMILIAR DE LA GUAJIRA").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "CAJA DE COMPENSACIÓN FAMILIAR DE LA GUAJIRA").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "CAJA DE COMPENSACIÓN FAMILIAR DE LA GUAJIRA").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>CAJA DE COMPENSACIÓN FAMILIAR DE LA GUAJIRA</td>
           <td><%= total_contribitivo %></td>
@@ -1194,9 +1194,9 @@
           <td>425</td>
           <td><%= (100* total/425.to_f).round(2) %></td>
         </tr>
-        <% total = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DE NARIÑO COMFAMILIAR NARIÑO").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DE NARIÑO COMFAMILIAR NARIÑO").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DE NARIÑO COMFAMILIAR NARIÑO").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total = Encuestum.where(pregunta1: "CAJA DE COMPENSACIÓN FAMILIAR DE NARIÑO COMFAMILIAR NARIÑO").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "CAJA DE COMPENSACIÓN FAMILIAR DE NARIÑO COMFAMILIAR NARIÑO").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "CAJA DE COMPENSACIÓN FAMILIAR DE NARIÑO COMFAMILIAR NARIÑO").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>CAJA DE COMPENSACIÓN FAMILIAR DE LA GUAJIRA</td>
           <td><%= total_contribitivo %></td>
@@ -1209,9 +1209,9 @@
           <td>426</td>
           <td><%= (100* total/426.to_f).round(2) %></td>
         </tr>
-        <% total = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DE SUCRE").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DE SUCRE").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DE SUCRE").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total = Encuestum.where(pregunta1: "CAJA DE COMPENSACIÓN FAMILIAR DE SUCRE").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "CAJA DE COMPENSACIÓN FAMILIAR DE SUCRE").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "CAJA DE COMPENSACIÓN FAMILIAR DE SUCRE").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>CAJA DE COMPENSACIÓN FAMILIAR DE SUCRE</td>
           <td><%= total_contribitivo %></td>
@@ -1224,9 +1224,9 @@
           <td>424</td>
           <td><%= (100* total/424.to_f).round(2) %></td>
         </tr>
-        <% total = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DEL CHOCÓ COMFACHOCO").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DEL CHOCÓ COMFACHOCO").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DEL CHOCÓ COMFACHOCO").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total = Encuestum.where(pregunta1: "CAJA DE COMPENSACIÓN FAMILIAR DEL CHOCÓ COMFACHOCO").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "CAJA DE COMPENSACIÓN FAMILIAR DEL CHOCÓ COMFACHOCO").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "CAJA DE COMPENSACIÓN FAMILIAR DEL CHOCÓ COMFACHOCO").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>CAJA DE COMPENSACIÓN FAMILIAR DEL CHOCÓ COMFACHOCO</td>
           <td><%= total_contribitivo %></td>
@@ -1239,9 +1239,9 @@
           <td>425</td>
           <td><%= (100* total/425.to_f).round(2) %></td>
         </tr>
-        <% total = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DEL HUILA COMFAMILIAR").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DEL HUILA COMFAMILIAR").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "CAJA DE COMPENSACIÓN FAMILIAR DEL HUILA COMFAMILIAR").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total = Encuestum.where(pregunta1: "CAJA DE COMPENSACIÓN FAMILIAR DEL HUILA COMFAMILIAR").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "CAJA DE COMPENSACIÓN FAMILIAR DEL HUILA COMFAMILIAR").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "CAJA DE COMPENSACIÓN FAMILIAR DEL HUILA COMFAMILIAR").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>CAJA DE COMPENSACIÓN FAMILIAR DEL HUILA COMFAMILIAR</td>
           <td><%= total_contribitivo %></td>
@@ -1255,8 +1255,8 @@
           <td><%= (100* total/429.to_f).round(2) %></td>
         </tr>
         <% total = Encuestum.where(pregunta1: "CAJA DE DE COMPENSACION FAMILIAR CAJACOPI ATLANTICO").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "CAJA DE DE COMPENSACION FAMILIAR CAJACOPI ATLANTICO").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "CAJA DE DE COMPENSACION FAMILIAR CAJACOPI ATLANTICO").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "CAJA DE DE COMPENSACION FAMILIAR CAJACOPI ATLANTICO").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "CAJA DE DE COMPENSACION FAMILIAR CAJACOPI ATLANTICO").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>CAJA DE DE COMPENSACION FAMILIAR  CAJACOPI ATLANTICO</td>
           <td><%= total_contribitivo %></td>
@@ -1270,8 +1270,8 @@
           <td><%= (100* total/433.to_f).round(2) %></td>
         </tr>
         <% total = Encuestum.where(pregunta1: "CAPITAL SALUD").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "CAPITAL SALUD").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "CAPITAL SALUD").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "CAPITAL SALUD").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "CAPITAL SALUD").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>CAPITAL SALUD</td>
           <td><%= total_contribitivo %></td>
@@ -1285,8 +1285,8 @@
           <td><%= (100* total/430.to_f).round(2) %></td>
         </tr>
         <% total = Encuestum.where(pregunta1: "CAPRESOCA EPS").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "CAPRESOCA EPS").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "CAPRESOCA EPS").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "CAPRESOCA EPS").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "CAPRESOCA EPS").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>  
           <td>CAPRESOCA  EPS</td>
           <td><%= total_contribitivo %></td>
@@ -1299,9 +1299,9 @@
           <td>426</td>
           <td><%= (100* total/426.to_f).round(2) %></td>
         </tr>
-        <% total = Encuestum.where(municipio: "COMFENALCO  VALLE  E.P.S.").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "COMFENALCO  VALLE  E.P.S.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "COMFENALCO  VALLE  E.P.S.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total = Encuestum.where(pregunta1: "COMFENALCO  VALLE  E.P.S.").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "COMFENALCO  VALLE  E.P.S.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "COMFENALCO  VALLE  E.P.S.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>COMFENALCO  VALLE  E.P.S.</td>
           <td><%= total_contribitivo %></td>
@@ -1315,8 +1315,8 @@
           <td><%= (100* total/427.to_f).round(2) %></td>
         </tr>
         <% total = Encuestum.where(pregunta1: "COMPENSAR   E.P.S.").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "COMPENSAR   E.P.S.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "COMPENSAR   E.P.S.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "COMPENSAR   E.P.S.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "COMPENSAR   E.P.S.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>COMPENSAR   E.P.S.</td>
           <td><%= total_contribitivo %></td>
@@ -1330,8 +1330,8 @@
           <td><%= (100* total/430.to_f).round(2) %></td>
         </tr>
         <% total = Encuestum.where(pregunta1: "COOMEVA E.P.S. S.A.").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "COOMEVA E.P.S. S.A.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "COOMEVA E.P.S. S.A.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "COOMEVA E.P.S. S.A.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "COOMEVA E.P.S. S.A.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>COOMEVA   E.P.S.  S.A.</td>
           <td><%= total_contribitivo %></td>
@@ -1345,8 +1345,8 @@
           <td><%= (100* total/487.to_f).round(2) %></td>
         </tr>
         <% total = Encuestum.where(pregunta1: "COOPERATIVA DE SALUD COMUNITARIA-COMPARTA").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "COOPERATIVA DE SALUD COMUNITARIA-COMPARTA").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "COOPERATIVA DE SALUD COMUNITARIA-COMPARTA").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "COOPERATIVA DE SALUD COMUNITARIA-COMPARTA").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "COOPERATIVA DE SALUD COMUNITARIA-COMPARTA").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>COOPERATIVA DE SALUD COMUNITARIA-COMPARTA</td>
           <td><%= total_contribitivo %></td>
@@ -1360,8 +1360,8 @@
           <td><%= (100* total/605.to_f).round(2) %></td>
         </tr>
         <% total = Encuestum.where(pregunta1: "COOPERATIVA DE SALUD Y DESARROLLO INTEGRAL ZONA SUR ORIENTAL DE CARTAGENA LTDA. COOSALUD E.S.S.").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "COOPERATIVA DE SALUD Y DESARROLLO INTEGRAL ZONA SUR ORIENTAL DE CARTAGENA LTDA. COOSALUD E.S.S.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "COOPERATIVA DE SALUD Y DESARROLLO INTEGRAL ZONA SUR ORIENTAL DE CARTAGENA LTDA. COOSALUD E.S.S.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "COOPERATIVA DE SALUD Y DESARROLLO INTEGRAL ZONA SUR ORIENTAL DE CARTAGENA LTDA. COOSALUD E.S.S.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "COOPERATIVA DE SALUD Y DESARROLLO INTEGRAL ZONA SUR ORIENTAL DE CARTAGENA LTDA. COOSALUD E.S.S.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>COOPERATIVA DE SALUD Y DESARROLLO INTEGRAL ZONA SUR ORIENTAL DE CARTAGENA LTDA. COOSALUD E.S.S.</td>
           <td><%= total_contribitivo %></td>
@@ -1374,9 +1374,9 @@
           <td>795</td>
           <td><%= (100* total/795.to_f).round(2) %></td>
         </tr>
-        <% total = Encuestum.where(municipio: "CRUZ BLANCA  EPS S.A.").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "CRUZ BLANCA  EPS S.A.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "CRUZ BLANCA  EPS S.A.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total = Encuestum.where(pregunta1: "CRUZ BLANCA  EPS S.A.").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "CRUZ BLANCA  EPS S.A.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "CRUZ BLANCA  EPS S.A.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>CRUZ BLANCA  EPS S.A.</td>
           <td><%= total_contribitivo %></td>
@@ -1390,8 +1390,8 @@
           <td><%= (100* total/430.to_f).round(2) %></td>
         </tr>
         <% total = Encuestum.where(pregunta1: "E.P.S.  FAMISANAR  LTDA.").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "E.P.S.  FAMISANAR  LTDA.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "E.P.S.  FAMISANAR  LTDA.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "E.P.S.  FAMISANAR  LTDA.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "E.P.S.  FAMISANAR  LTDA.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>E.P.S.  FAMISANAR  LTDA.</td>
           <td><%= total_contribitivo %></td>
@@ -1405,8 +1405,8 @@
           <td><%= (100* total/435.to_f).round(2) %></td>
         </tr>
         <% total = Encuestum.where(pregunta1: "E.P.S. SANITAS S.A.").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "E.P.S. SANITAS S.A.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "E.P.S. SANITAS S.A.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "E.P.S. SANITAS S.A.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "E.P.S. SANITAS S.A.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>E.P.S.  SANITAS  S.A.</td>
           <td><%= total_contribitivo %></td>
@@ -1419,9 +1419,9 @@
           <td>663</td>
           <td><%= (100* total/663.to_f).round(2) %></td>
         </tr>
-        <% total = Encuestum.where(municipio: "EMPRESA MUTUAL PARA EL DESARROLLO INTEGRAL  DE LA SALUD E.S.S. EMDISALUD ESS").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "EMPRESA MUTUAL PARA EL DESARROLLO INTEGRAL  DE LA SALUD E.S.S. EMDISALUD ESS").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "EMPRESA MUTUAL PARA EL DESARROLLO INTEGRAL  DE LA SALUD E.S.S. EMDISALUD ESS").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total = Encuestum.where(pregunta1: "EMPRESA MUTUAL PARA EL DESARROLLO INTEGRAL  DE LA SALUD E.S.S. EMDISALUD ESS").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "EMPRESA MUTUAL PARA EL DESARROLLO INTEGRAL  DE LA SALUD E.S.S. EMDISALUD ESS").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "EMPRESA MUTUAL PARA EL DESARROLLO INTEGRAL  DE LA SALUD E.S.S. EMDISALUD ESS").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>EMPRESA MUTUAL PARA EL DESARROLLO INTEGRAL  DE LA SALUD E.S.S.</td>
           <td><%= total_contribitivo %></td>
@@ -1434,9 +1434,9 @@
           <td>432</td>
           <td><%= (100* total/432.to_f).round(2) %></td>
         </tr>
-        <% total = Encuestum.where(municipio: "ENTIDAD COOPERATIVA SOL.DE SALUD DEL NORTE DE SOACHA ECOOPSOS").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "ENTIDAD COOPERATIVA SOL.DE SALUD DEL NORTE DE SOACHA ECOOPSOS").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "ENTIDAD COOPERATIVA SOL.DE SALUD DEL NORTE DE SOACHA ECOOPSOS").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total = Encuestum.where(pregunta1: "ENTIDAD COOPERATIVA SOL.DE SALUD DEL NORTE DE SOACHA ECOOPSOS").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "ENTIDAD COOPERATIVA SOL.DE SALUD DEL NORTE DE SOACHA ECOOPSOS").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "ENTIDAD COOPERATIVA SOL.DE SALUD DEL NORTE DE SOACHA ECOOPSOS").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>ENTIDAD COOPERATIVA SOL.DE SALUD DEL NORTE DE SOACHA ECOOPSOS</td>
           <td><%= total_contribitivo %></td>
@@ -1449,9 +1449,9 @@
           <td>430</td>
           <td><%= (100* total/430.to_f).round(2) %></td>
         </tr>
-        <% total = Encuestum.where(municipio: "EPS  CONVIDA").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "EPS  CONVIDA").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "EPS  CONVIDA").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total = Encuestum.where(pregunta1: "EPS  CONVIDA").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "EPS  CONVIDA").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "EPS  CONVIDA").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>EPS  CONVIDA</td>
           <td><%= total_contribitivo %></td>
@@ -1465,8 +1465,8 @@
           <td><%= (100* total/428.to_f).round(2) %></td>
         </tr>
         <% total = Encuestum.where(pregunta1: "EPS SERVICIO OCCIDENTAL DE SALUD  S.A. - EPS S.O.S. S.A.").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "EPS SERVICIO OCCIDENTAL DE SALUD  S.A. - EPS S.O.S. S.A.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "EPS SERVICIO OCCIDENTAL DE SALUD  S.A. - EPS S.O.S. S.A.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "EPS SERVICIO OCCIDENTAL DE SALUD  S.A. - EPS S.O.S. S.A.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "EPS SERVICIO OCCIDENTAL DE SALUD  S.A. - EPS S.O.S. S.A.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>EPS SERVICIO OCCIDENTAL DE SALUD  S.A. - EPS S.O.S. S.A.</td>
           <td><%= total_contribitivo %></td>
@@ -1480,8 +1480,8 @@
           <td><%= (100* total/453.to_f).round(2) %></td>
         </tr>
         <% total = Encuestum.where(pregunta1: "EPS Y MEDICINA PREPAGADA SURAMERICANA S.A").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "EPS Y MEDICINA PREPAGADA SURAMERICANA S.A").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "EPS Y MEDICINA PREPAGADA SURAMERICANA S.A").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "EPS Y MEDICINA PREPAGADA SURAMERICANA S.A").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "EPS Y MEDICINA PREPAGADA SURAMERICANA S.A").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>EPS Y MEDICINA PREPAGADA SURAMERICANA S.A</td>
           <td><%= total_contribitivo %></td>
@@ -1494,9 +1494,9 @@
           <td>464</td>
           <td><%= (100* total/464.to_f).round(2) %></td>
         </tr>
-        <% total = Encuestum.where(municipio: "MALLAMAS").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "MALLAMAS").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "MALLAMAS").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total = Encuestum.where(pregunta1: "MALLAMAS").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "MALLAMAS").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "MALLAMAS").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>MALLAMAS</td>
           <td><%= total_contribitivo %></td>
@@ -1510,8 +1510,8 @@
           <td><%= (100* total/914.to_f).round(2) %></td>
         </tr>
         <% total = Encuestum.where(pregunta1: "MEDIMAS").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "MEDIMAS", pregunta3: "Cotizante en el regimen contributivo" , pregunta3:"Beneficiario en el regimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "MEDIMAS", pregunta3:"Afiliado al regimen subsidiado (SISBEN)").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "MEDIMAS", pregunta3: "Cotizante en el regimen contributivo" , pregunta3:"Beneficiario en el regimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "MEDIMAS", pregunta3:"Afiliado al regimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>MEDIMAS</td>
           <td><%= total_contribitivo %></td>
@@ -1525,8 +1525,8 @@
           <td><%= (100* total/1200.to_f).round(2) %></td>
         </tr>
         <% total = Encuestum.where(pregunta1: "NUEVA EPS S.A.").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "NUEVA EPS S.A.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "NUEVA EPS S.A.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "NUEVA EPS S.A.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "NUEVA EPS S.A.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>NUEVA EPS S.A.</td>
           <td><%= total_contribitivo %></td>
@@ -1539,9 +1539,9 @@
           <td>2266</td>
           <td><%= (100* total/2266.to_f).round(2) %></td>
         </tr>
-        <% total = Encuestum.where(municipio: "PIJAOS SALUD EPSI").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "PIJAOS SALUD EPSI").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "PIJAOS SALUD EPSI").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total = Encuestum.where(pregunta1: "PIJAOS SALUD EPSI").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "PIJAOS SALUD EPSI").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "PIJAOS SALUD EPSI").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>PIJAOS SALUD EPSI</td>
           <td><%= total_contribitivo %></td>
@@ -1555,8 +1555,8 @@
           <td><%= (100* total/426.to_f).round(2) %></td>
         </tr>
         <% total = Encuestum.where(pregunta1: "SALUD  TOTAL  S.A.  E.P.S.").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "SALUD  TOTAL  S.A.  E.P.S.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "SALUD  TOTAL  S.A.  E.P.S.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "SALUD  TOTAL  S.A.  E.P.S.").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "SALUD  TOTAL  S.A.  E.P.S.").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>SALUD  TOTAL  S.A.  E.P.S.</td>
           <td><%= total_contribitivo %></td>
@@ -1570,8 +1570,8 @@
           <td><%= (100* total/469.to_f).round(2) %></td>
         </tr>
         <% total = Encuestum.where(pregunta1: "SALUDVIDA S.A .E.P.S").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "SALUDVIDA S.A .E.P.S").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "SALUDVIDA S.A .E.P.S").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "SALUDVIDA S.A .E.P.S").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "SALUDVIDA S.A .E.P.S").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>SALUDVIDA S.A .E.P.S</td>
           <td><%= total_contribitivo %></td>
@@ -1584,9 +1584,9 @@
           <td>496</td>
           <td><%= (100* total/496.to_f).round(2) %></td>
         </tr>
-        <% total = Encuestum.where(municipio: "SAVIA SALUD EPS").count(:id) %>
-        <% total_contribitivo = Encuestum.where(municipio: "SAVIA SALUD EPS").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
-        <% total_subsidiado = Encuestum.where(municipio: "SAVIA SALUD EPS").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
+        <% total = Encuestum.where(pregunta1: "SAVIA SALUD EPS").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "SAVIA SALUD EPS").where(pregunta3: "Cotizante en el régimen contributivo").where(pregunta3:"Beneficiario en el régimen contributivo").count(:id) %>
+        <% total_subsidiado = Encuestum.where(pregunta1: "SAVIA SALUD EPS").where(pregunta3:"Afiliado al régimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>SAVIA SALUD EPS</td>
           <td><%= total_contribitivo %></td>
