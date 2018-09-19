@@ -1510,7 +1510,7 @@
           <td><%= (100* total/914.to_f).round(2) %></td>
         </tr>
         <% total = Encuestum.where(pregunta1: "MEDIMAS").count(:id) %>
-        <% total_contribitivo = Encuestum.where(pregunta1: "MEDIMAS", pregunta3: "Cotizante en el regimen contributivo" , pregunta3:"Beneficiario en el regimen contributivo").count(:id) %>
+        <% total_contribitivo = Encuestum.where(pregunta1: "MEDIMAS", pregunta3: "Cotizante en el regimen contributivo").count(:id) + Encuestum.where(pregunta1: "MEDIMAS" , pregunta3:"Beneficiario en el regimen contributivo").count(:id) %>
         <% total_subsidiado = Encuestum.where(pregunta1: "MEDIMAS", pregunta3:"Afiliado al regimen subsidiado (SISBEN)").count(:id) %>
         <tr>
           <td>MEDIMAS</td>
