@@ -1605,7 +1605,7 @@
         <thead>
           <tr>            
             <th scope="col"> <strong> Total </strong></td>
-            <th scope="col"> <strong> <%= Encuestum.where(pregunta3: "Cotizante en el regimen contributivo").where(pregunta3:"Beneficiario en el regimen contributivo").count(:id)%> </strong></td>  
+            <th scope="col"> <strong> <%= Encuestum.where(pregunta3: "Cotizante en el regimen contributivo").count(:id) + Encuestum.where(pregunta3:"Beneficiario en el regimen contributivo").count(:id)%> </strong></td>  
             <th scope="col"> <strong> 21.753 </strong></td>
             <th scope="col"> <strong><%= (100* Encuestum.where(pregunta3: "Cotizante en el regimen contributivo").where(pregunta3:"Beneficiario en el regimen contributivo").count(:id)/21753.to_f).round(2) %></strong></td> 
             <th scope="col"> <strong> <%= Encuestum.where(pregunta3:"Afiliado al regimen subsidiado (SISBEN)").count(:id)%> </strong></td> 
