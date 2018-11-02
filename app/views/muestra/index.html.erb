@@ -65,7 +65,7 @@
           <td>552</td>
           <td><%= (100* total/552.to_f).round(2) %></td>
         </tr>
-        <% total = Encuestum.where(departamento: "Bogotá").count(:id) %>
+        <% total = Encuestum.where(departamento: "Bogota D.C.").count(:id) %>
         <tr>
           <td scope="row"> Bogotá, D.C. </td>
           <td><%= total %></td>
