@@ -32,7 +32,7 @@
       </thead>
       <tbody>  
         <% total  = 0 %>
-        <% Encuestum.group(:departamento).having("departamento != ?", "--").having("departamento != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+        <% Encuestum.group(:departamento).having("departamento != ?", "--").having("departamento != ?", "").having("departamento != ?", "05").order('COUNT(id) DESC').count(:id).each do |value,item|%>
           <% total = total + item %>
         <%end%>
         <% Encuestum.group(:departamento).having("departamento != ?", "--").having("departamento != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
@@ -67,7 +67,7 @@
       </thead>
       <tbody>  
         <% total_municipio  = 0 %>
-        <% Encuestum.group(:municipio).having("municipio != ?", "--").having("municipio != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
+        <% Encuestum.group(:municipio).having("municipio != ?", "--").having("municipio != ?", "").having("municipio != ?", "99773").order('COUNT(id) DESC').count(:id).each do |value,item|%>
           <% total_municipio = total_municipio + item %>
         <%end%>
         <% Encuestum.group(:municipio).having("municipio != ?", "--").having("municipio != ?", "").order('COUNT(id) DESC').count(:id).each do |value,item|%>
